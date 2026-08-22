@@ -2,7 +2,7 @@
 <html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>투자 리포트</title>
+<title>발행 파이프라인 점검</title>
 <style>
 :root{--bg:#fbfbfa;--panel:#fff;--fg:#1c1c1a;--muted:#6b6b66;--line:#e3e3df;
 --accent:#2f6f4f;--accent-soft:#e8f1ec;--code:#f3f3f0}
@@ -64,31 +64,15 @@ padding:15px 17px;margin-bottom:11px;text-decoration:none;color:inherit}
 footer{color:var(--muted);font-size:12px;margin-top:44px;padding-top:14px;
 border-top:1px solid var(--line)}
 </style>
-</head><body><div class="wrap"><header class="site"><h1>투자 리포트</h1><span class="sub">1건 · 최근 갱신 2026-08-22 13:48</span></header><div class="filters"><input id="q" type="search" placeholder="종목·키워드 검색" autocomplete="off"><button class="chip" data-kind="all" aria-pressed="true">전체</button><button class="chip" data-kind="report" aria-pressed="false">리포트</button></div><div id="list"></div><footer>본 자료는 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단과 그 결과의 책임은 투자자 본인에게 있습니다.</footer><script>
-const DATA=[{"slug": "setup-check", "title": "발행 파이프라인 점검", "summary": "발행 경로(PDF 생성 → 웹 페이지 → GitHub push → Telegram)가 정상 동작하는지 확인하기 위한 점검용 문서이며, 투자 판단 내용은 포함하지 않습니다.", "kind": "report", "symbol": null, "published_at": "2026-08-22T13:48:26+09:00", "url": "r/setup-check/", "pdf": "setup-check.pdf"}];
-const list=document.getElementById('list');
-const q=document.getElementById('q');
-let kind='all';
-const LBL={"ticker": "종목", "market": "시황", "macro": "매크로", "report": "리포트"};
-function esc(s){const d=document.createElement('div');d.textContent=s==null?'':s;return d.innerHTML}
-function render(){
-  const t=q.value.trim().toLowerCase();
-  const rows=DATA.filter(r=>(kind==='all'||r.kind===kind)&&(!t||
-    [r.title,r.summary,r.symbol,r.kind].filter(Boolean).join(' ').toLowerCase().includes(t)));
-  list.innerHTML=rows.length?rows.map(r=>{
-    const d=(r.published_at||'').slice(0,16).replace('T',' ');
-    return `<a class="card" href="${esc(r.url)}">
-      <div class="row"><span class="badge">${esc(LBL[r.kind]||r.kind)}</span>
-      ${r.symbol?`<strong>${esc(r.symbol)}</strong>`:''}<time>${esc(d)}</time></div>
-      <h2>${esc(r.title)}</h2>
-      ${r.summary?`<p class="sum">${esc(r.summary)}</p>`:''}</a>`}).join('')
-    :'<p class="empty">조건에 맞는 리포트가 없습니다.</p>';
-}
-q.addEventListener('input',render);
-document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
-  kind=c.dataset.kind;
-  document.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x===c));
-  render();
-}));
-render();
-</script></div></body></html>
+</head><body><div class="wrap"><header class="site"><a class="back" href="../../index.html">← 전체 리포트</a></header>
+<p class="meta"><span class="badge">리포트</span>2026-08-22 13:48</p>
+<h1 class="title">발행 파이프라인 점검</h1>
+<div class="lede"><span class="lbl">한 줄 결론</span>발행 경로(PDF 생성 → 웹 페이지 → GitHub push → Telegram)가 정상 동작하는지 확인하기 위한 점검용 문서이며, 투자 판단 내용은 포함하지 않습니다.</div>
+<h3>점검 항목</h3>
+<div class="table-wrap"><table><thead><tr><th>항목</th><th>확인 대상</th></tr></thead><tbody><tr><td>표 렌더링</td><td>이 표가 보이면 정상</td></tr><tr><td>차트 임베드</td><td>아래 PNG가 로드되면 정상</td></tr><tr><td>첨부</td><td>하단 PDF·Markdown 링크</td></tr></tbody></table></div>
+<ul><li>이 문서에는 시세·지표·손익비 등 <strong>어떠한 투자 수치도 포함되어 있지 않습니다</strong></li><li>점검 완료 후 삭제 예정입니다</li></ul>
+<h3>차트 로딩 확인</h3>
+<figure><a href="SOXX_20260812.png" target="_blank" rel="noopener"><img src="SOXX_20260812.png" alt="기존 산출물 재사용 — 이미지 서빙 경로 확인용" loading="lazy"></a><figcaption>기존 산출물 재사용 — 이미지 서빙 경로 확인용</figcaption></figure>
+<p><a class="dl" href="setup-check.pdf">PDF 내려받기</a> 
+<a class="dl" href="report.md">Markdown 원문</a></p>
+<footer>본 자료는 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단과 그 결과의 책임은 투자자 본인에게 있습니다.</footer></div></body></html>
