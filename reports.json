@@ -1,14 +1,14 @@
 {
   "reports": [
     {
-      "slug": "000660-ks-20260822-1355",
-      "title": "000660-ks-20260822-1355",
+      "slug": "sk-hynix-000660-ks-20260822",
+      "title": "SK hynix (000660.KS) 종목 리포트 · 2026-08-22",
       "summary": "SK하이닉스는 하락·중립 국면이며 유일하게 산출된 셋업(reclaim_long)의 손익비가 0.93으로 1 미만이라 신규 진입 보류·관망이 타당하고, 1,820,709원 종가 회복을 확인한 뒤에야 롱 전환을 검토합니다.",
       "kind": "ticker",
       "symbol": "000660.KS",
-      "published_at": "2026-08-22T13:55:35+09:00",
-      "url": "r/000660-ks-20260822-1355/",
-      "pdf": "000660-ks-20260822-1355.pdf"
+      "name": "SK hynix",
+      "published_at": "2026-08-22T14:06:51+09:00",
+      "url": "r/sk-hynix-000660-ks-20260822/"
     },
     {
       "slug": "setup-check",
@@ -17,8 +17,7 @@
       "kind": "report",
       "symbol": null,
       "published_at": "2026-08-22T13:51:48+09:00",
-      "url": "r/setup-check/",
-      "pdf": "setup-check.pdf"
+      "url": "r/setup-check/"
     }
   ]
 }
