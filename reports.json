@@ -6,7 +6,7 @@
       "summary": "발행 경로(PDF 생성 → 웹 페이지 → GitHub push → Telegram)가 정상 동작하는지 확인하기 위한 점검용 문서이며, 투자 판단 내용은 포함하지 않습니다.",
       "kind": "report",
       "symbol": null,
-      "published_at": "2026-08-22T13:48:26+09:00",
+      "published_at": "2026-08-22T13:51:48+09:00",
       "url": "r/setup-check/",
       "pdf": "setup-check.pdf"
     }
