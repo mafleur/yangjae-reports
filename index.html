@@ -5,9 +5,15 @@
 <title>투자 리포트</title>
 <style>
 :root{--bg:#fbfbfa;--panel:#fff;--fg:#1c1c1a;--muted:#6b6b66;--line:#e3e3df;
---accent:#2f6f4f;--accent-soft:#e8f1ec;--code:#f3f3f0}
+--accent:#2f6f4f;--accent-soft:#e8f1ec;--code:#f3f3f0;
+--pos:#1a7d4f;--neg:#c2402c;--hl:#fff3b8;--hl-fg:#3d3200;
+--danger:#c2402c;--danger-bg:#fdf1ee;--key:#2f6f4f;--key-bg:#eef5f1;
+--info:#5a6b86;--info-bg:#f0f3f8}
 @media (prefers-color-scheme:dark){:root{--bg:#141414;--panel:#1c1c1b;--fg:#e8e8e4;
---muted:#9a9a93;--line:#2e2e2b;--accent:#7dc4a0;--accent-soft:#1e2a24;--code:#232322}}
+--muted:#9a9a93;--line:#2e2e2b;--accent:#7dc4a0;--accent-soft:#1e2a24;--code:#232322;
+--pos:#5fcf98;--neg:#f08b76;--hl:#4a3f10;--hl-fg:#ffe8a3;
+--danger:#f08b76;--danger-bg:#2b1c18;--key:#7dc4a0;--key-bg:#18241e;
+--info:#9db1d0;--info-bg:#1a1e26}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);
 font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
@@ -42,6 +48,20 @@ table{border-collapse:collapse;width:100%;font-size:14px;min-width:420px}
 th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
 th{background:var(--code);font-weight:600}
 .missing{color:#b4553c;font-size:14px}
+.pos{color:var(--pos);font-weight:600;font-variant-numeric:tabular-nums}
+.neg{color:var(--neg);font-weight:600;font-variant-numeric:tabular-nums}
+mark{background:var(--hl);color:var(--hl-fg);padding:0 3px;border-radius:3px}
+td strong,th strong{font-weight:700}
+.callout{border:1px solid var(--line);border-left:4px solid var(--info);
+background:var(--info-bg);border-radius:6px;padding:12px 15px;margin:0 0 18px}
+.callout .ct{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;
+text-transform:uppercase;color:var(--info);margin-bottom:6px}
+.callout p{margin:0 0 7px;font-size:15px}
+.callout p:last-child{margin-bottom:0}
+.callout.danger{border-left-color:var(--danger);background:var(--danger-bg)}
+.callout.danger .ct{color:var(--danger)}
+.callout.key{border-left-color:var(--key);background:var(--key-bg)}
+.callout.key .ct{color:var(--key)}
 .dl{display:inline-block;font-size:13px;text-decoration:none;border:1px solid var(--line);
 border-radius:6px;padding:6px 12px;margin-top:8px}
 .warn{background:var(--accent-soft);border:1px solid var(--line);border-radius:6px;
@@ -64,8 +84,8 @@ padding:15px 17px;margin-bottom:11px;text-decoration:none;color:inherit}
 footer{color:var(--muted);font-size:12px;margin-top:44px;padding-top:14px;
 border-top:1px solid var(--line)}
 </style>
-</head><body><div class="wrap"><header class="site"><h1>투자 리포트</h1><span class="sub">4건 · 최근 갱신 2026-08-24 09:03</span></header><div class="filters"><input id="q" type="search" placeholder="종목·키워드 검색" autocomplete="off"><button class="chip" data-kind="all" aria-pressed="true">전체</button><button class="chip" data-kind="report" aria-pressed="false">리포트</button><button class="chip" data-kind="ticker" aria-pressed="false">종목</button></div><div id="list"></div><footer>본 자료는 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단과 그 결과의 책임은 투자자 본인에게 있습니다.</footer><script>
-const DATA=[{"slug": "ls-electric-010120-ks-20260824", "title": "LS ELECTRIC (010120.KS) 종목 리포트 · 2026-08-24", "summary": "평단 233,000원 대비 -19.74% 상태이나 현재가 187,000원은 박스권 지지선(167,367원)에서 불과 1.23 ATR(하루 평균 변동폭) 위, 7/30 속임수 하락 저점(165,400원) 바로 위 구간이므로 지금 즉시 전량 손절하는 것은 권장하지 않으며, 실행 계획은 ① 일봉 종가 165,400원(속임수 하락 저점)·167,367원(박스 지지선) 이탈 시 전량 손절, ② 반등 시 199,297 / 210,374 / 219,344원 겹침 구간에서 분할 축소입니다.", "kind": "ticker", "symbol": "010120.KS", "name": "LS ELECTRIC", "published_at": "2026-08-24T09:03:42+09:00", "url": "r/ls-electric-010120-ks-20260824/"}, {"slug": "invesco-qqq-trust-series-1-qqq-20260824", "title": "Invesco QQQ Trust, Series 1 (QQQ) 종목 리포트 · 2026-08-24", "summary": "QQQ는 682.94~729.84 박스에 갇힌 중립 구간에 있어 현재가 713.44에서의 신규 매수는 근거가 없으며, 701.70까지 눌릴 때 사거나(손익비 1:3.5) 729.46을 일봉 종가로 넘는 것을 확인한 뒤 따라 붙는 것이 유일한 매수 전략입니다.", "kind": "ticker", "symbol": "QQQ", "name": "Invesco QQQ Trust, Series 1", "published_at": "2026-08-24T08:33:01+09:00", "url": "r/invesco-qqq-trust-series-1-qqq-20260824/"}, {"slug": "sk-hynix-000660-ks-20260822", "title": "SK hynix (000660.KS) 종목 리포트 · 2026-08-22", "summary": "SK하이닉스는 하락·중립 국면이며 유일하게 산출된 셋업(reclaim_long)의 손익비가 0.93으로 1 미만이라 신규 진입 보류·관망이 타당하고, 1,820,709원 종가 회복을 확인한 뒤에야 롱 전환을 검토합니다.", "kind": "ticker", "symbol": "000660.KS", "name": "SK hynix", "published_at": "2026-08-22T14:06:51+09:00", "url": "r/sk-hynix-000660-ks-20260822/"}, {"slug": "setup-check", "title": "발행 파이프라인 점검", "summary": "발행 경로(PDF 생성 → 웹 페이지 → GitHub push → Telegram)가 정상 동작하는지 확인하기 위한 점검용 문서이며, 투자 판단 내용은 포함하지 않습니다.", "kind": "report", "symbol": null, "published_at": "2026-08-22T13:51:48+09:00", "url": "r/setup-check/"}];
+</head><body><div class="wrap"><header class="site"><h1>투자 리포트</h1><span class="sub">4건 · 최근 갱신 2026-08-24 09:39</span></header><div class="filters"><input id="q" type="search" placeholder="종목·키워드 검색" autocomplete="off"><button class="chip" data-kind="all" aria-pressed="true">전체</button><button class="chip" data-kind="report" aria-pressed="false">리포트</button><button class="chip" data-kind="ticker" aria-pressed="false">종목</button></div><div id="list"></div><footer>본 자료는 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단과 그 결과의 책임은 투자자 본인에게 있습니다.</footer><script>
+const DATA=[{"slug": "ls-electric-010120-ks-20260824", "title": "LS ELECTRIC (010120.KS) 종목 리포트 · 2026-08-24", "summary": "평단 233,000원 대비 -20.47%(현재가 185,300원)이나 지금 자리는 주가가 갇힌 박스의 아래쪽(167,367원)에서 1.18 ATR밖에 안 남은 지점이라 즉시 전량 손절은 권하지 않으며, 일봉 종가가 165,400원(7/30 반등 신호가 나온 저점) 또는 167,367원(박스 아래쪽)을 깨면 그때 전량 손절하고, 그 전에는 194,700 / 201,551 / 213,844원 반등 구간에서 나눠 줄이는 것이 실행 계획입니다.", "kind": "ticker", "symbol": "010120.KS", "name": "LS ELECTRIC", "published_at": "2026-08-24T09:39:10+09:00", "url": "r/ls-electric-010120-ks-20260824/"}, {"slug": "invesco-qqq-trust-series-1-qqq-20260824", "title": "Invesco QQQ Trust, Series 1 (QQQ) 종목 리포트 · 2026-08-24", "summary": "QQQ는 682.94~729.84 박스에 갇힌 중립 구간에 있어 현재가 713.44에서의 신규 매수는 근거가 없으며, 701.70까지 눌릴 때 사거나(손익비 1:3.5) 729.46을 일봉 종가로 넘는 것을 확인한 뒤 따라 붙는 것이 유일한 매수 전략입니다.", "kind": "ticker", "symbol": "QQQ", "name": "Invesco QQQ Trust, Series 1", "published_at": "2026-08-24T08:33:01+09:00", "url": "r/invesco-qqq-trust-series-1-qqq-20260824/"}, {"slug": "sk-hynix-000660-ks-20260822", "title": "SK hynix (000660.KS) 종목 리포트 · 2026-08-22", "summary": "SK하이닉스는 하락·중립 국면이며 유일하게 산출된 셋업(reclaim_long)의 손익비가 0.93으로 1 미만이라 신규 진입 보류·관망이 타당하고, 1,820,709원 종가 회복을 확인한 뒤에야 롱 전환을 검토합니다.", "kind": "ticker", "symbol": "000660.KS", "name": "SK hynix", "published_at": "2026-08-22T14:06:51+09:00", "url": "r/sk-hynix-000660-ks-20260822/"}, {"slug": "setup-check", "title": "발행 파이프라인 점검", "summary": "발행 경로(PDF 생성 → 웹 페이지 → GitHub push → Telegram)가 정상 동작하는지 확인하기 위한 점검용 문서이며, 투자 판단 내용은 포함하지 않습니다.", "kind": "report", "symbol": null, "published_at": "2026-08-22T13:51:48+09:00", "url": "r/setup-check/"}];
 const list=document.getElementById('list');
 const q=document.getElementById('q');
 let kind='all';
