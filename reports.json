@@ -1,6 +1,16 @@
 {
   "reports": [
     {
+      "slug": "ishares-phlx-sox-semiconductor-soxx-20260831",
+      "title": "iShares PHLX SOX Semiconductor (SOXX) 종목 리포트 · 2026-08-31",
+      "summary": "SOXX는 457.92~639.91 박스 안에서 매물을 소화 중이며 박스 안쪽 성격은 아직 매집·재분산 어느 쪽도 아닌 중립이므로, 현재가 525.43 추격은 권하지 않고 535.63을 일봉 종가로 회복한 뒤에만 롱 전환하되, 진입 후에는 집행 손절 514.83을 두고 박스 하단 457.92를 일봉 종가로 이탈한 뒤 3거래일 내 회복하지 못하고 반등에서 그 가격이 저항으로 확인되면 시나리오 자체를 폐기합니다.",
+      "kind": "ticker",
+      "symbol": "SOXX",
+      "name": "iShares PHLX SOX Semiconductor",
+      "published_at": "2026-08-31T08:30:00+09:00",
+      "url": "r/ishares-phlx-sox-semiconductor-soxx-20260831/"
+    },
+    {
       "slug": "netflix-inc-nflx-20260831",
       "title": "Netflix, Inc. (NFLX) 종목 리포트 · 2026-08-31",
       "summary": "NFLX는 70.32~103.94 박스의 아래쪽 절반에서 반등 중이며, 신규 매수는 81.74를 일봉 종가로 회복한 뒤에 들어가는 돌파 매수(손익비 8.11)를 1차안으로 하되, 진입 후 일봉 종가가 81.74 아래로 마감하면 관찰 단계에 들어가고 3거래일 안에 종가 회복에 실패한 뒤 반등이 81.74에서 막히면 셋업을 폐기하며, 집행 손절은 이와 별개로 80.61입니다.",
