@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>시황 리포트 · 2026-08-30</title>
+<style>
+:root{--bg:#fbfbfa;--panel:#fff;--fg:#1c1c1a;--muted:#6b6b66;--line:#e3e3df;
+--accent:#2f6f4f;--accent-soft:#e8f1ec;--code:#f3f3f0;
+--pos:#1a7d4f;--neg:#c2402c;--hl:#fff3b8;--hl-fg:#3d3200;
+--danger:#c2402c;--danger-bg:#fdf1ee;--key:#2f6f4f;--key-bg:#eef5f1;
+--info:#5a6b86;--info-bg:#f0f3f8}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--panel:#1c1c1b;--fg:#e8e8e4;
+--muted:#9a9a93;--line:#2e2e2b;--accent:#7dc4a0;--accent-soft:#1e2a24;--code:#232322;
+--pos:#5fcf98;--neg:#f08b76;--hl:#4a3f10;--hl-fg:#ffe8a3;
+--danger:#f08b76;--danger-bg:#2b1c18;--key:#7dc4a0;--key-bg:#18241e;
+--info:#9db1d0;--info-bg:#1a1e26}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+-webkit-text-size-adjust:100%}
+.wrap{max-width:820px;margin:0 auto;padding:28px 20px 80px}
+a{color:var(--accent)}
+header.site{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:22px}
+header.site h1{font-size:19px;margin:0;letter-spacing:-.01em}
+header.site .sub{color:var(--muted);font-size:13px}
+.back{font-size:13px;text-decoration:none}
+.meta{color:var(--muted);font-size:13px;margin:0 0 18px}
+.badge{display:inline-block;background:var(--accent-soft);color:var(--accent);
+border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;margin-right:8px}
+h1.title{font-size:27px;line-height:1.3;margin:0 0 6px;letter-spacing:-.02em}
+.lede{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+border-radius:6px;padding:14px 16px;margin:0 0 26px;font-size:16px;font-weight:500}
+.lede .lbl{display:block;color:var(--muted);font-size:11px;font-weight:700;
+letter-spacing:.09em;text-transform:uppercase;margin-bottom:5px}
+h2{font-size:20px;margin:34px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin:24px 0 8px}
+h4{font-size:15px;margin:20px 0 6px;color:var(--muted)}
+p{margin:0 0 12px}
+ul{margin:0 0 14px;padding-left:20px}
+li{margin-bottom:5px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+figure{margin:20px 0}
+figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+figcaption{color:var(--muted);font-size:13px;margin-top:7px;text-align:center}
+.table-wrap{overflow-x:auto;margin:0 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:420px}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--code);font-weight:600}
+.missing{color:#b4553c;font-size:14px}
+.pos{color:var(--pos);font-weight:600;font-variant-numeric:tabular-nums}
+.neg{color:var(--neg);font-weight:600;font-variant-numeric:tabular-nums}
+mark{background:var(--hl);color:var(--hl-fg);padding:0 3px;border-radius:3px}
+td strong,th strong{font-weight:700}
+.callout{border:1px solid var(--line);border-left:4px solid var(--info);
+background:var(--info-bg);border-radius:6px;padding:12px 15px;margin:0 0 18px}
+.callout .ct{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;
+text-transform:uppercase;color:var(--info);margin-bottom:6px}
+.callout p{margin:0 0 7px;font-size:15px}
+.callout p:last-child{margin-bottom:0}
+.callout.danger{border-left-color:var(--danger);background:var(--danger-bg)}
+.callout.danger .ct{color:var(--danger)}
+.callout.key{border-left-color:var(--key);background:var(--key-bg)}
+.callout.key .ct{color:var(--key)}
+.dl{display:inline-block;font-size:13px;text-decoration:none;border:1px solid var(--line);
+border-radius:6px;padding:6px 12px;margin-top:8px}
+.warn{background:var(--accent-soft);border:1px solid var(--line);border-radius:6px;
+padding:10px 14px;font-size:13px;color:var(--muted);margin:0 0 20px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filters input{flex:1;min-width:160px;padding:8px 12px;border:1px solid var(--line);
+border-radius:6px;background:var(--panel);color:var(--fg);font-size:14px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--muted);
+border-radius:999px;padding:6px 13px;font-size:13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);
+border-color:var(--accent);font-weight:600}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;
+padding:15px 17px;margin-bottom:11px;text-decoration:none;color:inherit}
+.card:hover{border-color:var(--accent)}
+.card h2{font-size:17px;margin:0 0 5px;border:0;padding:0}
+.card .sum{color:var(--muted);font-size:14px;margin:0}
+.card .row{display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
+.card time{color:var(--muted);font-size:12px}
+.empty{color:var(--muted);text-align:center;padding:40px 0;font-size:14px}
+footer{color:var(--muted);font-size:12px;margin-top:44px;padding-top:14px;
+border-top:1px solid var(--line)}
+</style>
+</head><body><div class="wrap"><header class="site"><a class="back" href="../../index.html">← 전체 리포트</a></header>
+<p class="meta"><span class="badge">시황</span>2026-08-30 09:29</p>
+<h1 class="title">시황 리포트 · 2026-08-30</h1>
+<div class="lede"><span class="lbl">한 줄 결론</span>지수는 아직 20일·50일 이동평균 위에 있고 투자심리는 탐욕 구간(S&amp;P 500 71.3 · 나스닥 73.0)이지만, 주도권이 에너지·헬스케어·소재로 옮겨가고 경기소비재·산업재·유틸리티는 20일·50일선을 모두 내준 방어적 순환이 진행 중이므로 <mark>신규 위험자산 확대는 보류</mark>하며, <strong>S&amp;P 500 일봉 종가가 20일 이동평균 7,667.63 아래로 내려간 뒤 이어지는 반등에서 이 선을 종가로 되찾지 못하면 강세 판단을 폐기</strong>합니다.</div>
+<aside class="callout danger"><span class="ct">무효화 기준 — 3단계로 봅니다</span><p><strong>① 관찰</strong>: S&amp;P 500 일봉 종가가 20일 이동평균 7,667.63을 하회. 한 번의 이탈은 무효가 아닙니다.</p><p><strong>② 경고</strong>: 이탈 후 3거래일 안에 종가로 7,667.63을 회복하지 못함. 이 시점부터 신규 매수를 중단합니다.</p><p><strong>③ 폐기</strong>: 반등이 7,667.63에서 막히고 이 선이 저항으로 바뀌거나, 50일 이동평균 7,571.34마저 종가로 내줄 때. 강세 판단을 접고 현금 비중을 올립니다.</p></aside>
+<hr>
+<h3>기준 시점과 데이터 한계</h3>
+<p>마지막으로 확정된 종가는 <strong>2026년 8월 28일(금)</strong>입니다. 오늘은 토요일이라 새 거래일 데이터가 없습니다.</p>
+<p>다만 이번 조회에서 <strong>지수와 섹터 ETF 전 종목의 당일 등락률이 값 없음으로 반환</strong>되어, 하루치 상승·하락 퍼센트는 이 브리핑에 싣지 않습니다. 수치를 추정해 메우지 않았습니다. 대신 8월 28일 종가와 함께 정상적으로 산출된 <strong>이동평균 대비 위치와 RSI(상대강도지수 — 최근 상승폭과 하락폭의 비율을 0~100으로 나타낸 과열·침체 지표)</strong>로 섹터 간 우열을 판정했습니다.</p>
+<hr>
+<h3>주도섹터 — 경기민감에서 자원·방어로 무게중심 이동</h3>
+<div class="table-wrap"><table><thead><tr><th>섹터 (ETF)</th><th>RSI</th><th>20일선</th><th>50일선</th><th>박스 내부 판정</th></tr></thead><tbody><tr><td><strong>에너지 (XLE)</strong></td><td><strong>60.1</strong></td><td>위</td><td>위</td><td>중립</td></tr><tr><td><strong>헬스케어 (XLV)</strong></td><td><strong>58.3</strong></td><td>위</td><td>위</td><td>분산 우위</td></tr><tr><td><strong>기술 (XLK)</strong></td><td><strong>57.8</strong></td><td>위</td><td>위</td><td>분산 우위</td></tr><tr><td><strong>소재 (XLB)</strong></td><td><strong>57.4</strong></td><td>위</td><td>위</td><td><strong>매집 우위</strong></td></tr><tr><td>금융 (XLF)</td><td>56.4</td><td>위</td><td>위</td><td>중립</td></tr><tr><td>커뮤니케이션 (XLC)</td><td>51.0</td><td>위</td><td>위</td><td>분산 우위</td></tr><tr><td>필수소비재 (XLP)</td><td>47.9</td><td>아래</td><td>아래</td><td>판정 불가</td></tr><tr><td>경기소비재 (XLY)</td><td>46.1</td><td>아래</td><td>아래</td><td>중립</td></tr><tr><td>리츠 (XLRE)</td><td>45.5</td><td>아래</td><td>아래</td><td>중립</td></tr><tr><td>산업재 (XLI)</td><td>41.4</td><td>아래</td><td>아래</td><td>중립</td></tr><tr><td><strong>유틸리티 (XLU)</strong></td><td><strong>39.7</strong></td><td>아래</td><td>아래</td><td>판정 불가</td></tr></tbody></table></div>
+<p>섹터 상대강도는 미국 SPDR 섹터 ETF 기준이며, 한국·일본은 지수 흐름만 제공됩니다.</p>
+<p><strong>읽는 법</strong>: 상위 6개는 20일선과 50일선을 모두 위에 두고 있고, 하위 5개는 두 선을 모두 아래에 두고 있습니다. 중간 지대가 거의 없다는 뜻이며, <mark>자금이 섹터를 고르게 밀어올리는 국면이 아니라 한쪽에서 빼서 다른 쪽으로 옮기는 국면</mark>입니다.</p>
+<p>주목할 점은 세 가지입니다.</p>
+<p>첫째, <strong>에너지가 1위</strong>입니다. 인플레이션이 다시 문제가 되는 국면에서 나타나는 전형적인 순서입니다.</p>
+<p>둘째, <strong>금리에 민감한 섹터가 나란히 최하위권</strong>입니다. 유틸리티 39.7, 리츠 45.5로 둘 다 20일선·50일선 아래입니다. 반대로 금리 상승에서 예대마진이 개선되는 금융은 56.4로 두 선 위에 있습니다. 시장은 이미 금리가 내려가는 쪽이 아니라 <strong>버티거나 올라가는 쪽</strong>에 자금을 배치하고 있습니다.</p>
+<p>셋째, <strong>경기소비재(XLY)가 기술(XLK)보다 크게 뒤처져 있습니다.</strong> 같은 성장 진영인데 소비 쪽만 20일선·50일선을 모두 내줬습니다. 아래 고용 뉴스와 맞물리는 대목입니다.</p>
+<p>한편 기술(XLK)과 헬스케어(XLV)는 RSI가 높으면서도 박스 안쪽이 <strong>분산 우위</strong>로 판정됐습니다. 지지 구간을 시험할 때마다 매도 거래량이 늘고 박스 안 저점이 낮아지고 있다는 뜻입니다. 지수를 떠받치는 위치에 있지만 내부 손바뀜은 매수자에게 유리하지 않습니다. 반대로 <strong>소재(XLB)만 매집 우위</strong>로 판정됐습니다. 박스 안에서 눌릴 때마다 저점이 높아지고 상승할 때 거래량이 더 실린다는 뜻으로, 상위권 중 내부 수급이 가장 건전합니다.</p>
+<hr>
+<h3>지수 현황</h3>
+<div class="table-wrap"><table><thead><tr><th>지수</th><th>8/28 종가</th><th>20일선</th><th>50일선</th><th>RSI</th></tr></thead><tbody><tr><td>S&amp;P 500</td><td>7,730.99</td><td>7,667.63 (위)</td><td>7,571.34 (위)</td><td>58.5</td></tr><tr><td>나스닥</td><td>26,541.35</td><td>26,205.77 (위)</td><td>25,974.22 (위)</td><td>56.8</td></tr><tr><td><strong>코스피</strong></td><td><strong>6,912.37</strong></td><td>6,726.09 (위)</td><td><strong>6,939.16 (아래)</strong></td><td>52.5</td></tr><tr><td>니케이 225</td><td>66,131.98</td><td><strong>66,269.82 (아래)</strong></td><td>66,022.10 (위)</td><td>49.3</td></tr></tbody></table></div>
+<p>미국 두 지수만 두 이동평균을 모두 위에 두고 있습니다. <strong>코스피는 50일선 6,939.16을 아직 회복하지 못한 상태</strong>로, 이 선이 당면 저항입니다. 다만 코스피는 박스 안쪽이 <strong>매집 우위</strong> 후보로 판정돼, 상위 4개 시장 중 내부 수급 방향은 가장 나쁘지 않습니다. 6,939.16을 일봉 종가로 되찾으면 관망에서 매수로 전환할 근거가 생깁니다.</p>
+<hr>
+<h3>핵심 뉴스 3건</h3>
+<h4>1. 워시 연준 의장, 잭슨홀에서 인플레이션 경고 강화 — 금리 인상 가능성 시사</h4>
+<p>*CNBC, 8월 28일*</p>
+<p>7월 기자회견에서 모호했던 입장을 잭슨홀에서 정리하며 <strong>금리를 더 올려야 하는 근거</strong>를 분명히 제시했습니다.</p>
+<p><strong>왜 중요한가</strong>: 지금 섹터 순위표가 그대로 이 발언의 결과물입니다. 유틸리티가 꼴찌(39.7), 리츠가 하위권(45.5)인 반면 금융이 상위권(56.4), 에너지가 1위(60.1)인 배열은 금리 인하가 아니라 인상을 반영한 배치입니다. 문제는 <strong>투자심리가 여전히 탐욕 구간</strong>이고 변동성지수(VIX)가 14.5로 낮다는 점입니다. 인상 리스크를 섹터 배치로는 반영하면서 지수 레벨과 변동성 가격에는 반영하지 않은 상태이며, <mark>둘 중 하나는 조정될 수밖에 없습니다</mark>.</p>
+<h4>2. 다음 주 고용지표와 브로드컴 실적이 랠리의 다음 관문</h4>
+<p>*Reuters, 8월 28일 / 관련: MarketWatch &quot;채용 둔화, 당분간 회복 어렵다&quot;, 8월 29일*</p>
+<p>MarketWatch는 올해 초 고용 급증 이후 여름 들어 채용이 다시 둔화됐고 구인 공고도 줄었다고 전했습니다.</p>
+<p><strong>왜 중요한가</strong>: 위 워시 발언과 겹치면 가장 나쁜 조합입니다. <strong>고용은 식는데 금리는 올려야 하는 상황</strong>에서는 방어 섹터와 성장 섹터가 동시에 밀립니다. 실제로 경기소비재(XLY 46.1)와 필수소비재(XLP 47.9)가 나란히 20일선·50일선 아래인 것이 소비 둔화를 먼저 반영한 흐름으로 보입니다. 브로드컴 실적은 기술 섹터의 분산 우위 판정이 되돌려질지 확인하는 자리입니다.</p>
+<h4>3. 베선트 재무장관, &quot;무질서한 엔화 움직임은 세계 시장을 불안정하게 만들 수 있다&quot;</h4>
+<p>*Reuters, 8월 29일*</p>
+<p><strong>왜 중요한가</strong>: 재무장관이 직접 엔화를 언급한 것은 환율 변동폭이 정책 당국의 관심 범위에 들어왔다는 뜻입니다. 니케이는 이미 20일선 66,269.82를 종가로 내준 상태(RSI 49.3)로 주요 4개 시장 중 가장 약합니다. 엔화가 급격히 움직이면 저금리 엔화를 빌려 다른 자산에 투자한 자금이 되돌려지는 과정에서 아시아 증시가 함께 흔들리며, <strong>50일선 아래에 있는 코스피가 직접 영향권</strong>입니다.</p>
+<hr>
+<h3>투자심리 (공포·탐욕 지수)</h3>
+<p>아래 점수는 공포·탐욕 지수를 <strong>대체 방식으로 추정한 값(프록시)</strong>입니다. 원본 지수를 그대로 받아온 것이 아니라 모멘텀·RSI·변동성·안전자산 선호 네 항목을 합쳐 0~100으로 환산한 것이며, 0에 가까울수록 공포, 100에 가까울수록 탐욕입니다.</p>
+<figure><a href="feargreed_20260830.png" target="_blank" rel="noopener"><img src="feargreed_20260830.png" alt="공포·탐욕 지수 게이지 — S&amp;P 500 / NASDAQ / KOSPI" loading="lazy"></a><figcaption>공포·탐욕 지수 게이지 — S&amp;P 500 / NASDAQ / KOSPI</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>시장</th><th>점수</th><th>판정</th></tr></thead><tbody><tr><td>S&amp;P 500</td><td>71.3</td><td>탐욕</td></tr><tr><td>나스닥</td><td>73.0</td><td>탐욕</td></tr><tr><td>코스피</td><td>51.3</td><td>중립</td></tr></tbody></table></div>
+<p>미국 점수를 끌어올린 것은 주로 <strong>변동성 항목 85.0</strong>입니다. VIX가 14.5로 낮게 형성돼 있어 나온 값이며, 실제 방향성 지표인 모멘텀(71.3)·RSI(58.5)보다 높습니다. 즉 <mark>미국의 탐욕 신호는 상승 확신보다 &quot;아무 일도 없을 것&quot;이라는 낮은 변동성 전망에서 나온 것</mark>이며, 1번 뉴스의 금리 인상 리스크와 정면으로 어긋납니다.</p>
+<aside class="callout info"><span class="ct">코스피 51.3은 &quot;중립&quot;으로 읽으면 안 됩니다</span><p>코스피 계산에 쓰이는 한국 변동성지수(VKOSPI) 조회가 실패해, 최근 20일간 <strong>실제로 움직인 폭을 1년 기준으로 환산한 값</strong>으로 대체됐습니다. 대체값 79.8%가 원래 눈금 범위(10~40) 밖이라 변동성 항목이 최저점 0.0에 고정됐고, 반대로 안전자산 항목은 최고점 100.0에 고정됐습니다. <strong>51.3이라는 중간값은 서로 반대 방향으로 끝까지 밀린 두 항목이 상쇄된 결과</strong>이지, 심리가 실제로 중립이라는 뜻이 아닙니다. 코스피 심리 판단은 이번 회차에서 신뢰하지 않는 편이 안전합니다.</p></aside>
+<hr>
+<h3>정리</h3>
+<aside class="callout key"><span class="ct">지금 시장의 구도</span><p><strong>표면</strong>: 미국 지수는 20일선·50일선 위, 심리는 탐욕, 변동성은 낮음.</p><p><strong>내부</strong>: 주도권이 에너지·소재·헬스케어로 이동, 금리민감주와 소비주는 두 이동평균 모두 이탈, 기술·헬스케어는 상승 중에도 내부 손바뀜이 매도 우위.</p><p><strong>불일치</strong>: 섹터 배치는 금리 인상을 반영했는데 지수 레벨과 VIX 14.5는 반영하지 않았습니다.</p></aside>
+<p>행동 기준은 <strong>신규 위험자산 확대 보류</strong>입니다. 보유 포지션을 정리하라는 뜻이 아니라, 지금 지수가 두 이동평균 위에 있는 상태에서 추가로 늘릴 자리는 아니라는 의미입니다. 다음 주 고용지표와 브로드컴 실적이 위 불일치를 어느 쪽으로 정리할지 확인한 뒤 움직여도 늦지 않습니다.</p>
+<ul><li><strong>미국</strong>: S&amp;P 500 20일선 7,667.63을 종가 기준으로 지키는 동안만 보유 유지.</li><li><strong>한국</strong>: 코스피 50일선 6,939.16 종가 회복 전까지 신규 진입 관망. 회복 시 매수 전환.</li><li><strong>관심 방향</strong>: 상위권 중 박스 안쪽이 매집 우위로 판정된 곳은 <strong>소재(XLB)</strong> 한 곳입니다.</li></ul>
+<hr>
+<p>*본 자료는 투자자문이 아니라 참고 정보입니다. 모든 수치는 2026년 8월 28일 종가 기준이며, 당일 등락률은 데이터가 반환되지 않아 포함하지 않았습니다. 투자 판단과 그 결과에 대한 책임은 투자자 본인에게 있습니다.*</p>
+<p><a class="dl" href="report.md">Markdown 원문</a></p>
+<footer>본 자료는 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단과 그 결과의 책임은 투자자 본인에게 있습니다.</footer></div></body></html>
