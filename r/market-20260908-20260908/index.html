@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>시황 리포트 · 2026-09-08</title>
+<style>
+:root{--bg:#fbfbfa;--panel:#fff;--fg:#1c1c1a;--muted:#6b6b66;--line:#e3e3df;
+--accent:#2f6f4f;--accent-soft:#e8f1ec;--code:#f3f3f0;
+--pos:#1a7d4f;--neg:#c2402c;--hl:#fff3b8;--hl-fg:#3d3200;
+--danger:#c2402c;--danger-bg:#fdf1ee;--key:#2f6f4f;--key-bg:#eef5f1;
+--info:#5a6b86;--info-bg:#f0f3f8}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--panel:#1c1c1b;--fg:#e8e8e4;
+--muted:#9a9a93;--line:#2e2e2b;--accent:#7dc4a0;--accent-soft:#1e2a24;--code:#232322;
+--pos:#5fcf98;--neg:#f08b76;--hl:#4a3f10;--hl-fg:#ffe8a3;
+--danger:#f08b76;--danger-bg:#2b1c18;--key:#7dc4a0;--key-bg:#18241e;
+--info:#9db1d0;--info-bg:#1a1e26}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+-webkit-text-size-adjust:100%}
+.wrap{max-width:820px;margin:0 auto;padding:28px 20px 80px}
+a{color:var(--accent)}
+header.site{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:22px}
+header.site h1{font-size:19px;margin:0;letter-spacing:-.01em}
+header.site .sub{color:var(--muted);font-size:13px}
+.back{font-size:13px;text-decoration:none}
+.meta{color:var(--muted);font-size:13px;margin:0 0 18px}
+.badge{display:inline-block;background:var(--accent-soft);color:var(--accent);
+border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;margin-right:8px}
+h1.title{font-size:27px;line-height:1.3;margin:0 0 6px;letter-spacing:-.02em}
+.lede{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+border-radius:6px;padding:14px 16px;margin:0 0 26px;font-size:16px;font-weight:500}
+.lede .lbl{display:block;color:var(--muted);font-size:11px;font-weight:700;
+letter-spacing:.09em;text-transform:uppercase;margin-bottom:5px}
+h2{font-size:20px;margin:34px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin:24px 0 8px}
+h4{font-size:15px;margin:20px 0 6px;color:var(--muted)}
+p{margin:0 0 12px}
+ul{margin:0 0 14px;padding-left:20px}
+li{margin-bottom:5px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+figure{margin:20px 0}
+figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+figcaption{color:var(--muted);font-size:13px;margin-top:7px;text-align:center}
+.table-wrap{overflow-x:auto;margin:0 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:420px}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--code);font-weight:600}
+.missing{color:#b4553c;font-size:14px}
+.note{color:var(--muted);font-size:13px;line-height:1.6;margin:-2px 0 16px}
+.pos{color:var(--pos);font-weight:600;font-variant-numeric:tabular-nums}
+.neg{color:var(--neg);font-weight:600;font-variant-numeric:tabular-nums}
+mark{background:var(--hl);color:var(--hl-fg);padding:0 3px;border-radius:3px}
+td strong,th strong{font-weight:700}
+.callout{border:1px solid var(--line);border-left:4px solid var(--info);
+background:var(--info-bg);border-radius:6px;padding:12px 15px;margin:0 0 18px}
+.callout .ct{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;
+text-transform:uppercase;color:var(--info);margin-bottom:6px}
+.callout p{margin:0 0 7px;font-size:15px}
+.callout p:last-child{margin-bottom:0}
+.callout.danger{border-left-color:var(--danger);background:var(--danger-bg)}
+.callout.danger .ct{color:var(--danger)}
+.callout.key{border-left-color:var(--key);background:var(--key-bg)}
+.callout.key .ct{color:var(--key)}
+.dl{display:inline-block;font-size:13px;text-decoration:none;border:1px solid var(--line);
+border-radius:6px;padding:6px 12px;margin-top:8px}
+.warn{background:var(--accent-soft);border:1px solid var(--line);border-radius:6px;
+padding:10px 14px;font-size:13px;color:var(--muted);margin:0 0 20px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filters input{flex:1;min-width:160px;padding:8px 12px;border:1px solid var(--line);
+border-radius:6px;background:var(--panel);color:var(--fg);font-size:14px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--muted);
+border-radius:999px;padding:6px 13px;font-size:13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);
+border-color:var(--accent);font-weight:600}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;
+padding:15px 17px;margin-bottom:11px;text-decoration:none;color:inherit}
+.card:hover{border-color:var(--accent)}
+.card h2{font-size:17px;margin:0 0 5px;border:0;padding:0}
+.card .sum{color:var(--muted);font-size:14px;margin:0}
+.card .row{display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
+.card time{color:var(--muted);font-size:12px}
+.empty{color:var(--muted);text-align:center;padding:40px 0;font-size:14px}
+footer{color:var(--muted);font-size:12px;margin-top:44px;padding-top:14px;
+border-top:1px solid var(--line)}
+</style>
+</head><body><div class="wrap"><header class="site"><a class="back" href="../../index.html">← 전체 리포트</a></header>
+<p class="meta"><span class="badge">시황</span>2026-09-08 12:20</p>
+<h1 class="title">시황 리포트 · 2026-09-08</h1>
+<div class="lede"><span class="lbl">한 줄 결론</span>미국은 직전 거래일(9월 4일)에 기술주만 오르고 나머지 대부분이 밀린 좁은 시장이었던 반면, 오늘 아시아에서는 코스피가 <span class="pos">+1.90%</span> 급등해 온도차가 뚜렷합니다. <mark>반도체 공급망 쪽 자금 조달·경계 기사가 동시에 나온 점</mark>이 이번 주 위험 요인이며, 미국 지수가 이번 주 물가지표를 확인하기 전까지는 지수 추종보다 주도 섹터 확인이 우선입니다. 미국 기술 섹터가 하락으로 돌아서거나 코스피가 오늘 저가 7,018.53 아래로 종가 마감하면 이 판단은 성립하지 않습니다.</div>
+<aside class="callout danger"><span class="ct">이 시황 판단이 틀렸다고 볼 조건</span><p>① 미국 기술 섹터(XLK)가 다음 거래일에 하락 마감해 지수를 방어하던 유일한 축이 사라지는 경우 — 나머지 10개 섹터 중 오른 것은 산업재 <span class="pos">+0.41%</span>, 유틸리티 <span class="pos">+0.12%</span> 둘뿐이라 대체할 곳이 없습니다.</p><p>② 코스피가 오늘 장중 저가인 7,018.53 아래로 일봉 종가를 마감하는 경우 — 오늘 <span class="pos">+1.90%</span> 상승분을 되돌린 것이므로 한국 쪽 수급 우위라는 전제가 사라집니다.</p><p>③ 변동성지수(VIX)가 현재 15.3에서 뚜렷하게 올라오는 경우 — 미국의 탐욕 판정 65.0은 대부분 이 낮은 변동성에서 나온 값이라, 그 전제가 바뀌면 심리 판정 자체를 다시 봐야 합니다.</p></aside>
+<p class="note">이 브리핑은 참고 정보이며 투자자문이 아닙니다. 종목·업종 판단은 본인 책임 하에 하시기 바랍니다.</p>
+<h3>지수 현황</h3>
+<div class="table-wrap"><table><thead><tr><th>지수</th><th>종가</th><th>등락</th><th>기준일</th></tr></thead><tbody><tr><td>S&amp;P 500</td><td>7,718.60</td><td><strong><span class="neg">-0.38%</span></strong></td><td>9월 4일 (미국 직전 거래일)</td></tr><tr><td>나스닥 종합</td><td>26,506.99</td><td><strong><span class="neg">-0.29%</span></strong></td><td>9월 4일 (미국 직전 거래일)</td></tr><tr><td>코스피</td><td>7,128.43</td><td><strong><span class="pos">+1.90%</span></strong></td><td>9월 8일</td></tr><tr><td>닛케이 225</td><td>66,445.13</td><td><strong><span class="pos">+0.07%</span></strong></td><td>9월 8일</td></tr></tbody></table></div>
+<p>미국은 9월 7일이 휴장이어서 가장 최근 종가가 9월 4일 자료입니다. 코스피는 오늘 장중 저가 7,018.53에서 고가 7,141.04까지 올라 고가 부근에서 마감했고, 닛케이는 장중 65,763.11까지 밀렸다가 회복해 보합으로 끝났습니다. 아시아 두 지수의 폭이 크게 갈렸다는 점에서 오늘 상승은 지역 전반이 아니라 한국 쪽 수급에 치우친 움직임입니다.</p>
+<h3>주도 섹터와 부진 섹터</h3>
+<p>섹터 상대강도는 미국 SPDR 섹터 ETF 기준이며, 한국·일본은 지수 등락만 제공됩니다.</p>
+<div class="table-wrap"><table><thead><tr><th>구분</th><th>섹터</th><th>ETF</th><th>등락</th></tr></thead><tbody><tr><td>주도</td><td>기술</td><td>XLK</td><td><strong><span class="pos">+0.70%</span></strong></td></tr><tr><td>주도</td><td>산업재</td><td>XLI</td><td><strong><span class="pos">+0.41%</span></strong></td></tr><tr><td>주도</td><td>유틸리티</td><td>XLU</td><td><strong><span class="pos">+0.12%</span></strong></td></tr><tr><td>부진</td><td>헬스케어</td><td>XLV</td><td><strong><span class="neg">-1.04%</span></strong></td></tr><tr><td>부진</td><td>커뮤니케이션 서비스</td><td>XLC</td><td><strong><span class="neg">-1.19%</span></strong></td></tr><tr><td>부진</td><td>경기소비재</td><td>XLY</td><td><strong><span class="neg">-1.33%</span></strong></td></tr></tbody></table></div>
+<p>11개 섹터 중 오른 것은 세 개뿐이고, 그중 유틸리티는 <span class="pos">+0.12%</span>로 사실상 제자리입니다. <mark>실질적으로는 기술과 산업재 두 섹터가 지수 하락을 방어한 구도</mark>입니다. 반대편에서는 경기소비재 <span class="neg">-1.33%</span>, 커뮤니케이션 서비스 <span class="neg">-1.19%</span>로 소비·광고 관련 수요에 연동되는 쪽이 가장 많이 밀렸고, 금융 <span class="neg">-0.79%</span>, 에너지 <span class="neg">-0.87%</span>도 함께 내렸습니다. 지수 하락폭(<span class="neg">-0.38%</span>)보다 대부분 섹터의 하락폭이 큰 것은 시가총액 상위 기술주가 지수를 떠받쳤다는 뜻이며, 이런 구도에서는 지수만 보고 시장 체력을 판단하기 어렵습니다.</p>
+<aside class="callout key"><span class="ct">오늘 확인할 것</span><p>미국 기술주가 지수를 홀로 받치는 구도가 이어지는지, 아니면 오늘 코스피 <span class="pos">+1.90%</span>처럼 상승 종목이 넓어지는지입니다. 기술주가 흔들리면 지수를 방어할 다른 섹터가 현재로선 없습니다.</p></aside>
+<h3>핵심 뉴스 3건</h3>
+<p><strong>① 엔비디아 협력사 위스트론, 15억 달러 규모 해외 주식 매각 발표 후 주가 하락</strong> ([CNBC, 9월 8일](https://www.cnbc.com/2026/09/08/nvidia-supplier-wistron-share-sale.html)) AI 서버 조립을 맡는 대만 협력사가 대규모 증자에 나섰다는 것은 증설 자금 수요가 여전하다는 신호지만, 발표 직후 주가는 하락했습니다. 기존 주주 지분이 희석되는 부담을 시장이 먼저 반영한 것으로, AI 공급망 종목의 주가가 더 이상 수주·증설 소식만으로 오르지 않는 국면이라는 점을 보여줍니다. 오늘 코스피 상승도 반도체 비중이 큰 시장인 만큼, 이 흐름은 국내 관련주에 직접 걸리는 사안입니다.</p>
+<p><strong>② 반도체 주식 투자자 경계 — 환율 흐름이 추가 약세를 예고할 수 있다</strong> ([MarketWatch, 9월 7일](https://www.marketwatch.com/story/chip-stock-investors-beware-these-charts-could-warn-of-further-weakness-ahead-1bd890cc?mod=mw_rss_topstories)) 반도체 종목으로 들어오고 나가는 자금의 방향을 통화 시장에서 먼저 읽을 수 있다는 지적입니다. 미국에서 기술 섹터가 유일한 주도 섹터인 지금, 그 기술 섹터의 핵심인 반도체에 경계 신호가 붙는다면 지수를 방어하던 한 축이 사라진다는 의미입니다. ①번 뉴스와 방향이 같다는 점에서 개별 종목 이슈가 아니라 업종 전반의 자금 흐름 문제로 보는 편이 맞습니다.</p>
+<p><strong>③ 이번 주 미국 증시는 물가지표가 지배 — 휴일로 단축된 한 주</strong> ([CNBC, 9월 7일](https://www.cnbc.com/2026/09/07/here-are-the-3-big-things-were-watching-in-this-holiday-shortened-trading-week.html)) 9월 7일 휴장으로 거래일이 줄어든 데다 물가지표 발표가 예정돼 있어, 발표 전까지는 거래량이 얇은 상태에서 가격이 크게 움직일 수 있습니다. 미국의 공포·탐욕 지표가 65.0(탐욕)으로 이미 낙관 쪽에 서 있어, 물가지표가 예상과 어긋날 경우 되돌림의 폭이 커질 수 있는 위치입니다. 구체적 발표 일자는 이번 브리핑에서 사용한 자료로 확인하지 못했으므로, 날짜는 별도 매크로 확인이 필요합니다.</p>
+<h3>공포·탐욕 지표 (프록시)</h3>
+<div class="table-wrap"><table><thead><tr><th>시장</th><th>점수</th><th>판정</th></tr></thead><tbody><tr><td>S&amp;P 500</td><td>65.0</td><td>탐욕</td></tr><tr><td>나스닥</td><td>64.6</td><td>탐욕</td></tr><tr><td>코스피</td><td>54.3</td><td>중립</td></tr></tbody></table></div>
+<p>세 수치 모두 원본 지표가 아니라 가격·변동성·안전자산 흐름으로 대신 계산한 값(프록시)입니다. 미국은 변동성 항목이 82.3으로 가장 높은데, 이는 변동성지수(VIX, 시장이 예상하는 향후 30일 변동폭)가 15.3으로 낮게 유지된 결과입니다. 즉 미국의 탐욕 판정은 주가가 크게 올라서라기보다 <mark>시장이 앞으로의 흔들림을 거의 예상하지 않고 있다는 데서 나옵니다</mark>. 코스피는 54.3으로 중립이며, 오늘 <span class="pos">+1.90%</span> 상승에도 아직 낙관 구간에 들어서지 않았습니다.</p>
+<figure><a href="feargreed_20260908.png" target="_blank" rel="noopener"><img src="feargreed_20260908.png" alt="공포·탐욕 게이지" loading="lazy"></a><figcaption>공포·탐욕 게이지</figcaption></figure>
+<aside class="callout info"><span class="ct">코스피 지표의 한계</span><p>코스피 변동성 항목은 한국 변동성지수(VKOSPI) 조회가 되지 않아 최근 20일간 실제로 움직인 폭(연 환산 45.5%)으로 대체해 계산했습니다. 눈금이 10~40 범위로 맞춰져 있어 45.5는 그 밖에 놓이고, 결과적으로 이 항목 점수가 0.0에 고정됐습니다. 같은 방향의 변화를 구분하지 못하는 상태이므로, 코스피 54.3은 미국 두 수치만큼 신뢰하기 어렵습니다. 또한 유틸리티 ETF(XLU)의 발행주식수 조회가 실패했으나 등락률 산출에는 영향이 없습니다.</p></aside>
+<h3>정리</h3>
+<p>미국 기술·산업재 두 섹터가 지수를 방어하는 좁은 시장이고, 그 방어축인 반도체에 자금 조달과 자금 흐름 경계 기사가 같은 주에 겹쳤습니다. 미국 쪽 심리는 이미 탐욕(65.0)에 서 있어 물가지표를 앞두고 되돌림에 취약한 위치이며, 반대로 코스피는 오늘 <span class="pos">+1.90%</span> 올랐음에도 심리는 중립(54.3)이라 상단이 곧바로 막힐 자리는 아닙니다. 다만 코스피 지표는 위에 적은 계산상 한계가 있어 그대로 받아들이기 어렵습니다.</p>
+<p class="note">본 자료는 공개 데이터에 기반한 참고 정보이며 투자자문이 아닙니다. 최종 판단과 책임은 투자자 본인에게 있습니다.</p>
+<p><a class="dl" href="report.md">Markdown 원문</a></p>
+<footer>본 자료는 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단과 그 결과의 책임은 투자자 본인에게 있습니다.</footer></div></body></html>
