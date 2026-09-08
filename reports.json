@@ -1,6 +1,16 @@
 {
   "reports": [
     {
+      "slug": "holdings-US-20260908",
+      "title": "보유종목 점검 · 2026-09-08",
+      "summary": "보유종목 10개 중 3개(삼성전자 (005930.KS), SK하이닉스 (000660.KS), LS ELECTRIC (010120.KS))가 리포트가 제시한 가격대를 건드려 확인이 필요합니다. 아직 분석하지 않은 2개(Fluence Energy (FLNC), GE Vernova (GEV))는 이번 점검에서 판정 자체가 불가능했습니다. SOXX가 회복선 522.80달러를 일봉 종가로 넘으면 이 판단은 다시 봅니다.",
+      "kind": "watch",
+      "symbol": null,
+      "name": null,
+      "published_at": "2026-09-08T10:00:13+09:00",
+      "url": "r/holdings-US-20260908/"
+    },
+    {
       "slug": "lightpath-technologies-inc-lpth-20260908",
       "title": "LightPath Technologies, Inc. (LPTH) 종목 리포트 · 2026-09-08",
       "summary": "관망입니다. 9월 11일 실적 발표 이후 일봉 종가가 10.04달러를 회복할 때만 롱으로 전환하고(손익비 1:1.94), 진입한 경우 집행 손절은 8.72달러이며, 일봉 종가가 9.00달러 아래로 마감하면 관망 자체를 종료하고 9.04달러를 종가로 내준 뒤 3거래일 안에 회복하지 못한 채 반등이 그 가격에서 막히면 이 시나리오를 폐기합니다.",
@@ -19,16 +29,6 @@
       "name": "Alphabet Inc.",
       "published_at": "2026-09-08T08:14:35+09:00",
       "url": "r/alphabet-inc-googl-20260908/"
-    },
-    {
-      "slug": "holdings-US-20260908",
-      "title": "보유종목 점검 · 2026-09-08",
-      "summary": "보유종목 10개 중 이번 점검에서 가격대를 건드린 종목은 없습니다. 아직 분석하지 않은 4개(Alphabet A (GOOGL), LightPath (LPTH), Fluence Energy (FLNC), GE Vernova (GEV))는 이번 점검에서 판정 자체가 불가능했습니다. 005930.KS가 1차 목표(분할안 참고) 270,375원를 장중 고가로 찍으면 이 판단은 다시 봅니다.",
-      "kind": "watch",
-      "symbol": null,
-      "name": null,
-      "published_at": "2026-09-08T08:09:00+09:00",
-      "url": "r/holdings-US-20260908/"
     },
     {
       "slug": "samsungelec-005930-ks-20260907",
