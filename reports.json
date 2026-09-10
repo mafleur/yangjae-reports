@@ -1,6 +1,16 @@
 {
   "reports": [
     {
+      "slug": "usa-rare-earth-inc-usar-20260911",
+      "title": "USA Rare Earth (USAR) 종목 리포트 · 2026-09-11",
+      "summary": "USAR는 이번에도 패스입니다 — 엔진이 낸 유일한 셋업의 손익비가 1:0.85로 직전(1.03)보다 더 나빠졌고, 손익비 1 미만은 걸지 않습니다. 진입 조건은 16.92달러 일봉 종가 회복이며, 진입했을 경우의 집행 손절은 15.33달러(진입 대비 -9.42%)입니다. 진입하지 않은 상태에서 볼 선은 15.02달러 종가 이탈과 2026-11-06 실적이고, 구조 자체의 폐기선은 12.84달러 이탈 후 3거래일 내 종가 회복 실패 + 반등에서 저항 확인입니다.",
+      "kind": "ticker",
+      "symbol": "USAR",
+      "name": "USA Rare Earth",
+      "published_at": "2026-09-11T06:33:58+09:00",
+      "url": "r/usa-rare-earth-inc-usar-20260911/"
+    },
+    {
       "slug": "holdings-US-20260911",
       "title": "보유종목 점검 · 2026-09-11",
       "summary": "보유종목 10개 중 5개에 조치가 필요합니다 — 전량 청산 1개(LS ELECTRIC (010120.KS)) · 신규 매수 보류 1개(USA Rare Earth (USAR)) · 매수 진입 3개(삼성전자 (005930.KS), SK하이닉스 (000660.KS), iShares Semiconductor ETF (SOXX)). 리포트는 있으나 기준 가격이 등록되지 않은 3개(LightPath (LPTH), Fluence Energy (FLNC), GE Vernova (GEV))는 이번 점검에서 판정 자체가 불가능했습니다. Alphabet A (GOOGL)의 회복선 341.42달러를 일봉 종가로 넘으면 매수 진입 대상이 되며, 이 판단은 다시 봅니다.",
