@@ -1,6 +1,16 @@
 {
   "reports": [
     {
+      "slug": "holdings-KR-20260910",
+      "title": "보유종목 점검 · 2026-09-10",
+      "summary": "보유종목 10개 중 5개(삼성전자 (005930.KS), SK하이닉스 (000660.KS), LS ELECTRIC (010120.KS), USA Rare Earth (USAR), iShares Semiconductor ETF (SOXX))가 리포트가 제시한 가격대를 건드려 확인이 필요합니다. 리포트는 있으나 기준 가격이 등록되지 않은 3개(LightPath (LPTH), Fluence Energy (FLNC), GE Vernova (GEV))는 이번 점검에서 판정 자체가 불가능했습니다. GOOGL가 관망 종료 기준 321.26달러를 일봉 종가로 이탈하면 이 판단은 다시 봅니다.",
+      "kind": "watch",
+      "symbol": null,
+      "name": null,
+      "published_at": "2026-09-10T15:40:17+09:00",
+      "url": "r/holdings-KR-20260910/"
+    },
+    {
       "slug": "holdings-US-20260910",
       "title": "보유종목 점검 · 2026-09-10",
       "summary": "보유종목 10개 중 5개(삼성전자 (005930.KS), SK하이닉스 (000660.KS), LS ELECTRIC (010120.KS), USA Rare Earth (USAR), iShares Semiconductor ETF (SOXX))가 리포트가 제시한 가격대를 건드려 확인이 필요합니다. 리포트는 있으나 기준 가격이 등록되지 않은 3개(LightPath (LPTH), Fluence Energy (FLNC), GE Vernova (GEV))는 이번 점검에서 판정 자체가 불가능했습니다. GOOGL가 관망 종료 기준 321.26달러를 일봉 종가로 이탈하면 이 판단은 다시 봅니다.",
