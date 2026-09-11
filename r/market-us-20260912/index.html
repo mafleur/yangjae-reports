@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>시황 리포트 · 2026-09-12</title>
+<style>
+:root{--bg:#fbfbfa;--panel:#fff;--fg:#1c1c1a;--muted:#6b6b66;--line:#e3e3df;
+--accent:#2f6f4f;--accent-soft:#e8f1ec;--code:#f3f3f0;
+--pos:#1a7d4f;--neg:#c2402c;--hl:#fff3b8;--hl-fg:#3d3200;
+--danger:#c2402c;--danger-bg:#fdf1ee;--key:#2f6f4f;--key-bg:#eef5f1;
+--info:#5a6b86;--info-bg:#f0f3f8}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--panel:#1c1c1b;--fg:#e8e8e4;
+--muted:#9a9a93;--line:#2e2e2b;--accent:#7dc4a0;--accent-soft:#1e2a24;--code:#232322;
+--pos:#5fcf98;--neg:#f08b76;--hl:#4a3f10;--hl-fg:#ffe8a3;
+--danger:#f08b76;--danger-bg:#2b1c18;--key:#7dc4a0;--key-bg:#18241e;
+--info:#9db1d0;--info-bg:#1a1e26}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+-webkit-text-size-adjust:100%}
+.wrap{max-width:820px;margin:0 auto;padding:28px 20px 80px}
+a{color:var(--accent)}
+header.site{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:22px}
+header.site h1{font-size:19px;margin:0;letter-spacing:-.01em}
+header.site .sub{color:var(--muted);font-size:13px}
+.back{font-size:13px;text-decoration:none}
+.meta{color:var(--muted);font-size:13px;margin:0 0 18px}
+.badge{display:inline-block;background:var(--accent-soft);color:var(--accent);
+border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;margin-right:8px}
+h1.title{font-size:27px;line-height:1.3;margin:0 0 6px;letter-spacing:-.02em}
+.lede{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+border-radius:6px;padding:14px 16px;margin:0 0 26px;font-size:16px;font-weight:500}
+.lede .lbl{display:block;color:var(--muted);font-size:11px;font-weight:700;
+letter-spacing:.09em;text-transform:uppercase;margin-bottom:5px}
+h2{font-size:20px;margin:34px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin:24px 0 8px}
+h4{font-size:15px;margin:20px 0 6px;color:var(--muted)}
+p{margin:0 0 12px}
+ul{margin:0 0 14px;padding-left:20px}
+li{margin-bottom:5px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+figure{margin:20px 0}
+figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+figcaption{color:var(--muted);font-size:13px;margin-top:7px;text-align:center}
+.table-wrap{overflow-x:auto;margin:0 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:420px}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--code);font-weight:600}
+.missing{color:#b4553c;font-size:14px}
+.note{color:var(--muted);font-size:13px;line-height:1.6;margin:-2px 0 16px}
+.pos{color:var(--pos);font-weight:600;font-variant-numeric:tabular-nums}
+.neg{color:var(--neg);font-weight:600;font-variant-numeric:tabular-nums}
+mark{background:var(--hl);color:var(--hl-fg);padding:0 3px;border-radius:3px}
+td strong,th strong{font-weight:700}
+.callout{border:1px solid var(--line);border-left:4px solid var(--info);
+background:var(--info-bg);border-radius:6px;padding:12px 15px;margin:0 0 18px}
+.callout .ct{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;
+text-transform:uppercase;color:var(--info);margin-bottom:6px}
+.callout p{margin:0 0 7px;font-size:15px}
+.callout p:last-child{margin-bottom:0}
+.callout.danger{border-left-color:var(--danger);background:var(--danger-bg)}
+.callout.danger .ct{color:var(--danger)}
+.callout.key{border-left-color:var(--key);background:var(--key-bg)}
+.callout.key .ct{color:var(--key)}
+.dl{display:inline-block;font-size:13px;text-decoration:none;border:1px solid var(--line);
+border-radius:6px;padding:6px 12px;margin-top:8px}
+.warn{background:var(--accent-soft);border:1px solid var(--line);border-radius:6px;
+padding:10px 14px;font-size:13px;color:var(--muted);margin:0 0 20px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filters input{flex:1;min-width:160px;padding:8px 12px;border:1px solid var(--line);
+border-radius:6px;background:var(--panel);color:var(--fg);font-size:14px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--muted);
+border-radius:999px;padding:6px 13px;font-size:13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);
+border-color:var(--accent);font-weight:600}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;
+padding:15px 17px;margin-bottom:11px;text-decoration:none;color:inherit}
+.card:hover{border-color:var(--accent)}
+.card h2{font-size:17px;margin:0 0 5px;border:0;padding:0}
+.card .sum{color:var(--muted);font-size:14px;margin:0}
+.card .row{display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
+.card time{color:var(--muted);font-size:12px}
+.empty{color:var(--muted);text-align:center;padding:40px 0;font-size:14px}
+footer{color:var(--muted);font-size:12px;margin-top:44px;padding-top:14px;
+border-top:1px solid var(--line)}
+</style>
+</head><body><div class="wrap"><header class="site"><a class="back" href="../../index.html">← 전체 리포트</a></header>
+<p class="meta"><span class="badge">시황</span>2026-09-12 00:34</p>
+<h1 class="title">시황 리포트 · 2026-09-12</h1>
+<div class="lede"><span class="lbl">한 줄 결론</span>8월 근원 소비자물가가 예상보다 높게 나왔는데도 미국 지수가 장중 오른 배경은 브렌트유 <strong><span class="neg">-2.73%</span></strong> 되밀림과 변동성지수 <span class="neg">-11.04%</span>이며, 30년 국채 금리가 5.329%로 남아 직전 브리핑의 판단 폐기 조건을 채우지 못했으므로 <mark>신규 위험자산 편입 중단(경고 단계)을 그대로 유지합니다 — S&amp;P 500이 정규장 종가로 7,668.25(20일선)를 지키고 동시에 30년 금리가 5.286% 아래로 내려오면 경고를 해제하고, 반대로 7,580.06 아래에서 마치면 보유분 축소를 검토합니다.</mark></div>
+<p class="note">미국 지수·섹터·금리·유가·변동성지수는 한국시간 9월 12일 00시 30분(뉴욕 9월 11일 11시 30분, 정규장 개장 2시간 경과) 기준 <strong>장중 수치</strong>이며 마감값은 바뀝니다. 코스피와 니케이 225는 9월 11일 종가이되, 확정 종가가 제공되지 않아 같은 날 시간별 자료의 마지막 체결가로 채운 값이라 확정치와 다를 수 있습니다.</p>
+<aside class="callout danger"><span class="ct">이 브리핑이 틀렸다고 볼 기준</span><p><strong>① 경고 해제(금리 부담이 풀렸음)</strong> — S&amp;P 500이 정규장 종가로 7,668.25(20일선) 위에서 마치고, 동시에 30년 국채 금리가 5.286% 아래로 내려올 것. 두 조건이 같이 충족돼야 하며, 오늘 장중에 20일선 위에 있는 것만으로는 해당하지 않습니다.</p><p><strong>② 한 단계 더 악화</strong> — S&amp;P 500이 7,580.06(9월 10일 저가) 아래에서 정규장을 마칠 것. 이때 보유분 축소를 검토하십시오.</p><p><strong>③ 오늘 상승의 전제 소멸</strong> — 브렌트유가 107.63달러(전일 종가) 위로 되돌아갈 것. 오늘 지수 상승을 설명한 유가 되밀림이 하루 만에 지워지는 경우입니다.</p></aside>
+<hr>
+<h3>직전 브리핑(2026-09-11 낮)이 건 조건의 판정</h3>
+<div class="table-wrap"><table><thead><tr><th>직전에 건 조건</th><th>판정</th><th>근거</th></tr></thead><tbody><tr><td>종가로 7,667.62 회복 <strong>그리고</strong> 30년 금리 5.286% 아래 → 경고 해제</td><td><strong>미충족</strong></td><td>30년 금리 5.329%로 조건선 위. 지수는 장중 7,672.39로 조건선 위이나 마감 전</td></tr><tr><td>7,580.06 아래에서 정규장 마감 → 보유분 축소 검토</td><td>미충족</td><td>오늘 장중 저가 7,636.75로 조건선 위</td></tr><tr><td>브렌트유 101.21달러 아래로 되밀림 → 유가 전제 폐기</td><td>미충족</td><td>브렌트유 104.69달러, 장중 저가도 103.48달러</td></tr><tr><td>CPI 발표 후 10년 금리가 4.944% 위로 더 가는지</td><td><strong>위로 가지 않음</strong></td><td>장중 고가 4.985%까지 올랐다가 4.938%로 되밀림 (전일 대비 <span class="neg">-0.12%</span>)</td></tr><tr><td>에너지(XLE)가 전날 유가 급등을 따라 오르는지</td><td><strong>따라 오르지 않음</strong></td><td>XLE <span class="pos">+0.14%</span>. 유가 자체가 되밀려 따라갈 상승분이 사라졌습니다</td></tr></tbody></table></div>
+<p>직전과 달라진 것은 하락을 만들던 두 축 중 유가 쪽만 풀렸다는 점입니다. 어제는 브렌트유 <span class="pos">+6.51%</span>와 30년 금리 <span class="pos">+1.42%</span>가 같이 작용해 11개 섹터 중 9개가 내렸고, 오늘은 유가가 <span class="neg">-2.73%</span>로 되밀리며 11개 중 9개가 올랐습니다. 금리는 30년 5.329%·10년 4.938%로 다년 최고 부근에 남아 있어, 경고를 건 근거 자체는 그대로입니다.</p>
+<hr>
+<h3>지수</h3>
+<div class="table-wrap"><table><thead><tr><th>지수</th><th>현재/종가</th><th>등락</th><th>고가</th><th>저가</th></tr></thead><tbody><tr><td><strong>S&amp;P 500</strong> (장중)</td><td>7,672.39</td><td><strong><span class="pos">+1.06%</span></strong></td><td>7,677.02</td><td>7,636.75</td></tr><tr><td>나스닥 종합 (장중)</td><td>26,422.12</td><td><span class="pos">+1.31%</span></td><td>26,431.22</td><td>26,283.11</td></tr><tr><td>코스피 (9/11 종가)</td><td>6,919.23</td><td><span class="neg">-1.63%</span></td><td>6,948.83</td><td>6,802.50</td></tr><tr><td>니케이 225 (9/11 종가)</td><td>64,006.42</td><td><span class="neg">-1.94%</span></td><td>64,312.02</td><td>63,208.63</td></tr></tbody></table></div>
+<p>S&amp;P 500은 20일선(최근 20일 평균 가격선) 7,668.25를 4.14포인트 위에 두고 있습니다. 장중 저가 7,636.75는 그 아래였으므로 지금 위에 있는 것은 되찾은 상태이며, 정규장 종가로 확정돼야 조건 충족입니다. 50일선 7,603.91은 68.48포인트 아래에 있습니다. 상대강도지수(RSI, 최근 14일 동안 오른 폭과 내린 폭의 비율을 0~100으로 나타낸 값)는 51.4로 어제 44.2에서 중립선 위로 올라왔고, 하루 평균 변동폭(ATR)은 62.28포인트입니다.</p>
+<p>위쪽에서 참고할 가격은 90일 박스 상단 <strong>7,793.95</strong>이며 현재가에서 121.56포인트, 하루 평균 변동폭의 1.95배 거리입니다. 이 상단 부근에서 위로 넘었다가 되밀린 자국이 남아 있어 파는 물량이 나오는 국면(매물 출회) 후보로 잡히고, 박스 안쪽 판정은 중립입니다. 아래쪽 박스 하단은 7,281.98입니다.</p>
+<p>코스피는 9월 11일을 6,919.23으로 마쳤습니다. 어제 낮 브리핑 시점의 장중 6,862.35보다 높으므로 오후에 저가 6,802.50에서 올라와 마감한 것이며, 그래도 하루 <span class="neg">-1.63%</span>입니다. 니케이 225는 <span class="neg">-1.94%</span>로 더 밀렸습니다. 두 지수 모두 오늘 미국장의 상승은 반영하지 못한 상태로 주말에 들어갔습니다.</p>
+<hr>
+<h3>주도섹터</h3>
+<p>미국 섹터 상대강도(SPDR 업종 ETF 기준, 9월 11일 장중):</p>
+<div class="table-wrap"><table><thead><tr><th>주도</th><th>등락</th><th></th><th>부진</th><th>등락</th></tr></thead><tbody><tr><td>기술 (XLK)</td><td><strong><span class="pos">+1.74%</span></strong></td><td></td><td>헬스케어 (XLV)</td><td><strong><span class="neg">-0.27%</span></strong></td></tr><tr><td>커뮤니케이션 (XLC)</td><td><span class="pos">+1.27%</span></td><td></td><td>유틸리티 (XLU)</td><td><span class="neg">-0.05%</span></td></tr><tr><td>산업재 (XLI)</td><td><span class="pos">+1.03%</span></td><td></td><td>필수소비재 (XLP)</td><td><span class="pos">+0.11%</span></td></tr></tbody></table></div>
+<p>어제 가장 많이 밀린 기술이 오늘 선두로 올라섰고, 부진 3개는 헬스케어·유틸리티·필수소비재로 전부 방어 성격 업종입니다. 어제와 정확히 뒤집힌 배열이며, 장기금리가 크게 내리지 않은 상태에서 나온 되돌림이라 하루로 끝날 수 있습니다. 임의소비재(XLY) <span class="pos">+0.86%</span>, 부동산(XLRE) <span class="pos">+0.67%</span>, 소재(XLB) <span class="pos">+0.43%</span>, 금융(XLF) <span class="pos">+0.40%</span>로 중간 구간도 전부 상승입니다.</p>
+<p>에너지(XLE)는 <span class="pos">+0.14%</span>에 그쳤습니다. 어제 유가 급등을 따라가지 못했고 오늘은 유가가 되밀렸으므로, 어제 걸어 둔 확인 항목은 따라 오르지 않는 쪽으로 끝났습니다. 섹터 상대강도는 미국 ETF 기준으로만 제공되며 한국·일본은 지수 등락만 있습니다.</p>
+<hr>
+<h3>8월 소비자물가</h3>
+<p>오늘 발표된 8월 지표를 계절조정(계절적 변동을 걷어낸 값) 물가지수에서 직접 계산하면 다음과 같습니다.</p>
+<div class="table-wrap"><table><thead><tr><th>항목</th><th>전월 대비</th><th>시장 예상</th><th>전년 대비</th></tr></thead><tbody><tr><td>헤드라인 CPI</td><td><span class="pos">+0.396%</span></td><td><span class="pos">+0.4%</span></td><td><span class="pos">+3.35%</span></td></tr><tr><td>근원 CPI (식품·에너지 제외)</td><td><strong><span class="pos">+0.290%</span></strong></td><td><span class="pos">+0.2%</span></td><td><span class="pos">+2.45%</span></td></tr></tbody></table></div>
+<p>전월 대비와 전년 대비는 미 연준 자료의 물가지수(8월 334.131 / 337.765)에서 계산한 값이고, 시장 예상치는 9월 11일자 CNBC 기사에 적힌 다우존스 컨센서스를 옮긴 것입니다.</p>
+<p>헤드라인은 예상과 같고 근원이 예상을 웃돌았습니다. 근원 전월 대비 0.290%는 이 속도가 1년 이어질 경우 3.5% 수준이 되는 값이라, 연준 목표 2%와의 거리가 줄지 않았습니다. 전년 대비 근원 2.45%가 낮게 보이는 것은 지난해 같은 달과 비교한 값이기 때문입니다. 헤드라인을 밀어 올린 것은 이란 사태에 따른 에너지 가격이라는 게 오늘 기사들의 공통된 해석입니다.</p>
+<hr>
+<h3>금리·유가·변동성</h3>
+<div class="table-wrap"><table><thead><tr><th>항목</th><th>현재</th><th>전일 종가</th><th>등락</th></tr></thead><tbody><tr><td>미 30년 국채 금리</td><td>5.329%</td><td>5.361%</td><td><span class="neg">-0.60%</span></td></tr><tr><td>미 10년 국채 금리</td><td>4.938%</td><td>4.944%</td><td><span class="neg">-0.12%</span></td></tr><tr><td>브렌트유</td><td>104.69달러</td><td>107.63달러</td><td><strong><span class="neg">-2.73%</span></strong></td></tr><tr><td>WTI</td><td>99.44달러</td><td>102.48달러</td><td><span class="neg">-2.97%</span></td></tr><tr><td>변동성지수 (VIX)</td><td>15.87</td><td>17.84</td><td><span class="neg">-11.04%</span></td></tr></tbody></table></div>
+<p>근원 물가가 예상을 웃돌았는데 금리가 내린 조합은 발표 직후 움직임(10년 금리 장중 4.985%)이 되돌려진 결과입니다. 30년 5.329%는 어제 대비 0.032%포인트 내린 것뿐이라, 어제 경고를 건 금리 수준 자체는 유지되고 있습니다. 브렌트유는 장중 110.19달러까지 올랐다가 103.48달러까지 되밀려 하루 안에 6.71달러 폭을 냈고, 이 되밀림이 오늘 주식 상승과 변동성지수 <span class="neg">-11.04%</span>를 같이 설명합니다.</p>
+<hr>
+<h3>핵심 뉴스</h3>
+<p><strong>1. 8월 CPI, 근원 예상 상회 — 금리 인상 베팅 확대 (CNBC·Yahoo Finance, 9월 11일)</strong> 9월 16일 FOMC를 앞둔 마지막 물가 지표에서 근원이 예상을 웃돌면서, 인하가 아니라 인상 쪽으로 기울어 있던 시장 베팅이 더 굳어졌다고 보도됐습니다. 주식은 올랐지만 30년 금리가 5.329%에 남아 있는 상태라, 오늘 상승을 물가 우려의 해소로 읽으면 FOMC에서 되돌려질 위험을 떠안게 됩니다. 베팅 확률 수치는 우리 쪽 자료로 확인되지 않아 인용하지 않습니다.</p>
+<p><strong>2. 워시 연준 의장의 신뢰도가 시험대에 (CNBC 분석, 9월 11일)</strong> 물가 경고를 반복해 온 워시 의장이 이번 결정에서 실제로 움직이지 않으면 중앙은행 장악력에 의문이 생기고, 움직이면 장기금리에 한 번 더 부담이 얹힙니다. 어느 쪽이든 9월 16일이 이번 브리핑의 경고 해제 조건(30년 금리 5.286%)에 직접 닿는 날짜가 됩니다.</p>
+<p><strong>3. 유가 100달러 부근이 사모대출 차주를 압박 (CNBC, 9월 11일)</strong> 유가가 물가를 통해 금리를 다시 밀어 올리면 이미 높은 이자를 내는 고부채 차주부터 부담이 커진다는 내용입니다. 오늘 브렌트유가 <span class="neg">-2.73%</span> 되밀린 것은 이 경로를 하루 늦춘 것이고, 월요일 이란 관련 제재 대상 공개가 예정돼 있어 되밀림이 유지될지는 주말을 넘겨야 확인됩니다. 오늘 상승만 보고 위험자산을 늘리면 그 확인 없이 주말을 넘기게 됩니다.</p>
+<hr>
+<h3>투자심리 (Fear/Greed 대용 지표)</h3>
+<div class="table-wrap"><table><thead><tr><th>지수</th><th>점수</th><th>구간</th><th>어제</th></tr></thead><tbody><tr><td>S&amp;P 500</td><td>62.4</td><td>탐욕</td><td>57.8</td></tr><tr><td>나스닥</td><td>63.1</td><td>탐욕</td><td>58.4</td></tr><tr><td>코스피</td><td>50.3</td><td>중립</td><td>39.3</td></tr></tbody></table></div>
+<figure><a href="feargreed_20260911.png" target="_blank" rel="noopener"><img src="feargreed_20260911.png" alt="Fear/Greed 게이지 (2026-09-11)" loading="lazy"></a><figcaption>Fear/Greed 게이지 (2026-09-11)</figcaption></figure>
+<p>미국 두 지수는 탐욕 구간에서 하루 만에 4~5점 더 올라갔고, 변동성 항목이 80.3으로 가장 높습니다. 변동성지수 15.87이 그대로 반영된 값이라, 오늘 심리 개선의 대부분은 변동성 축소에서 나온 것입니다. 코스피 50.3은 어제 39.3에서 중립으로 올라왔습니다.</p>
+<aside class="callout info"><span class="ct">코스피 점수는 정확도가 떨어집니다</span><p>코스피 점수의 변동성 항목은 원래 쓰는 코스피200 변동성지수(VKOSPI)를 받아오지 못해 20일 실현변동성(연율화 44.1%)으로 대체했습니다. 점수 눈금이 10~40 범위에 맞춰져 있어 44.1은 그 밖이고, 변동성 항목이 최저값 0에 고정돼 더 나빠져도 점수가 내려가지 않습니다. 반대로 안전자산 선호 항목이 91.9로 높게 잡혀 전체 점수를 끌어올렸습니다. 코스피 50.3은 방향 참고용으로만 보시고 미국 두 지수와 같은 정밀도로 비교하지 마시기 바랍니다.</p><p>세 점수 모두 공식 CNN Fear &amp; Greed 지수가 아니라 모멘텀·상대강도·변동성·안전자산 선호 네 항목으로 계산한 대용 지표입니다.</p></aside>
+<hr>
+<h3>확인 캘린더</h3>
+<div class="table-wrap"><table><thead><tr><th>날짜 (한국시간)</th><th>이벤트</th><th>확인할 것</th></tr></thead><tbody><tr><td>9월 12일 05:00</td><td>뉴욕 정규장 마감</td><td>S&amp;P 500이 7,668.25 위에서 마치는지</td></tr><tr><td>9월 14일 (월, 기사 발언 기준)</td><td>이란 관련 대형 은행 제재 대상 공개</td><td>브렌트유가 104.69달러 아래를 지키는지</td></tr><tr><td><strong>9월 16일</strong></td><td>FOMC 금리 결정</td><td>30년 금리가 5.286% 아래로 내려오는지</td></tr><tr><td>9월 17일</td><td>주간 신규 실업수당 청구</td><td>고용 둔화가 금리 부담을 상쇄하는지</td></tr></tbody></table></div>
+<aside class="callout info"><span class="ct">일정 출처</span><p>우리 쪽 매크로 일정 자료에 향후 5일 안에 등록된 이벤트는 9월 16일 FOMC 하나뿐입니다. 제재 대상 공개일(월요일)은 9월 11일자 CNBC 기사의 발언을 옮긴 것이고, 실업수당 청구일은 직전 브리핑에서 확인한 일정입니다. 또한 S&amp;P 500의 이동평균·변동폭을 받아오는 과정에서 지수용 실적 컨센서스 자료는 조회되지 않았으나, 이 브리핑은 그 항목을 쓰지 않으므로 위 수치에는 영향이 없습니다.</p></aside>
+<hr>
+<h3>집행</h3>
+<p>1. <strong>신규 위험자산 편입 중단을 유지합니다.</strong> 경고 해제 조건 두 개 중 금리 쪽이 충족되지 않았고, 월요일 제재 공개까지 확인 없이 주말을 넘겨야 합니다. 2. <strong>보유분은 유지하되 7,580.06을 판정선으로 둡니다.</strong> S&amp;P 500이 이 가격 아래에서 정규장을 마치면 그때 보유분 축소를 검토하십시오. 장중 이탈만으로는 조치하지 않습니다. 3. <strong>경고 해제는 두 조건이 같이 충족될 때만 합니다.</strong> S&amp;P 500 종가가 7,668.25 위이고 30년 금리가 5.286% 아래면 해제하십시오. 한쪽만 충족되면 유지합니다. 4. <strong>오늘의 섹터 배열을 근거로 업종을 갈아타지 마십시오.</strong> 기술 <span class="pos">+1.74%</span>·방어주 부진은 어제와 정확히 뒤집힌 하루치 되돌림이며, 30년 금리가 5.329%에 남아 있어 되돌아갈 수 있습니다.</p>
+<p class="note">이 문서는 참고 정보이며 투자자문이 아닙니다. 모든 수치는 위에 적은 기준 시각의 시장 자료에서 가져온 것이고, 투자 판단과 그 결과에 대한 책임은 투자자 본인에게 있습니다.</p>
+<p><a class="dl" href="report.md">Markdown 원문</a></p>
+<footer>본 자료는 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단과 그 결과의 책임은 투자자 본인에게 있습니다.</footer></div></body></html>
