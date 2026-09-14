@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>구조 엔진 백테스트 리포트 · 2026-09-15</title>
+<style>
+:root{--bg:#fbfbfa;--panel:#fff;--fg:#1c1c1a;--muted:#6b6b66;--line:#e3e3df;
+--accent:#2f6f4f;--accent-soft:#e8f1ec;--code:#f3f3f0;
+--pos:#1a7d4f;--neg:#c2402c;--hl:#fff3b8;--hl-fg:#3d3200;
+--danger:#c2402c;--danger-bg:#fdf1ee;--key:#2f6f4f;--key-bg:#eef5f1;
+--info:#5a6b86;--info-bg:#f0f3f8}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--panel:#1c1c1b;--fg:#e8e8e4;
+--muted:#9a9a93;--line:#2e2e2b;--accent:#7dc4a0;--accent-soft:#1e2a24;--code:#232322;
+--pos:#5fcf98;--neg:#f08b76;--hl:#4a3f10;--hl-fg:#ffe8a3;
+--danger:#f08b76;--danger-bg:#2b1c18;--key:#7dc4a0;--key-bg:#18241e;
+--info:#9db1d0;--info-bg:#1a1e26}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+-webkit-text-size-adjust:100%}
+.wrap{max-width:820px;margin:0 auto;padding:28px 20px 80px}
+a{color:var(--accent)}
+header.site{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:22px}
+header.site h1{font-size:19px;margin:0;letter-spacing:-.01em}
+header.site .sub{color:var(--muted);font-size:13px}
+.back{font-size:13px;text-decoration:none}
+.meta{color:var(--muted);font-size:13px;margin:0 0 18px}
+.badge{display:inline-block;background:var(--accent-soft);color:var(--accent);
+border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;margin-right:8px}
+h1.title{font-size:27px;line-height:1.3;margin:0 0 6px;letter-spacing:-.02em}
+.lede{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+border-radius:6px;padding:14px 16px;margin:0 0 26px;font-size:16px;font-weight:500}
+.lede .lbl{display:block;color:var(--muted);font-size:11px;font-weight:700;
+letter-spacing:.09em;text-transform:uppercase;margin-bottom:5px}
+h2{font-size:20px;margin:34px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin:24px 0 8px}
+h4{font-size:15px;margin:20px 0 6px;color:var(--muted)}
+p{margin:0 0 12px}
+ul{margin:0 0 14px;padding-left:20px}
+li{margin-bottom:5px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+figure{margin:20px 0}
+figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+figcaption{color:var(--muted);font-size:13px;margin-top:7px;text-align:center}
+.table-wrap{overflow-x:auto;margin:0 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:420px}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--code);font-weight:600}
+.missing{color:#b4553c;font-size:14px}
+.note{color:var(--muted);font-size:13px;line-height:1.6;margin:-2px 0 16px}
+.pos{color:var(--pos);font-weight:600;font-variant-numeric:tabular-nums}
+.neg{color:var(--neg);font-weight:600;font-variant-numeric:tabular-nums}
+mark{background:var(--hl);color:var(--hl-fg);padding:0 3px;border-radius:3px}
+td strong,th strong{font-weight:700}
+.callout{border:1px solid var(--line);border-left:4px solid var(--info);
+background:var(--info-bg);border-radius:6px;padding:12px 15px;margin:0 0 18px}
+.callout .ct{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;
+text-transform:uppercase;color:var(--info);margin-bottom:6px}
+.callout p{margin:0 0 7px;font-size:15px}
+.callout p:last-child{margin-bottom:0}
+.callout.danger{border-left-color:var(--danger);background:var(--danger-bg)}
+.callout.danger .ct{color:var(--danger)}
+.callout.key{border-left-color:var(--key);background:var(--key-bg)}
+.callout.key .ct{color:var(--key)}
+.dl{display:inline-block;font-size:13px;text-decoration:none;border:1px solid var(--line);
+border-radius:6px;padding:6px 12px;margin-top:8px}
+.warn{background:var(--accent-soft);border:1px solid var(--line);border-radius:6px;
+padding:10px 14px;font-size:13px;color:var(--muted);margin:0 0 20px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filters input{flex:1;min-width:160px;padding:8px 12px;border:1px solid var(--line);
+border-radius:6px;background:var(--panel);color:var(--fg);font-size:14px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--muted);
+border-radius:999px;padding:6px 13px;font-size:13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);
+border-color:var(--accent);font-weight:600}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;
+padding:15px 17px;margin-bottom:11px;text-decoration:none;color:inherit}
+.card:hover{border-color:var(--accent)}
+.card h2{font-size:17px;margin:0 0 5px;border:0;padding:0}
+.card .sum{color:var(--muted);font-size:14px;margin:0}
+.card .row{display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
+.card time{color:var(--muted);font-size:12px}
+.empty{color:var(--muted);text-align:center;padding:40px 0;font-size:14px}
+footer{color:var(--muted);font-size:12px;margin-top:44px;padding-top:14px;
+border-top:1px solid var(--line)}
+</style>
+</head><body><div class="wrap"><header class="site"><a class="back" href="../../index.html">← 전체 리포트</a></header>
+<p class="meta"><span class="badge">리포트</span><strong>구조 엔진 백테스트</strong> · 2026-09-15 07:47</p>
+<h1 class="title">구조 엔진 백테스트 리포트 · 2026-09-15</h1>
+<div class="lede"><span class="lbl">한 줄 결론</span>현 집행 정책(고정 목표 전량 청산)은 <strong>선택편향이 없는 무작위 9종목에서 매매당 -0.048R로 기대값이 음수</strong>이며, 전체 24종목에서 나온 +0.075R은 보유·관심 목록 쪽(+0.139R)이 끌어올린 값입니다. 게다가 이 +0.075R은 슬리피지를 30bp로 올리거나, 미체결 만료를 20일로 늘리거나, 신호 주기를 3일로 줄이면 <strong>세 경우 모두 음수로 뒤집힙니다.</strong> 이 결과로는 현 정책에 실전 자금을 늘릴 수 없고, 판정은 다음 두 가지가 모두 확인될 때까지 보류합니다 — ① 구간을 3년 이상으로 늘려 2022년 약세장을 포함시켰을 때도 무작위 유니버스에서 기대값이 양수인지 ② 그때도 상위 3건을 제거한 뒤 양수로 남는지. 청산을 고정 목표에서 ATR 트레일링으로 바꾼 판본만이 무작위 유니버스(+0.185R)와 파라미터 변화 양쪽에서 부호를 지켰습니다.</div>
+<aside class="callout key"><span class="ct">이번 측정이 답할 수 없는 것</span><p>테스트 구간 1년(2025-09-14 ~ 2026-09-14) 안에서 코스피는 <strong><span class="pos">+102.8%</span></strong>, 나스닥은 <strong><span class="pos">+17.2%</span></strong> 올랐습니다. 단일 상승 국면이며, 이 엔진은 롱 온리입니다. <strong>하락 국면에서 이 시스템이 어떻게 되는지는 이 결과로 알 수 없습니다.</strong> 아래 숫자가 좋아 보이더라도 그 사실은 바뀌지 않습니다.</p></aside>
+<hr>
+<h3>표본과 한계</h3>
+<div class="table-wrap"><table><thead><tr><th>항목</th><th>값</th></tr></thead><tbody><tr><td>테스트 구간</td><td>2025-09-14 ~ 2026-09-14 (1년, 단일 상승 국면)</td></tr><tr><td>유니버스</td><td>보유·관심 16종목 + 무작위 10종목(시드 20260914) = 26종목 요청</td></tr><tr><td>실제 검증</td><td><strong>24종목</strong> (2종목은 봉 부족으로 제외)</td></tr><tr><td>신호</td><td>셋업 555회 산출(셋업이 안 나온 날 58회 별도) → 손익비 1 미만 124회 제외 → 197회 미체결 만료 → <strong>232회 체결</strong></td></tr><tr><td>완결 매매</td><td>223건 (고정 목표 기준)</td></tr><tr><td>가격</td><td>배당 조정, 휴장일 유령 봉 제거</td></tr></tbody></table></div>
+<p>제외된 2종목과 이유를 그대로 적습니다. SOL AI반도체TOP2+ (0167A0.KS)는 상장 이후 일봉이 124개뿐이라 엔진이 요구하는 200개에 못 미칩니다. NEMCL은 618개 봉 중 <strong>570개가 시·고·저·종가가 같고 거래량이 0인 비거래일</strong>이어서, 실제로 거래된 봉은 48개뿐입니다.</p>
+<p>무작위 10종목은 오늘 상장돼 있고 시가총액 상위에 드는 종목군에서 뽑았습니다. 생존편향이 줄었을 뿐 사라지지는 않았습니다. 보유·관심 16종목은 그동안 살아남았기 때문에 목록에 있는 것이므로 <strong>낙관 상한</strong>으로만 읽어야 합니다.</p>
+<hr>
+<h3>검증 범위</h3>
+<div class="table-wrap"><table><thead><tr><th>층</th><th>내용</th><th>이번에 한 일</th></tr></thead><tbody><tr><td>구조 엔진</td><td>`compute_indicators` → `build_trade_setups`</td><td><strong>과거 재현 백테스트</strong></td></tr><tr><td>집행 정책</td><td>구조적 손절 / 목표 전량 / 1% 리스크 / 13% 상한</td><td>코드로 옮겨 시뮬레이션</td></tr><tr><td>판단층(LLM)</td><td>대표 셋업 선정, 패스 결정, 서술</td><td><strong>백테스트 불가</strong> — 발행된 리포트 채점만</td></tr></tbody></table></div>
+<p>판단층을 백테스트하면 안 되는 이유는 두 가지입니다. 모델이 테스트 구간을 이미 학습했고, 규칙집(`CLAUDE.md`) 자체가 &quot;2026-08-31 COHR 리포트 오류에서 도출&quot;, &quot;USAR 검토에서 도출&quot;처럼 결과를 보고 쓰였습니다. 지금 규칙으로 과거를 돌리면 표본 내 튜닝 결과가 나옵니다.</p>
+<aside class="callout info"><span class="ct">하네스를 믿을 수 있는 근거</span><p>엔진은 표시용 6개월·주봉 2년·구조 판정용 3년, 세 개의 시계열을 받습니다. 이 중 하나라도 자르지 않으면 박스와 지지 선반이 미래 봉을 봅니다. `tests/test_backtest.py`의 회귀 테스트가 <strong>기준일 이후 모든 봉을 3배로 바꿔 넣어도 산출물이 한 글자도 달라지지 않는지</strong>를 검사하며, 동시에 구조용 시계열만 자르지 않으면 실제로 답이 달라진다는 것도 함께 고정해 두었습니다. 이 테스트가 통과하기 전에는 아래 수치를 읽지 않았습니다.</p></aside>
+<hr>
+<h3>청산 규칙 4종 비교</h3>
+<p>진입 신호는 네 경우 모두 <strong>완전히 동일</strong>합니다. 차이는 전부 청산에서 옵니다.</p>
+<div class="table-wrap"><table><thead><tr><th>청산 규칙</th><th>완결</th><th>기대값(R)</th><th>중앙값</th><th>승률</th><th>페이오프</th><th>Profit factor</th><th>계좌 수익률</th><th>최대 낙폭</th></tr></thead><tbody><tr><td><strong>고정 목표 전량 (현 정책)</strong></td><td>223</td><td><strong>+0.075</strong></td><td>-1.006</td><td>42.1%</td><td>1.53</td><td>1.12</td><td><strong><span class="pos">+15.6%</span></strong></td><td>15.4%</td></tr><tr><td>T1 절반 익절 + 본전 스탑</td><td>290</td><td><strong>-0.007</strong></td><td>+0.031</td><td>51.4%</td><td>0.93</td><td>0.98</td><td><strong><span class="pos">+1.8%</span></strong></td><td>16.0%</td></tr><tr><td>고정 목표 없음 + ATR 트레일링</td><td>236</td><td><strong>+0.254</strong></td><td>-0.858</td><td>36.4%</td><td>2.45</td><td>1.41</td><td><strong><span class="pos">+37.9%</span></strong></td><td>17.5%</td></tr><tr><td>절반 익절 후 트레일링</td><td>204</td><td><strong>+0.243</strong></td><td>-1.008</td><td>39.2%</td><td>2.13</td><td>1.37</td><td><strong><span class="pos">+31.2%</span></strong></td><td>15.1%</td></tr></tbody></table></div>
+<figure><a href="backtest_equity_20260915.png" target="_blank" rel="noopener"><img src="backtest_equity_20260915.png" alt="청산 규칙별 자본곡선" loading="lazy"></a><figcaption>청산 규칙별 자본곡선</figcaption></figure>
+<p>승률이 가장 높은 판본(T1 절반 익절, 51.4%)이 유일하게 기대값이 음수입니다. 승률이 가장 낮은 판본(트레일링, 36.4%)이 가장 많이 법니다. 말씀하신 목표 — 승률이 낮아도 이긴 돈이 크면 된다 — 와 정합적인 것은 트레일링 쪽이며, 수치가 그 방향을 지지합니다.</p>
+<p>T1 절반 익절 판본이 중요한 이유가 하나 더 있습니다. <strong>엔진이 대표 셋업을 고를 때 쓰는 점수(`_rank_score`)가 `risk_reward_blended`, 즉 이 절반 익절을 전제로 계산한 손익비를 우선 씁니다</strong>(`data/charts.py:441`, 그 값이 없을 때만 전 구간 손익비로 내려옵니다). 집행 정책은 목표에서 전량 청산인데, 셋업을 고르는 점수는 그와 다른 청산 계획을 전제하고 있습니다.</p>
+<hr>
+<h3>손익 분포</h3>
+<figure><a href="backtest_rdist_20260915.png" target="_blank" rel="noopener"><img src="backtest_rdist_20260915.png" alt="매매당 손익 분포" loading="lazy"></a><figcaption>매매당 손익 분포</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>지표</th><th>고정 목표</th><th>트레일링</th></tr></thead><tbody><tr><td>총수익 중 상위 1건 비중</td><td>4.9%</td><td>10.1%</td></tr><tr><td>상위 3건 비중</td><td>12.0%</td><td>19.8%</td></tr><tr><td><strong>상위 1건 제거 후 기대값</strong></td><td>+0.040R</td><td>+0.166R</td></tr><tr><td><strong>상위 3건 제거 후 기대값</strong></td><td><strong>-0.011R</strong></td><td><strong>+0.081R</strong></td></tr><tr><td>상위 5건 제거 후 기대값</td><td>-0.051R</td><td>+0.005R</td></tr><tr><td>평균 최대 유리폭(MFE)</td><td>1.27R</td><td>1.95R</td></tr><tr><td>평균 최대 역행폭(MAE)</td><td>-0.94R</td><td>-0.87R</td></tr></tbody></table></div>
+<p>현 정책의 기대값은 상위 3건에 의존합니다. 그 3건을 빼면 부호가 바뀝니다. 트레일링 판본은 상위 5건을 빼도 간신히 양수로 남습니다.</p>
+<hr>
+<h3>고정 목표가 남기고 나온 이익</h3>
+<div class="table-wrap"><table><thead><tr><th>청산 규칙</th><th>목표에서 청산된 매매</th><th>평균 남긴 R</th><th>중앙값</th><th>최대</th><th>1R 이상 놓친 비율</th></tr></thead><tbody><tr><td>고정 목표 전량</td><td>96건</td><td><strong>+0.43R</strong></td><td>+0.22R</td><td>+3.63R</td><td>9%</td></tr><tr><td>T1 절반 익절</td><td>76건</td><td><strong>+0.92R</strong></td><td>+0.74R</td><td>+4.17R</td><td>30%</td></tr></tbody></table></div>
+<p>목표에서 청산된 매매가 그 뒤 실제로 더 간 거리입니다. 고정 목표는 평균 0.43R을 남기고 나오며, 절반 익절 판본은 0.92R을 남깁니다. 히스토그램에서 고정 목표 쪽 분포가 +3R 부근에서 끊기고 트레일링 쪽이 +20R까지 이어지는 것이 같은 사실의 다른 표현입니다.</p>
+<hr>
+<h3>벤치마크 대비</h3>
+<div class="table-wrap"><table><thead><tr><th>비교 대상</th><th>수익률</th><th>최대 낙폭</th></tr></thead><tbody><tr><td>코스피</td><td><strong><span class="pos">+102.8%</span></strong></td><td>38.6%</td></tr><tr><td>나스닥 종합</td><td><strong><span class="pos">+17.2%</span></strong></td><td>13.2%</td></tr><tr><td>S&amp;P 500</td><td><strong><span class="pos">+15.2%</span></strong></td><td>9.1%</td></tr><tr><td><strong>검증한 24종목 동일가중 보유</strong></td><td><strong><span class="pos">+64.0%</span></strong></td><td>종목 평균 42.7%</td></tr><tr><td>시스템 — 고정 목표 (현 정책)</td><td><strong><span class="pos">+15.6%</span></strong></td><td>15.4%</td></tr><tr><td>시스템 — 트레일링</td><td><strong><span class="pos">+37.9%</span></strong></td><td>17.5%</td></tr></tbody></table></div>
+<aside class="callout danger"><span class="ct">벤치마크 판정</span><p>최선의 청산 규칙(<span class="pos">+37.9%</span>)도 <strong>같은 종목을 그냥 들고 있는 것(<span class="pos">+64.0%</span>)에 집니다.</strong> 현 정책(<span class="pos">+15.6%</span>)은 S&amp;P 500을 간신히 넘고 코스피에는 크게 집니다. 다만 시스템은 대부분의 시간을 현금으로 보내며 낙폭이 종목 평균의 3분의 1 수준입니다. 절대 수익으로는 지고, 낙폭 대비로는 경쟁이 되는 상태입니다.</p><p>이 비교는 두 유니버스를 합친 것입니다. 나눠 보면 결과가 갈리며, 그쪽이 더 중요합니다 — 아래 &#x27;유니버스 분리&#x27;를 보십시오.</p></aside>
+<hr>
+<h3>시장별·분기별 분해</h3>
+<div class="table-wrap"><table><thead><tr><th>청산 규칙</th><th>한국 수익률</th><th>미국 수익률</th></tr></thead><tbody><tr><td>고정 목표</td><td><strong><span class="pos">+17.8%</span></strong></td><td><strong><span class="neg">-2.2%</span></strong></td></tr><tr><td>T1 절반 익절</td><td><strong><span class="pos">+4.0%</span></strong></td><td><strong><span class="neg">-2.1%</span></strong></td></tr><tr><td>트레일링</td><td><strong><span class="pos">+41.1%</span></strong></td><td><strong><span class="neg">-3.1%</span></strong></td></tr><tr><td>절반 익절 후 트레일링</td><td><strong><span class="pos">+28.6%</span></strong></td><td><strong><span class="pos">+2.6%</span></strong></td></tr></tbody></table></div>
+<p><mark>네 규칙 전부, 이익이 한국 종목에서만 나옵니다.</mark> 그런데 같은 기간 검증한 한국 12종목을 그냥 동일가중으로 보유하면 <span class="pos">+91.8%</span>였습니다. 미국 12종목은 보유 시 <span class="pos">+36.3%</span>인데 시스템은 손실입니다. 한국에서의 이익은 엔진의 판별력이라기보다 코스피가 두 배가 된 국면에 롱으로 노출된 결과일 가능성이 큽니다.</p>
+<div class="table-wrap"><table><thead><tr><th>진입 분기</th><th>고정 목표 기대값</th><th>트레일링 기대값</th><th>매매 수</th></tr></thead><tbody><tr><td>2025 Q3</td><td>+0.458R</td><td>+1.014R</td><td>18</td></tr><tr><td>2025 Q4</td><td>+0.169R</td><td>+0.497R</td><td>57~59</td></tr><tr><td>2026 Q1</td><td>+0.320R</td><td>+0.698R</td><td>54~56</td></tr><tr><td>2026 Q2</td><td><strong>-0.068R</strong></td><td><strong>-0.180R</strong></td><td>57~65</td></tr><tr><td>2026 Q3</td><td><strong>-0.393R</strong></td><td><strong>-0.399R</strong></td><td>37~38</td></tr></tbody></table></div>
+<p>최근 두 분기가 두 규칙 모두 음수입니다. 자본곡선에서 5~6월 고점 이후 모든 선이 내려오는 구간과 같습니다. 1년 합계가 양수인 것은 앞 세 분기 덕분입니다.</p>
+<hr>
+<h3>유니버스 분리</h3>
+<p>보유·관심 목록과 무작위 추출을 따로 돌렸습니다. 앞의 모든 숫자는 두 집단을 합친 것입니다.</p>
+<div class="table-wrap"><table><thead><tr><th>청산 규칙</th><th>보유·관심 15종목 기대값</th><th>무작위 9종목 기대값</th><th>보유·관심 수익률</th><th>무작위 수익률</th></tr></thead><tbody><tr><td><strong>고정 목표 (현 정책)</strong></td><td>+0.139R</td><td><strong>-0.048R</strong></td><td><span class="pos">+13.6%</span></td><td><span class="pos">+1.9%</span></td></tr><tr><td>T1 절반 익절</td><td>+0.121R</td><td><strong>-0.229R</strong></td><td><span class="pos">+8.3%</span></td><td><span class="neg">-6.5%</span></td></tr><tr><td>트레일링</td><td>+0.292R</td><td><strong>+0.185R</strong></td><td><span class="pos">+26.9%</span></td><td><span class="pos">+11.1%</span></td></tr><tr><td>절반 익절 후 트레일링</td><td>+0.313R</td><td><strong>+0.116R</strong></td><td><span class="pos">+22.6%</span></td><td><span class="pos">+8.6%</span></td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>참고</th><th>보유·관심 15종목</th><th>무작위 9종목</th></tr></thead><tbody><tr><td>그냥 동일가중으로 보유했을 때</td><td><strong><span class="pos">+101.4%</span></strong></td><td><strong><span class="pos">+1.8%</span></strong></td></tr></tbody></table></div>
+<p>두 집단의 성격이 정반대입니다. 보유·관심 종목은 그냥 들고만 있어도 1년에 두 배가 됐고 거기서는 어떤 청산 규칙도 보유를 못 이깁니다. 무작위 종목은 1년 동안 제자리(<span class="pos">+1.8%</span>)였는데, 거기서는 트레일링 판본이 <span class="pos">+11.1%</span>로 보유를 앞섰습니다.</p>
+<p>읽는 법은 이렇습니다. <strong>이 엔진은 박스와 눌림을 거래하므로 크게 오르는 장에서는 상방을 잘라 먹고 보유에 집니다.</strong> 반대로 방향이 없는 장에서는 보유보다 낫습니다. 그리고 <strong>현 정책은 선택편향을 걷어낸 쪽에서 기대값이 음수</strong>이므로, 전체 합계 +0.075R을 시스템의 실력으로 읽으면 안 됩니다.</p>
+<aside class="callout danger"><span class="ct">무작위 유니버스에서의 꼬리 검사</span><p>무작위 9종목만 놓고 보면 상위 3건을 제거한 뒤 기대값이 <strong>네 규칙 모두 음수</strong>입니다(고정 -0.177R / 절반 익절 -0.299R / 트레일링 -0.093R / 절반 익절 후 트레일링 -0.079R). 표본이 76~106건으로 작다는 점을 감안해도, 편향 없는 표본에서 꼬리를 걷어내면 남는 것이 없습니다.</p></aside>
+<hr>
+<h3>파라미터 민감도</h3>
+<p>값을 바꿔 가며 부호가 유지되는지만 봤습니다. <strong>이 결과로 값을 고치지 않습니다</strong> — 1년짜리 표본에서 좋은 값을 고르면 그것이 곧 표본 내 튜닝입니다.</p>
+<div class="table-wrap"><table><thead><tr><th>바꾼 값</th><th>범위</th><th>고정 목표 (현 정책)</th><th>트레일링</th></tr></thead><tbody><tr><td>슬리피지</td><td>0 / 10 / 30bp</td><td>+0.109 → +0.062 → <strong>-0.031</strong> ❌</td><td>+0.291 → +0.239 → +0.136 ✅</td></tr><tr><td>트레일링 폭</td><td>1.5 ~ 4.0 ATR</td><td>해당 없음</td><td>+0.248 ~ +0.565 ✅</td></tr><tr><td>미체결 만료</td><td>5 / 10 / 20일</td><td>+0.017 → +0.075 → <strong>-0.055</strong> ❌</td><td>+0.488 → +0.254 → +0.344 ✅</td></tr><tr><td>신호 주기</td><td>3 / 7 / 14일</td><td><strong>-0.014</strong> → +0.075 → +0.080 ❌</td><td>+0.329 → +0.254 → +0.030 ✅</td></tr><tr><td>최소 손익비</td><td>0 / 1.0 / 1.5 / 2.0</td><td>+0.059 → +0.075 → +0.033 → <strong>-0.045</strong> ❌</td><td>+0.218 → +0.254 → +0.054 → <strong>-0.190</strong> ❌</td></tr></tbody></table></div>
+<p>현 정책은 네 축 중 네 축에서 부호가 바뀝니다. 지금의 조합(만료 10일, 신호 주기 7일, 슬리피지 10bp)이 우연히 양수가 나오는 자리에 있습니다. 트레일링 판본은 최소 손익비를 제외한 세 축에서 부호를 지킵니다.</p>
+<p>최소 손익비 축은 따로 볼 값이 있습니다. <strong>손익비 문턱을 1.5나 2.0으로 높이면 모든 규칙이 나빠집니다.</strong> 손익비가 높은 셋업은 진입가가 현재가에서 멀어 체결이 잘 안 되고, 체결되면 그만큼 구조가 덜 확인된 자리입니다. 손익비가 높을수록 좋은 셋업이라는 전제는 이 표본에서 성립하지 않습니다.</p>
+<hr>
+<h3>낙폭과 생존</h3>
+<p>승률이 낮은 시스템은 큰 이익이 오는 날까지 살아남아야 이깁니다. 실현된 매매를 순서만 바꿔 5,000번 다시 배열했습니다(1회 1% 리스크, 복리).</p>
+<figure><a href="backtest_drawdown_20260915.png" target="_blank" rel="noopener"><img src="backtest_drawdown_20260915.png" alt="최대 낙폭 분포" loading="lazy"></a><figcaption>최대 낙폭 분포</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>청산 규칙</th><th>낙폭 중앙값</th><th>상위 10% 나쁜 경우</th><th>상위 1%</th><th>1년 수익률 중앙값</th><th><strong>돈을 잃을 확률</strong></th></tr></thead><tbody><tr><td>고정 목표 (현 정책)</td><td>18.5%</td><td>29.5%</td><td>39.9%</td><td><span class="pos">+15.0%</span></td><td><strong>27.0%</strong></td></tr><tr><td>T1 절반 익절</td><td>23.5%</td><td>36.6%</td><td>46.7%</td><td><span class="neg">-6.1%</span></td><td><strong>59.8%</strong></td></tr><tr><td>트레일링</td><td>19.3%</td><td>29.6%</td><td>41.5%</td><td><span class="pos">+67.8%</span></td><td><strong>7.6%</strong></td></tr><tr><td>절반 익절 후 트레일링</td><td><strong>15.7%</strong></td><td><strong>24.5%</strong></td><td><strong>35.1%</strong></td><td><span class="pos">+57.0%</span></td><td><strong>5.6%</strong></td></tr></tbody></table></div>
+<p>현 정책은 같은 매매를 다른 순서로 겪었을 때 <strong>네 번 중 한 번 이상 1년을 손실로 마칩니다.</strong> 이 분포도 1년·단일 국면 표본에서 나온 것이므로 그 국면의 성질을 물려받습니다.</p>
+<aside class="callout info"><span class="ct">자본곡선 낙폭의 한계</span><p>자본곡선은 청산 시점에만 찍습니다. 보유 중 겪는 낙폭은 여기 잡히지 않으며, 그 몫은 MAE로 따로 봅니다 — 완결 매매의 평균 MAE는 -0.94R입니다.</p></aside>
+<hr>
+<h3>손절 폭 적정성</h3>
+<div class="table-wrap"><table><thead><tr><th>항목</th><th>값</th></tr></thead><tbody><tr><td>손절 폭 중앙값</td><td>1.22 ATR (주가 대비 6.75%)</td></tr><tr><td>이긴 매매의 MAE 중앙값</td><td><strong>-0.27R</strong></td></tr><tr><td>이긴 매매 중 -0.7R 넘게 물린 비율</td><td>16%</td></tr><tr><td>이긴 매매 중 -0.9R 넘게 물린 비율</td><td><strong>6%</strong></td></tr></tbody></table></div>
+<p>결국 이익으로 끝난 매매의 대부분은 손절 근처까지 가지 않았습니다. <strong>손절이 무관한 흔들림에 털리고 있다는 증거는 이 표본에 없습니다.</strong> 손절을 더 넓혀서 얻을 것은 많지 않습니다.</p>
+<p>같은 날 고가가 목표에, 저가가 손절에 동시에 닿은 매매는 <strong>0건</strong>입니다. 시뮬레이터가 그런 경우 손절을 먼저 가정하는데, 이 표본에서는 그 가정이 결과에 영향을 주지 않았습니다.</p>
+<hr>
+<h3>비용</h3>
+<div class="table-wrap"><table><thead><tr><th>청산 규칙</th><th>비용 전 기대값</th><th>비용 후</th><th>비용이 먹은 비율</th></tr></thead><tbody><tr><td>고정 목표 (현 정책)</td><td>+0.133R</td><td><strong>+0.075R</strong></td><td><strong>43%</strong></td></tr><tr><td>T1 절반 익절</td><td>+0.054R</td><td><strong>-0.007R</strong></td><td><strong>전부 — 부호가 바뀝니다</strong></td></tr><tr><td>트레일링</td><td>+0.317R</td><td><strong>+0.254R</strong></td><td>20%</td></tr><tr><td>절반 익절 후 트레일링</td><td>+0.306R</td><td><strong>+0.243R</strong></td><td>21%</td></tr></tbody></table></div>
+<p>현 정책은 엣지의 43%를 비용으로 냅니다. 보유 기간이 평균 8.1봉으로 짧고 손익비 중앙값이 1.81이라 회전이 빠른 탓입니다. 트레일링 판본은 평균 9.0봉을 들고 훨씬 큰 이익을 받아 비용 비중이 절반 이하입니다.</p>
+<p>절반 익절 판본은 비용 전에는 양수인데 비용을 빼면 음수가 됩니다. 두 번 나눠 팔기 때문에 매도 수수료와 거래세를 두 번 냅니다.</p>
+<aside class="callout info"><span class="ct">비용 가정의 상태</span><p>`config/backtest.yaml`의 수수료·증권거래세는 확인이 필요한 값입니다. 아래 민감도와 함께 읽어야 하며, 정확한 값을 확인하는 대로 그 파일만 고치면 전 구간이 다시 계산됩니다.</p></aside>
+<hr>
+<h3>집행 정책에서 발견한 것</h3>
+<p><strong>1. 13% 상한이 1% 리스크보다 먼저 물립니다.</strong> 손절 폭이 주가의 7.7%보다 좁으면 1%를 걸기 위해 필요한 비중이 13%를 넘어 상한에 걸립니다. 이 표본의 손절 폭 중앙값은 6.75%이고, <strong>223건 중 126건(57%)에서 상한이 먼저 작동</strong>해 실제 리스크가 계좌의 0.88%로 줄었습니다. 두 숫자는 서로 독립적으로 정해졌지만 실제로는 절반 이상의 매매에서 상한 쪽만 유효합니다.</p>
+<p><strong>2. 셋업을 고르는 기준과 집행 계획이 다릅니다.</strong> 앞서 적은 대로 `_rank_score`는 절반 익절을 전제한 손익비를 우선 쓰는데, 그 계획은 이 표본에서 기대값 -0.007R로 본전에 못 미칩니다. 실제로 집행하는 고정 목표 전량은 +0.075R입니다.</p>
+<p><strong>3. `edge.rr_structural`과 `edge.coherence_warning`은 코드에 없습니다.</strong> `CLAUDE.md`와 `.claude/agents/ticker.md`는 리포트에 이 두 값을 반드시 적으라고 요구하지만 `_edge_profile`은 이 키를 만들지 않습니다. 백테스트와 별개 사안이며 따로 처리해야 합니다.</p>
+<p><strong>4. 추격 비권장 표시는 이 표본에서 반대로 작동했습니다.</strong> 표시가 붙은 49건의 기대값이 +0.284R, 붙지 않은 174건이 +0.016R입니다. 표본이 작아 결론은 아니지만, 이 플래그가 걸러내려는 것이 실제로 나쁜 자리인지 확인이 필요합니다.</p>
+<p><strong>5. 셋업 종류별 성적</strong> (괄호 안은 매매 수)</p>
+<div class="table-wrap"><table><thead><tr><th>셋업</th><th>고정 목표</th><th>트레일링</th></tr></thead><tbody><tr><td>돌파 매수</td><td>+0.201R (65)</td><td>+0.350R (62)</td></tr><tr><td>되돌림 매수</td><td>+0.053R (103)</td><td>+0.316R (117)</td></tr><tr><td>저항 회복 매수</td><td>+0.100R (47)</td><td><strong>-0.064R</strong> (51)</td></tr><tr><td>지지 확인 매수</td><td>-0.816R (8)</td><td>+0.731R (6)</td></tr></tbody></table></div>
+<p>되돌림 매수는 고정 목표에서 거의 본전인데 트레일링에서 크게 개선됩니다. 저항 회복 매수는 반대로 트레일링에서 나빠집니다. 지지 확인 매수는 표본이 6~8건이라 읽지 않습니다.</p>
+<hr>
+<h3>실제 발행 리포트 성적표</h3>
+<p>이 시스템이 실제로 발행한 리포트 32건을 원문에서 진입·손절·목표를 복원해 이후 일봉으로 채점했습니다. 32건 전부 읽어냈습니다.</p>
+<div class="table-wrap"><table><thead><tr><th>결과</th><th>건수</th></tr></thead><tbody><tr><td>목표 먼저 도달</td><td>4</td></tr><tr><td>손절 먼저</td><td>2</td></tr><tr><td><strong>결판난 계획</strong></td><td><strong>6</strong></td></tr><tr><td>진입 조건 미충족</td><td>7</td></tr><tr><td>다음 리포트로 대체될 때까지 진행 중</td><td>7</td></tr><tr><td>발행 직후라 판정 불가</td><td>12</td></tr></tbody></table></div>
+<p>결판난 6건의 합계는 <strong>+2.541R</strong>, 매매당 <strong>+0.423R</strong>입니다. <strong>이 숫자로는 아무것도 증명되지 않습니다</strong> — 리포트가 쌓인 기간이 2026-08-22부터 3주 남짓입니다. 이번에 만든 것은 성적표 자체가 아니라, 앞으로 이 성적이 자동으로 쌓이게 하는 장치입니다.</p>
+<p>지금까지는 `state/levels.yaml`이 종목당 최신 1건만 남기고 덮어썼고, 훑기 결과 JSON은 배치가 끝나면서 삭제됐습니다. 그래서 과거 계획의 좌표가 어디에도 남지 않았습니다. 이번에 두 가지를 바꿨습니다.</p>
+<ul><li>기준 가격을 덮어쓰기 전에 `state/levels_history.jsonl`에 한 줄씩 덧붙입니다.</li><li>`watch-scan`·`index-scan` 결과를 `state/scans/`에 시각별로 보관합니다. CLI 안에서 처리하므로 배치·세션·수동 실행 어느 경로로 돌려도 남습니다.</li></ul>
+<p>이 시점부터는 리포트 원문을 파싱할 필요 없이 구조화된 기록만으로 채점됩니다.</p>
+<hr>
+<h3>합격 기준 대조</h3>
+<p>실행 전에 정해 둔 기준입니다. 결과를 보고 만든 것이 아닙니다. 판정은 <strong>무작위 9종목</strong> 기준으로 합니다 — 보유·관심 목록은 선택편향이 있어 판정에 쓸 수 없습니다.</p>
+<div class="table-wrap"><table><thead><tr><th>항목</th><th>기준</th><th>고정 목표(현 정책)</th><th>트레일링</th></tr></thead><tbody><tr><td>매매 표본</td><td>≥ 200건</td><td>전체 223 ✅ / 무작위만 76 ❌</td><td>전체 236 ✅ / 무작위만 85 ❌</td></tr><tr><td>비용 후 기대값</td><td>&gt; 0</td><td><strong>무작위 -0.048R ❌</strong> (전체 +0.075R)</td><td>무작위 +0.185R ✅</td></tr><tr><td><strong>꼬리 의존도</strong></td><td>상위 3건 제거 후에도 양수</td><td><strong>-0.177R ❌</strong></td><td><strong>-0.093R ❌</strong></td></tr><tr><td>비용 후 최대 낙폭</td><td>&lt; 20%</td><td>4.3% ✅</td><td>6.9% ✅</td></tr><tr><td><strong>벤치마크 대비</strong></td><td>리스크 조정 후 우위</td><td><span class="pos">+1.9%</span> vs 보유 <span class="pos">+1.8%</span> — 무승부</td><td><strong><span class="pos">+11.1%</span> vs <span class="pos">+1.8%</span> ✅</strong></td></tr><tr><td>파라미터 표면</td><td>최적값 ±1구간에서 부호 유지</td><td><strong>네 축 전부 부호 뒤집힘 ❌</strong></td><td>네 축 중 세 축 유지</td></tr><tr><td>국면별</td><td>치명적인 국면 없음</td><td><strong>판정 불가 — 하락 국면이 표본에 없음</strong></td><td>동일</td></tr></tbody></table></div>
+<p>무작위 유니버스만 놓으면 표본이 76~85건으로 합격선 200건에 미달합니다. <strong>따라서 이 표의 나머지 줄도 &quot;측정값&quot;이지 &quot;판정&quot;이 아닙니다.</strong> 구간을 늘려 표본을 채우는 것이 다음 순서인 이유가 여기 있습니다.</p>
+<hr>
+<h3>다음에 할 일</h3>
+<p>1. <strong>구간을 3년 이상으로 늘립니다.</strong> 데이터는 이미 5년치를 받아 두었고 `--from`/`--to`만 바꾸면 되므로 추가 다운로드도 코드 수정도 필요 없습니다. 무작위 유니버스의 표본을 200건 이상으로 채우고 2022년 약세장을 넣는 것이 목적입니다. 2. <strong>무작위 유니버스를 30종목 이상으로 늘립니다.</strong> 9종목은 종목 운과 엔진 실력이 분리되지 않습니다. 시드를 바꿔 여러 번 뽑아 결과가 같은 방향인지도 함께 봅니다. 3. <strong>청산 규칙 변경은 그 결과를 본 뒤에 결정합니다.</strong> 1년 표본에서 트레일링이 앞선다는 이유로 정책을 바꾸면 그것이 곧 표본 내 튜닝입니다. 4. <strong>비용 가정을 확정합니다.</strong> 현 정책은 슬리피지 30bp에서 기대값이 음수가 되므로, 실제 세율·수수료가 가정보다 높으면 부호가 바뀝니다. 5. <strong>13% 상한과 1% 리스크의 충돌을 정리합니다.</strong> 지금은 절반 이상의 매매에서 의도한 리스크가 걸리지 않습니다. 6. <strong>손익비 문턱 1.0의 근거를 다시 봅니다.</strong> 문턱을 높이면 성적이 나빠지는데, 이는 손익비가 셋업의 품질을 재는 지표로 작동하지 않는다는 뜻일 수 있습니다.</p>
+<p><a class="dl" href="report.md">Markdown 원문</a></p>
+<footer>본 자료는 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단과 그 결과의 책임은 투자자 본인에게 있습니다.</footer></div></body></html>
