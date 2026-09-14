@@ -1,6 +1,16 @@
 {
   "reports": [
     {
+      "slug": "lightpath-technologies-inc-lpth-20260915",
+      "title": "LightPath (LPTH) 종목 리포트 · 2026-09-15",
+      "summary": "보유분 200주는 유지하되, 일봉 종가가 8.93달러 아래로 마감하면 전량 정리합니다. 신규 진입은 일봉 종가가 10.04달러를 회복할 때만 하고(손익비 1:1.43, 손절 폭 1.32 ATR), 진입한 경우 집행 손절은 8.68달러입니다. 직전 리포트가 걸어 둔 폐기선 9.38달러는 9월 11일·14일 이틀 연속 종가로 내준 상태이므로, 9월 16일 종가까지 9.38달러를 회복하지 못하면 경고 단계로 넘어가며 신규 매수는 그때부터 하지 않습니다.",
+      "kind": "ticker",
+      "symbol": "LPTH",
+      "name": "LightPath",
+      "published_at": "2026-09-15T06:34:56+09:00",
+      "url": "r/lightpath-technologies-inc-lpth-20260915/"
+    },
+    {
       "slug": "holdings-US-20260915",
       "title": "보유종목 점검 · 2026-09-15",
       "summary": "보유종목 15개 중 5개에 조치가 필요합니다 — 전량 손절 2개(USA Rare Earth (USAR), GE Vernova (GEV)) · 보유분 정리 2개(LightPath (LPTH), Fluence Energy (FLNC)) · 보유 유지 (추가 진입 판단) 1개(Netflix (NFLX)). 아직 분석하지 않은 7개(삼성물산 (028260.KS), SOL AI반도체TOP2플러스 (0167A0.KS), TIGER 코리아AI전력기기TOP3플러스 (0117V0.KS), SOL 반도체전공정 (475300.KS), TIGER 미국배당다우존스 (458730.KS), Alibaba (BABA), MP Materials (MP))는 이번 점검에서 판정 자체가 불가능했습니다. 삼성전자 (005930.KS)의 집행 손절 246,373원을 장중 저가로 찍으면 전량 손절 대상이 되며, 이 판단은 다시 봅니다.",
