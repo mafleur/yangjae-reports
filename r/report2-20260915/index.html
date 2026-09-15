@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>수익률 극대화 검증 리포트 · 2026-09-15</title>
+<style>
+:root{--bg:#fbfbfa;--panel:#fff;--fg:#1c1c1a;--muted:#6b6b66;--line:#e3e3df;
+--accent:#2f6f4f;--accent-soft:#e8f1ec;--code:#f3f3f0;
+--pos:#1a7d4f;--neg:#c2402c;--hl:#fff3b8;--hl-fg:#3d3200;
+--danger:#c2402c;--danger-bg:#fdf1ee;--key:#2f6f4f;--key-bg:#eef5f1;
+--info:#5a6b86;--info-bg:#f0f3f8}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--panel:#1c1c1b;--fg:#e8e8e4;
+--muted:#9a9a93;--line:#2e2e2b;--accent:#7dc4a0;--accent-soft:#1e2a24;--code:#232322;
+--pos:#5fcf98;--neg:#f08b76;--hl:#4a3f10;--hl-fg:#ffe8a3;
+--danger:#f08b76;--danger-bg:#2b1c18;--key:#7dc4a0;--key-bg:#18241e;
+--info:#9db1d0;--info-bg:#1a1e26}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+-webkit-text-size-adjust:100%}
+.wrap{max-width:820px;margin:0 auto;padding:28px 20px 80px}
+a{color:var(--accent)}
+header.site{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:22px}
+header.site h1{font-size:19px;margin:0;letter-spacing:-.01em}
+header.site .sub{color:var(--muted);font-size:13px}
+.back{font-size:13px;text-decoration:none}
+.meta{color:var(--muted);font-size:13px;margin:0 0 18px}
+.badge{display:inline-block;background:var(--accent-soft);color:var(--accent);
+border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;margin-right:8px}
+h1.title{font-size:27px;line-height:1.3;margin:0 0 6px;letter-spacing:-.02em}
+.lede{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+border-radius:6px;padding:14px 16px;margin:0 0 26px;font-size:16px;font-weight:500}
+.lede .lbl{display:block;color:var(--muted);font-size:11px;font-weight:700;
+letter-spacing:.09em;text-transform:uppercase;margin-bottom:5px}
+h2{font-size:20px;margin:34px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin:24px 0 8px}
+h4{font-size:15px;margin:20px 0 6px;color:var(--muted)}
+p{margin:0 0 12px}
+ul{margin:0 0 14px;padding-left:20px}
+li{margin-bottom:5px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+figure{margin:20px 0}
+figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+figcaption{color:var(--muted);font-size:13px;margin-top:7px;text-align:center}
+.table-wrap{overflow-x:auto;margin:0 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:420px}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--code);font-weight:600}
+.missing{color:#b4553c;font-size:14px}
+.note{color:var(--muted);font-size:13px;line-height:1.6;margin:-2px 0 16px}
+.pos{color:var(--pos);font-weight:600;font-variant-numeric:tabular-nums}
+.neg{color:var(--neg);font-weight:600;font-variant-numeric:tabular-nums}
+mark{background:var(--hl);color:var(--hl-fg);padding:0 3px;border-radius:3px}
+td strong,th strong{font-weight:700}
+.callout{border:1px solid var(--line);border-left:4px solid var(--info);
+background:var(--info-bg);border-radius:6px;padding:12px 15px;margin:0 0 18px}
+.callout .ct{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;
+text-transform:uppercase;color:var(--info);margin-bottom:6px}
+.callout p{margin:0 0 7px;font-size:15px}
+.callout p:last-child{margin-bottom:0}
+.callout.danger{border-left-color:var(--danger);background:var(--danger-bg)}
+.callout.danger .ct{color:var(--danger)}
+.callout.key{border-left-color:var(--key);background:var(--key-bg)}
+.callout.key .ct{color:var(--key)}
+.dl{display:inline-block;font-size:13px;text-decoration:none;border:1px solid var(--line);
+border-radius:6px;padding:6px 12px;margin-top:8px}
+.warn{background:var(--accent-soft);border:1px solid var(--line);border-radius:6px;
+padding:10px 14px;font-size:13px;color:var(--muted);margin:0 0 20px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filters input{flex:1;min-width:160px;padding:8px 12px;border:1px solid var(--line);
+border-radius:6px;background:var(--panel);color:var(--fg);font-size:14px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--muted);
+border-radius:999px;padding:6px 13px;font-size:13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);
+border-color:var(--accent);font-weight:600}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;
+padding:15px 17px;margin-bottom:11px;text-decoration:none;color:inherit}
+.card:hover{border-color:var(--accent)}
+.card h2{font-size:17px;margin:0 0 5px;border:0;padding:0}
+.card .sum{color:var(--muted);font-size:14px;margin:0}
+.card .row{display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
+.card time{color:var(--muted);font-size:12px}
+.empty{color:var(--muted);text-align:center;padding:40px 0;font-size:14px}
+footer{color:var(--muted);font-size:12px;margin-top:44px;padding-top:14px;
+border-top:1px solid var(--line)}
+</style>
+</head><body><div class="wrap"><header class="site"><a class="back" href="../../index.html">← 전체 리포트</a></header>
+<p class="meta"><span class="badge">리포트</span><strong>수익률 극대화 검증</strong> · 2026-09-15 12:49</p>
+<h1 class="title">수익률 극대화 검증 리포트 · 2026-09-15</h1>
+<div class="lede"><span class="lbl">한 줄 결론</span>수익률을 극대화할 방법을 찾기 전에 <strong>극대화할 엣지가 있는지</strong>를 먼저 확인했고, 답은 없다는 쪽입니다. 2018~2026년을 2년 학습 / 1년 검증으로 굴려 학습 구간에서 청산 규칙과 노출 한도를 고르고 다음 구간에서만 채점하니, 무작위 종목 추첨 3벌의 6.7년 누적 수익률이 <strong><span class="neg">-0.6%</span> / <span class="pos">+79.7%</span> / <span class="neg">-17.9%</span>로 부호조차 갈립니다.</strong> 학습 구간 MAR 1.36~2.92가 검증 구간에서 -0.11~1.03으로 무너지고(격차 1.23~2.40), 2022년 검증 구간은 세 추첨 전부 <strong><span class="neg">-17.2%</span> ~ <span class="neg">-20.0%</span></strong>로 계좌 낙폭 한도 20%를 넘깁니다. 이 결과로는 집행 정책을 바꾸지 않으며, 판정은 <strong>롱 온리 구조 엔진이 하락 국면에서 무엇을 해야 하는지가 정해질 때까지 보류</strong>합니다. 되돌릴 조건은 하나입니다 — 무작위 추첨 3벌 전부에서 검증 구간 기대값이 양수이고 2022년 같은 하락 구간의 낙폭이 20% 안에 들어올 때.</div>
+<aside class="callout danger"><span class="ct">이 리포트는 직전 리포트의 정정을 포함합니다</span><p>2026-09-15에 발행한 백테스트 리포트의 수익률과 낙폭이 틀렸습니다. 아래 &quot;직전 리포트 정정&quot;에 무엇이 왜 틀렸는지 적었습니다. 그 리포트의 수치는 인용하지 마십시오.</p></aside>
+<hr>
+<h3>직전 리포트(2026-09-15) 정정</h3>
+<p>네 군데가 틀렸고, 넷 다 측정의 결함입니다. 전략의 문제가 아니라 제가 만든 백테스트의 문제입니다.</p>
+<p><strong>① 계좌가 없는 돈을 썼습니다.</strong> 포트폴리오 계산이 청산일 손익만 더하고 동시 보유 자본을 추적하지 않았습니다. 그 결과 <strong>364일 중 119~183일이 투입 자본 100%를 넘었고 최대 198%</strong>까지 갔습니다. 레버리지를 쓰지 않는다는 전제가 지켜지지 않은 숫자였습니다.</p>
+<p><strong>② 낙폭을 청산 시점에만 쟀습니다.</strong> 보유 중 겪는 낙폭이 잡히지 않아 실제보다 얕게 나왔습니다. 일별 시가평가로 바꾸니 현 정책(고정 목표 전량 청산)의 1년 낙폭이 15.4%에서 21.4%로 올라갑니다.</p>
+<p><strong>③ 무작위 유니버스에 거래 불가능한 종목이 섞였습니다.</strong> 스크리너가 내준 목록에 호가가 거의 움직이지 않는 해외 장외 종목이 들어 있었습니다. GMGSF는 봉의 70%, SURYY는 69%, MZHOF는 60%가 고가와 저가가 같은 무거래일이고 일평균 거래대금이 각각 $9,088 / $7,110 / $45,422입니다. EBBNF는 하루 변동폭이 주가의 0.21%라 구조적 손절이 진입가 바로 아래에 붙습니다. 이 때문에 <strong>매매 한 건이 7,247,888R을 기록</strong>했고, 그 한 건이 한 추첨의 결과 전체를 만들었습니다(총 7,247,935R 중). 나머지 1,586건의 중앙값은 -1.02R로 정상이었습니다.</p>
+<p><strong>④ 분할 청산 판본에 버그가 있었습니다.</strong> 엔진이 목표를 하나만 준 셋업에서 1차 목표 청산이 사라져 손절까지 끌고 갔습니다.</p>
+<h4>고친 내용</h4>
+<div class="table-wrap"><table><thead><tr><th>항목</th><th>조치</th></tr></thead><tbody><tr><td>현금 제약</td><td>동시 보유 자본이 계좌를 넘으면 매매를 거절하거나 남은 현금만큼만 채웁니다. 거절 건수와 그 매매가 냈을 손익을 결과에 남깁니다</td></tr><tr><td>낙폭</td><td>보유 중 평가손익을 매일 반영해 잽니다. 20% 한도 판정은 이 곡선으로만 합니다</td></tr><tr><td>거래 가능성</td><td>미국 일평균 거래대금 $5M, 한국 ₩10억, 무거래 봉 5% 이하, 봉 500개 이상. 오늘 기준이 아니라 저장된 과거 시세로 판정합니다</td></tr><tr><td>손절 폭 하한</td><td>손절이 주가의 0.5%보다 좁으면 위험 단위가 성립하지 않는 것으로 보고 매매하지 않으며, 건수를 따로 셉니다</td></tr><tr><td>자리 배분</td><td>같은 날 신호가 자리보다 많을 때 무엇을 살지 다섯 규칙 중에서 고릅니다</td></tr><tr><td>동시 노출 한도</td><td>동시 보유 종목 수·시장별 상한·동시 리스크 합계. 각 포지션이 실제로 지는 리스크로 셉니다</td></tr></tbody></table></div>
+<p>거래 가능성 필터는 첫 추첨 30종목 중 11개를 걸러냅니다. 그래서 유니버스를 40종목씩 다시 뽑아 필터 통과 후 26~27종목이 남게 했습니다.</p>
+<hr>
+<h3>목적함수와 제약</h3>
+<p>사용자 확정 사항입니다. 낙폭 대비 수익(MAR = 수익률 ÷ 최대낙폭)을 극대화하되, 1회 매매 리스크는 계좌의 1%, 계좌 최대 낙폭은 20% 이내, 레버리지는 쓰지 않습니다.</p>
+<p>여기서 하나가 먼저 정해집니다. <strong>사이징은 지렛대가 아닙니다.</strong> 수익률은 매매 건수 × 매매당 기대값(R) × 1R당 계좌 비중의 곱인데, 세 번째 항이 막혀 있습니다. 1회 1%에서 이미 계좌 낙폭이 21.4%로 한도에 닿아 있어 비중을 키우면 수익보다 낙폭이 먼저 한도를 넘습니다.</p>
+<p>손절 폭 중앙값이 주가의 6.75%이므로 1%를 걸려면 비중이 13%(상한)입니다. 동시 보유가 평균 8~9종목이면 104~121%가 되어 현금 100%를 넘습니다. <strong>세 제약을 동시에 지키면 자리가 모자라고, 그때 무엇을 살지 고르는 규칙이 새로 필요해집니다.</strong></p>
+<hr>
+<h3>정정된 1년 기준선</h3>
+<p>구간 2025-09-14 ~ 2026-09-14, 현금 제약과 일별 시가평가를 적용한 값입니다.</p>
+<div class="table-wrap"><table><thead><tr><th>유니버스</th><th>청산 규칙</th><th>수익률</th><th>최대 낙폭</th><th>MAR</th></tr></thead><tbody><tr><td>보유·관심 13종목</td><td>고정 목표 (현 정책)</td><td><strong><span class="pos">+8.9%</span></strong></td><td>17.3%</td><td>0.51</td></tr><tr><td>보유·관심 13종목</td><td>절반 익절 후 트레일링</td><td><strong><span class="pos">+15.5%</span></strong></td><td>20.8%</td><td>0.75</td></tr><tr><td>무작위 27종목</td><td>고정 목표 (현 정책)</td><td><strong><span class="neg">-7.8%</span></strong></td><td>18.1%</td><td>-0.43</td></tr><tr><td>무작위 27종목</td><td>T1 절반 익절</td><td><strong><span class="neg">-9.3%</span></strong></td><td>23.1%</td><td>-0.40</td></tr><tr><td>무작위 27종목</td><td>트레일링</td><td><strong><span class="neg">-32.3%</span></strong></td><td>36.1%</td><td>-0.90</td></tr><tr><td>무작위 27종목</td><td>절반 익절 후 트레일링</td><td><strong><span class="neg">-21.5%</span></strong></td><td>29.4%</td><td>-0.73</td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>참고</th><th>보유·관심 13종목</th><th>무작위 27종목</th></tr></thead><tbody><tr><td>그냥 동일가중으로 보유했을 때</td><td><span class="pos">+106.0%</span></td><td><span class="pos">+14.5%</span></td></tr></tbody></table></div>
+<p><mark>선택편향을 걷어낸 27종목에서는 네 청산 규칙이 전부 손실입니다.</mark> 직전 리포트가 무작위 9종목에서 트레일링 <span class="pos">+11.1%</span>를 냈던 것은 표본이 작았기 때문이며, 같은 방식으로 27종목을 돌리면 <span class="neg">-32.3%</span>입니다.</p>
+<aside class="callout info"><span class="ct">종목 수와 낙폭의 관계</span><p>무작위 유니버스가 9종목에서 27종목으로 늘면서 낙폭이 10%에서 36%로 커집니다. 분산이 나빠져서가 아니라, 종목이 많으면 자리가 다 차서 평균 투입 자본이 40%에서 80% 위로 올라가고 그만큼 시장에 더 노출되기 때문입니다.</p></aside>
+<hr>
+<h3>워크포워드 — 학습에서 고르고 다음 구간에서 채점</h3>
+<p>구간 2018-01 ~ 2026-09, 2년 학습 / 1년 검증으로 7개 창입니다. 각 창의 학습 구간에서 청산 규칙 3종과 노출 한도 4종을 조합한 12개 후보 중 MAR이 가장 높으면서 낙폭 20%를 지킨 것을 고르고, <strong>그 다음 1년에만 성적을 매겼습니다.</strong> 무작위 종목 추첨을 시드 3벌로 나눠 같은 절차를 세 번 돌렸습니다.</p>
+<div class="table-wrap"><table><thead><tr><th>추첨</th><th>6.7년 누적 수익률</th><th>검증 매매</th><th>매매당 기대값</th><th>학습 MAR</th><th>검증 MAR</th><th>격차</th></tr></thead><tbody><tr><td>20260914 (27종목)</td><td><strong><span class="neg">-0.6%</span></strong></td><td>1,596건</td><td><strong>-0.032R</strong></td><td>2.92</td><td>0.52</td><td>2.40</td></tr><tr><td>7 (26종목)</td><td><strong><span class="pos">+79.7%</span></strong></td><td>1,562건</td><td>+0.055R</td><td>2.26</td><td>1.03</td><td>1.23</td></tr><tr><td>424242 (26종목)</td><td><strong><span class="neg">-17.9%</span></strong></td><td>1,566건</td><td>+0.037R</td><td>1.36</td><td>-0.11</td><td>1.47</td></tr></tbody></table></div>
+<figure><a href="wf_overfit_20260915.png" target="_blank" rel="noopener"><img src="wf_overfit_20260915.png" alt="학습 구간에서 고른 설정의 검증 구간 성적" loading="lazy"></a><figcaption>학습 구간에서 고른 설정의 검증 구간 성적</figcaption></figure>
+<p>같은 절차를 종목만 바꿔 세 번 돌렸는데 6.7년 누적이 <span class="neg">-17.9%</span>에서 <span class="pos">+79.7%</span>까지 벌어집니다. 매매 표본은 세 번 모두 1,500건이 넘으므로 표본 부족이 아니라 <strong>결과가 어느 종목을 뽑았느냐에 좌우된다는 뜻</strong>입니다.</p>
+<h4>연도별로 보면 어디서 깨지는가</h4>
+<figure><a href="wf_windows_20260915.png" target="_blank" rel="noopener"><img src="wf_windows_20260915.png" alt="검증 구간 연도별 수익률" loading="lazy"></a><figcaption>검증 구간 연도별 수익률</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>검증 연도</th><th>추첨 20260914</th><th>추첨 7</th><th>추첨 424242</th></tr></thead><tbody><tr><td>2020</td><td><span class="pos">+6.0%</span></td><td><span class="pos">+27.6%</span></td><td><span class="neg">-4.5%</span></td></tr><tr><td>2021</td><td><span class="neg">-8.8%</span></td><td><span class="pos">+17.1%</span></td><td><span class="neg">-3.4%</span></td></tr><tr><td><strong>2022</strong></td><td><strong><span class="neg">-17.6%</span></strong></td><td><strong><span class="neg">-17.2%</span></strong></td><td><strong><span class="neg">-20.0%</span></strong></td></tr><tr><td>2023</td><td><span class="pos">+1.1%</span></td><td><span class="pos">+17.7%</span></td><td><span class="neg">-2.3%</span></td></tr><tr><td>2024</td><td><span class="neg">-7.3%</span></td><td><span class="pos">+3.9%</span></td><td><span class="pos">+1.8%</span></td></tr><tr><td>2025</td><td><span class="pos">+24.9%</span></td><td><span class="pos">+7.4%</span></td><td><span class="pos">+3.5%</span></td></tr><tr><td>2026</td><td><span class="pos">+6.7%</span></td><td><span class="pos">+10.4%</span></td><td><span class="pos">+8.0%</span></td></tr></tbody></table></div>
+<p>2022년만 세 추첨이 모두 크게 잃고, 그 창의 낙폭은 21.5% / 22.4% / 20.1%로 셋 다 한도를 넘습니다. 다른 연도는 부호가 제각각인데 2022년만 일치합니다. 롱 온리 엔진이 하락 국면에서 겪는 일이며, 직전 리포트의 1년 표본에는 이 국면이 없었습니다.</p>
+<h4>꼬리 검사</h4>
+<div class="table-wrap"><table><thead><tr><th>추첨</th><th>기대값</th><th>상위 3건 제거</th><th>상위 5건 제거</th><th>승률</th><th>최대 연속 손실</th></tr></thead><tbody><tr><td>20260914</td><td>-0.032R</td><td>-0.061R</td><td>-0.074R</td><td>37.2%</td><td>15회</td></tr><tr><td>7</td><td>+0.055R</td><td>+0.033R</td><td>+0.021R</td><td>40.9%</td><td>11회</td></tr><tr><td>424242</td><td>+0.037R</td><td>+0.009R</td><td>-0.005R</td><td>37.8%</td><td>15회</td></tr></tbody></table></div>
+<p>상위 몇 건을 빼도 양수로 남는 것은 추첨 7 하나뿐입니다. 연속 11~15회 손실은 1회 1% 리스크로도 계좌의 11~15%가 연속으로 빠진다는 뜻이며, 그 구간을 버티는 것이 현실적으로 가장 어려운 부분입니다.</p>
+<hr>
+<h3>동시 노출 한도</h3>
+<p>1년 표본에서 가장 크게 MAR을 움직인 항목입니다. 매매 자체는 바꾸지 않고 계좌 규칙만 바꿉니다.</p>
+<figure><a href="concentration_20260915.png" target="_blank" rel="noopener"><img src="concentration_20260915.png" alt="동시 노출 한도별 MAR" loading="lazy"></a><figcaption>동시 노출 한도별 MAR</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>청산 규칙</th><th>한도 없음</th><th>가장 좋았던 한도</th></tr></thead><tbody><tr><td>고정 목표</td><td><span class="pos">+15.1%</span> / 낙폭 21.4% / MAR 0.70</td><td>동시 6종목 — <span class="pos">+22.8%</span> / 15.7% / <strong>1.45</strong></td></tr><tr><td>절반 익절 후 트레일링</td><td><span class="pos">+2.9%</span> / 낙폭 28.7% / MAR 0.10</td><td>동시 리스크 3% — <span class="pos">+22.2%</span> / 7.1% / <strong>3.14</strong></td></tr></tbody></table></div>
+<p><strong>방향은 구조적입니다.</strong> 세 청산 규칙과 세 한도 종류 전부에서, 동시 노출을 줄이면 낙폭이 크게 떨어지고 수익은 대체로 유지되거나 올랐습니다. 자리가 다 찼을 때 들어가는 매매가 평균적으로 나쁘다는 뜻이며, 그 시점은 신호가 몰리는 때 — 시장이 한 방향으로 움직여 여러 종목이 동시에 조건을 채우는 때입니다.</p>
+<p><strong>값은 구조적이지 않습니다.</strong> 최적 한도가 데이터를 바꾸면 통째로 이동합니다. 필터 이전 데이터에서는 &quot;시장별 2종목&quot;이 고정 목표 기준 MAR 3.17로 최고였는데, 같은 항목이 정리된 데이터에서는 0.20입니다. 워크포워드에서도 7개 창 중 4~6종의 서로 다른 설정이 뽑혔습니다. <strong>어느 값을 쓸지는 이 표본이 정하지 못하며, 여기서 하나를 고르면 그게 과최적화입니다.</strong></p>
+<hr>
+<h3>채택 기준 대조</h3>
+<p>실행 전에 정해 둔 기준입니다. 판정은 워크포워드 검증 구간으로만 합니다.</p>
+<div class="table-wrap"><table><thead><tr><th>항목</th><th>기준</th><th>결과</th></tr></thead><tbody><tr><td>검증 구간 매매 표본</td><td>≥ 200건</td><td>1,562~1,596건 — 통과</td></tr><tr><td>비용 후 기대값</td><td>&gt; 0</td><td>3벌 중 2벌, 그것도 +0.04~0.06R — <strong>미달</strong></td></tr><tr><td>상위 3건 제거 후 기대값</td><td>&gt; 0</td><td>3벌 중 1벌 — <strong>미달</strong></td></tr><tr><td>검증 구간 최대 낙폭</td><td>≤ 20%</td><td>2022년 창에서 3벌 전부 초과 — <strong>미달</strong></td></tr><tr><td>추첨 3벌의 부호 일치</td><td>일치</td><td><span class="neg">-0.6%</span> / <span class="pos">+79.7%</span> / <span class="neg">-17.9%</span> — <strong>미달</strong></td></tr><tr><td>파라미터 안정성</td><td>채택값 ±1구간 순위 유지</td><td>7창 중 4~6종의 서로 다른 설정 — <strong>미달</strong></td></tr></tbody></table></div>
+<p>여섯 항목 중 다섯이 미달입니다. 계획에 걸어 둔 중단 조건에 해당하므로 <strong>지렛대 최적화 단계로 넘어가지 않고 여기서 멈춥니다.</strong></p>
+<hr>
+<h3>질문에 대한 답</h3>
+<p>수익률을 극대화하는 방법을 찾지 못했습니다. 찾지 못한 이유는 방법이 부족해서가 아니라 <strong>극대화할 대상이 확인되지 않기 때문</strong>입니다. 매매당 기대값이 세 추첨에서 -0.032R, +0.055R, +0.037R로 사실상 0이고, 여기에 무엇을 곱해도 0 근처입니다.</p>
+<p>지금 데이터로 말할 수 있는 것은 셋입니다.</p>
+<p><strong>동시 노출을 줄이는 방향은 맞습니다.</strong> 다만 얼마로 줄일지를 이 표본이 정하지 못하므로, 지금 값을 정해 정책에 넣지 않습니다.</p>
+<p><strong>비중을 키우는 길은 막혀 있습니다.</strong> 1회 1%에서 이미 낙폭이 한도에 닿아 있습니다.</p>
+<p><strong>막히는 곳은 하락 국면입니다.</strong> 2022년 검증 구간에서만 세 추첨이 일치해 <span class="neg">-17%</span> ~ <span class="neg">-20%</span>를 잃고 낙폭 한도를 넘깁니다. 롱 온리 구조 엔진에는 하락장에서 할 일이 없고, 지금은 그 구간에 그대로 노출됩니다.</p>
+<p>그래서 다음에 볼 것은 청산 규칙이나 한도 값이 아니라 <strong>하락 국면을 어떻게 다룰 것인가</strong>입니다. 선택지는 세 가지로 좁혀집니다 — ① 시장 국면 판정을 넣어 하락 국면에서 신규 진입을 멈춘다 ② 숏 또는 인버스를 허용한다 ③ 하락 국면에는 이 시스템을 쓰지 않고 현금으로 둔다. ①은 국면 판정 자체가 또 하나의 과최적화 대상이 되므로 워크포워드로 검증해야 하고, ②는 엔진이 롱 온리로 설계돼 있어 구조 변경이 필요하며, ③은 판정을 사람이 내린다는 뜻입니다. 어느 쪽을 볼지는 결정이 필요한 사안입니다.</p>
+<p><a class="dl" href="report.md">Markdown 원문</a></p>
+<footer>본 자료는 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단과 그 결과의 책임은 투자자 본인에게 있습니다.</footer></div></body></html>
