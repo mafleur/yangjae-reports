@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>보유종목 점검 · 2026-09-16</title>
+<style>
+:root{--bg:#fbfbfa;--panel:#fff;--fg:#1c1c1a;--muted:#6b6b66;--line:#e3e3df;
+--accent:#2f6f4f;--accent-soft:#e8f1ec;--code:#f3f3f0;
+--pos:#1a7d4f;--neg:#c2402c;--hl:#fff3b8;--hl-fg:#3d3200;
+--danger:#c2402c;--danger-bg:#fdf1ee;--key:#2f6f4f;--key-bg:#eef5f1;
+--info:#5a6b86;--info-bg:#f0f3f8}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--panel:#1c1c1b;--fg:#e8e8e4;
+--muted:#9a9a93;--line:#2e2e2b;--accent:#7dc4a0;--accent-soft:#1e2a24;--code:#232322;
+--pos:#5fcf98;--neg:#f08b76;--hl:#4a3f10;--hl-fg:#ffe8a3;
+--danger:#f08b76;--danger-bg:#2b1c18;--key:#7dc4a0;--key-bg:#18241e;
+--info:#9db1d0;--info-bg:#1a1e26}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+-webkit-text-size-adjust:100%}
+.wrap{max-width:820px;margin:0 auto;padding:28px 20px 80px}
+a{color:var(--accent)}
+header.site{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:22px}
+header.site h1{font-size:19px;margin:0;letter-spacing:-.01em}
+header.site .sub{color:var(--muted);font-size:13px}
+.back{font-size:13px;text-decoration:none}
+.meta{color:var(--muted);font-size:13px;margin:0 0 18px}
+.badge{display:inline-block;background:var(--accent-soft);color:var(--accent);
+border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;margin-right:8px}
+h1.title{font-size:27px;line-height:1.3;margin:0 0 6px;letter-spacing:-.02em}
+.lede{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+border-radius:6px;padding:14px 16px;margin:0 0 26px;font-size:16px;font-weight:500}
+.lede .lbl{display:block;color:var(--muted);font-size:11px;font-weight:700;
+letter-spacing:.09em;text-transform:uppercase;margin-bottom:5px}
+h2{font-size:20px;margin:34px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin:24px 0 8px}
+h4{font-size:15px;margin:20px 0 6px;color:var(--muted)}
+p{margin:0 0 12px}
+ul{margin:0 0 14px;padding-left:20px}
+li{margin-bottom:5px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+figure{margin:20px 0}
+figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+figcaption{color:var(--muted);font-size:13px;margin-top:7px;text-align:center}
+.table-wrap{overflow-x:auto;margin:0 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:420px}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--code);font-weight:600}
+.missing{color:#b4553c;font-size:14px}
+.note{color:var(--muted);font-size:13px;line-height:1.6;margin:-2px 0 16px}
+.pos{color:var(--pos);font-weight:600;font-variant-numeric:tabular-nums}
+.neg{color:var(--neg);font-weight:600;font-variant-numeric:tabular-nums}
+mark{background:var(--hl);color:var(--hl-fg);padding:0 3px;border-radius:3px}
+td strong,th strong{font-weight:700}
+.callout{border:1px solid var(--line);border-left:4px solid var(--info);
+background:var(--info-bg);border-radius:6px;padding:12px 15px;margin:0 0 18px}
+.callout .ct{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;
+text-transform:uppercase;color:var(--info);margin-bottom:6px}
+.callout p{margin:0 0 7px;font-size:15px}
+.callout p:last-child{margin-bottom:0}
+.callout.danger{border-left-color:var(--danger);background:var(--danger-bg)}
+.callout.danger .ct{color:var(--danger)}
+.callout.key{border-left-color:var(--key);background:var(--key-bg)}
+.callout.key .ct{color:var(--key)}
+.dl{display:inline-block;font-size:13px;text-decoration:none;border:1px solid var(--line);
+border-radius:6px;padding:6px 12px;margin-top:8px}
+.warn{background:var(--accent-soft);border:1px solid var(--line);border-radius:6px;
+padding:10px 14px;font-size:13px;color:var(--muted);margin:0 0 20px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filters input{flex:1;min-width:160px;padding:8px 12px;border:1px solid var(--line);
+border-radius:6px;background:var(--panel);color:var(--fg);font-size:14px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--muted);
+border-radius:999px;padding:6px 13px;font-size:13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);
+border-color:var(--accent);font-weight:600}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;
+padding:15px 17px;margin-bottom:11px;text-decoration:none;color:inherit}
+.card:hover{border-color:var(--accent)}
+.card h2{font-size:17px;margin:0 0 5px;border:0;padding:0}
+.card .sum{color:var(--muted);font-size:14px;margin:0}
+.card .row{display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
+.card time{color:var(--muted);font-size:12px}
+.empty{color:var(--muted);text-align:center;padding:40px 0;font-size:14px}
+footer{color:var(--muted);font-size:12px;margin-top:44px;padding-top:14px;
+border-top:1px solid var(--line)}
+</style>
+</head><body><div class="wrap"><header class="site"><a class="back" href="../../index.html">← 전체 리포트</a></header>
+<p class="meta"><span class="badge">보유종목 점검</span>2026-09-16 15:40</p>
+<h1 class="title">보유종목 점검 · 2026-09-16</h1>
+<div class="lede"><span class="lbl">한 줄 결론</span>보유종목 16개 중 2개에 조치가 필요합니다 — 보유 유지 (추가 진입 판단) 1개(SK하이닉스 (000660.KS)) · 진입 대기 — 매수 아님 1개(삼성전자 (005930.KS)). 아직 분석하지 않은 7개(삼성물산 (028260.KS), SOL AI반도체TOP2플러스 (0167A0.KS), TIGER 코리아AI전력기기TOP3플러스 (0117V0.KS), SOL 반도체전공정 (475300.KS), TIGER 미국배당다우존스 (458730.KS), Alibaba (BABA), MP Materials (MP))는 이번 점검에서 판정 자체가 불가능했습니다. LS ELECTRIC (010120.KS)의 회복선 198,956원을 일봉 종가로 넘으면 매수 진입 대상이 되며, 이 판단은 다시 봅니다.</div>
+<aside class="callout key"><span class="ct">오늘 조치</span><p><strong>진입 대기 — 매수 아님</strong> — 삼성전자 (005930.KS) · 2026-09-16 회복선(구조 회복 시작) 250,503원 종가 상회 · 보유 10주 · 평단 336,535원 · 평가 <span class="neg">-24.7%</span> (-832,850원)</p><p><strong>보유 유지 (추가 진입 판단)</strong> — SK하이닉스 (000660.KS) · 2026-09-16 회복선 1,720,275원 종가 상회 · 보유 2주 · 평단 2,132,667원 · 평가 <span class="neg">-17.5%</span> (-747,334원)</p></aside>
+<div class="table-wrap"><table><thead><tr><th>종목</th><th>현재가</th><th>보유</th><th>조치</th><th>상태</th><th>마지막 리포트</th></tr></thead><tbody><tr><td>삼성전자 (005930.KS)</td><td>253,250원</td><td>10주 · 평단 336,535원 · 평가 <span class="neg">-24.7%</span> (-832,850원)</td><td><strong>진입 대기 — 매수 아님</strong></td><td>리포트가 건 가격을 건드렸습니다</td><td>2026-09-15</td></tr><tr><td>SK하이닉스 (000660.KS)</td><td>1,759,000원</td><td>2주 · 평단 2,132,667원 · 평가 <span class="neg">-17.5%</span> (-747,334원)</td><td><strong>보유 유지 (추가 진입 판단)</strong></td><td>리포트가 건 가격을 건드렸습니다</td><td>2026-09-15</td></tr><tr><td>LS ELECTRIC (010120.KS)</td><td>198,400원</td><td>39주 · 평단 233,648원 · 평가 <span class="neg">-15.1%</span> (-1,374,672원)</td><td><strong>보유 유지</strong></td><td>기준 가격(회복선)까지 하루 평균 변동폭의 0.05배 이내입니다</td><td>2026-09-15</td></tr><tr><td>삼성물산 (028260.KS)</td><td>351,500원</td><td>3주 · 평단 486,166원 · 평가 <span class="neg">-27.7%</span> (-403,998원)</td><td><strong>분석 필요</strong></td><td>아직 분석한 적이 없습니다</td><td>없음</td></tr><tr><td>SOL AI반도체TOP2플러스 (0167A0.KS)</td><td>17,215원</td><td>200주 · 평단 18,656원 · 평가 <span class="neg">-7.7%</span> (-288,200원)</td><td><strong>분석 필요</strong></td><td>아직 분석한 적이 없습니다</td><td>없음</td></tr><tr><td>TIGER 코리아AI전력기기TOP3플러스 (0117V0.KS)</td><td>18,450원</td><td>400주 · 평단 18,375원 · 평가 <span class="pos">+0.4%</span> (+30,000원)</td><td><strong>분석 필요</strong></td><td>아직 분석한 적이 없습니다</td><td>없음</td></tr><tr><td>SOL 반도체전공정 (475300.KS)</td><td>22,405원</td><td>350주 · 평단 23,394원 · 평가 <span class="neg">-4.2%</span> (-346,150원)</td><td><strong>분석 필요</strong></td><td>아직 분석한 적이 없습니다</td><td>없음</td></tr><tr><td>TIGER 미국배당다우존스 (458730.KS)</td><td>14,815원</td><td>1006주 · 평단 13,025원 · 평가 <span class="pos">+13.7%</span> (+1,800,740원)</td><td><strong>분석 필요</strong></td><td>아직 분석한 적이 없습니다</td><td>없음</td></tr><tr><td>Netflix (NFLX)</td><td>77.90달러</td><td>10주 · 평단 88.95달러 · 평가 <span class="neg">-12.4%</span> (-110.52달러)</td><td><strong>보유 유지</strong></td><td>기준 가격(회복선)까지 하루 평균 변동폭의 0.18배 이내입니다</td><td>2026-09-16</td></tr><tr><td>LightPath (LPTH)</td><td>9.29달러</td><td>200주 · 평단 13.18달러 · 평가 <span class="neg">-29.5%</span> (-778.42달러)</td><td><strong>보유 유지</strong></td><td>기준 가격(직전 폐기선 9.38달러 회복)까지 하루 평균 변동폭의 0.09배 이내입니다</td><td>2026-09-15</td></tr><tr><td>USA Rare Earth (USAR)</td><td>15.40달러</td><td>30주 · 평단 17.88달러 · 평가 <span class="neg">-13.9%</span> (-74.54달러)</td><td><strong>보유 유지</strong></td><td>기준 가격(집행 손절)까지 하루 평균 변동폭의 0.05배 이내입니다</td><td>2026-09-15</td></tr><tr><td>Fluence Energy (FLNC)</td><td>9.30달러</td><td>270주 · 평단 27.42달러 · 평가 <span class="neg">-66.1%</span> (-4,892.91달러)</td><td><strong>보유 유지</strong></td><td>기준 가격(관망 종료 기준)까지 하루 평균 변동폭의 0.18배 이내입니다</td><td>2026-09-15</td></tr><tr><td>GE Vernova (GEV)</td><td>882.81달러</td><td>1주 · 평단 1,009.58달러 · 평가 <span class="neg">-12.6%</span> (-126.77달러)</td><td><strong>보유 유지</strong></td><td>기준 가격(폐기선)까지 하루 평균 변동폭의 0.16배 이내입니다</td><td>2026-09-16</td></tr><tr><td>Alibaba (BABA)</td><td>109.34달러</td><td>8주 · 평단 157.74달러 · 평가 <span class="neg">-30.7%</span> (-387.17달러)</td><td><strong>분석 필요</strong></td><td>아직 분석한 적이 없습니다</td><td>없음</td></tr><tr><td>MP Materials (MP)</td><td>49.17달러</td><td>8주 · 평단 51.49달러 · 평가 <span class="neg">-4.5%</span> (-18.58달러)</td><td><strong>분석 필요</strong></td><td>아직 분석한 적이 없습니다</td><td>없음</td></tr><tr><td>Bloom Energy (BE)</td><td>259.35달러</td><td>1주 · 평단 258.87달러 · 평가 <span class="pos">+0.2%</span> (+0.48달러)</td><td><strong>보유 유지</strong></td><td>특이사항 없습니다</td><td>2026-09-16</td></tr></tbody></table></div>
+<h3>조치 상세</h3>
+<h4>삼성전자 (005930.KS) — 진입 대기 — 매수 아님</h4>
+<p class="note">체결 기록 기준 보유: 10주 · 평단 336,535원 · 평가 <span class="neg">-24.7%</span> (-832,850원)</p>
+<ul><li>2026-09-16 · 회복선(구조 회복 시작) 250,503원을 종가 253,250원으로 넘었습니다 → <strong>진입 대기 — 매수 아님</strong>: 진입 대기 — 매수 아님</li></ul>
+<h4>SK하이닉스 (000660.KS) — 보유 유지 (추가 진입 판단)</h4>
+<p class="note">체결 기록 기준 보유: 2주 · 평단 2,132,667원 · 평가 <span class="neg">-17.5%</span> (-747,334원)</p>
+<ul><li>2026-09-16 · 회복선 1,720,275원을 종가 1,759,000원으로 넘었습니다 → <strong>보유 유지 (추가 진입 판단)</strong>: 이미 2주를 보유 중입니다 — 추가 진입 여부만 판단합니다 (2주 · 평단 2,132,667원 · 평가 <span class="neg">-17.5%</span> (-747,334원))</li></ul>
+<aside class="callout info"><span class="ct">오늘 심층 분석 대상</span><p>삼성전자 (005930.KS), SK하이닉스 (000660.KS), 삼성물산 (028260.KS)</p></aside>
+<p>다음 배치로 미룬 종목: SOL AI반도체TOP2플러스 (0167A0.KS), TIGER 코리아AI전력기기TOP3플러스 (0117V0.KS), SOL 반도체전공정 (475300.KS), TIGER 미국배당다우존스 (458730.KS), Alibaba (BABA), MP Materials (MP)</p>
+<hr>
+<h3>오늘 발굴된 후보</h3>
+<p>KR 주도섹터 건설 · 반도체에서 후보 1개가 나왔고, 가장 앞선 것은 GS E&amp;C(006360.KS)로 진입 35,817원 · 손절 33,720원 · 손익비 1:1.18입니다 — 제안일 뿐이며 관심종목에 넣을지는 확인 후 정합니다.</p>
+<p class="note">기준: 2026-09-16 · KR</p>
+<h3>주도섹터</h3>
+<div class="table-wrap"><table><thead><tr><th>섹터</th><th>ETF</th><th>20일 초과수익</th><th>5일</th><th>1일</th></tr></thead><tbody><tr><td><strong>건설</strong></td><td>117700.KS</td><td><span class="pos">+4.92%</span></td><td><span class="pos">+2.98%</span></td><td><span class="neg">-3.72%</span></td></tr><tr><td><strong>반도체</strong></td><td>091160.KS</td><td><span class="pos">+4.27%</span></td><td><span class="neg">-1.11%</span></td><td><span class="pos">+2.69%</span></td></tr></tbody></table></div>
+<h3>후보</h3>
+<div class="table-wrap"><table><thead><tr><th>종목</th><th>섹터</th><th>셋업</th><th>진입</th><th>손절</th><th>목표</th><th>손익비</th><th>손절 폭</th><th>진입 근거</th></tr></thead><tbody><tr><td><strong>GS E&amp;C</strong> (006360.KS)</td><td>건설</td><td>pullback_long</td><td>35,817원</td><td>33,720원</td><td>38,283원</td><td>1:1.18</td><td>0.83 ATR</td><td>일봉 0.618 되돌림, 스윙고점, 라운드피겨, 최근 반응(19봉 전)</td></tr></tbody></table></div>
+<p class="note">진입·손절·목표는 구조 엔진이 낸 값이며 리포트를 대신하지 않습니다. 관심종목에 등록하면 다음 배치가 정식 리포트를 씁니다.</p>
+<h3>걸러진 이유</h3>
+<p>1차로 123개를 훑었습니다.</p>
+<ul><li>거래대금 미달: 83개</li><li>추세 미달(현재가&gt;50일선&gt;200일선 아님): 20개</li><li>우선주·중복 상장: 8개</li><li>52주 고점 대비 위치 벗어남: 5개</li><li>이미 보고 있는 종목: 2개</li><li>지수 대비 상대강도 미달: 1개</li><li>구조 판정에서 탈락 — 현재가 추격 비권장: 3개</li></ul>
+<p><a class="dl" href="report.md">Markdown 원문</a></p>
+<footer>본 자료는 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단과 그 결과의 책임은 투자자 본인에게 있습니다.</footer></div></body></html>
