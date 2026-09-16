@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>시황 리포트 · 2026-09-17</title>
+<style>
+:root{--bg:#fbfbfa;--panel:#fff;--fg:#1c1c1a;--muted:#6b6b66;--line:#e3e3df;
+--accent:#2f6f4f;--accent-soft:#e8f1ec;--code:#f3f3f0;
+--pos:#1a7d4f;--neg:#c2402c;--hl:#fff3b8;--hl-fg:#3d3200;
+--danger:#c2402c;--danger-bg:#fdf1ee;--key:#2f6f4f;--key-bg:#eef5f1;
+--info:#5a6b86;--info-bg:#f0f3f8}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--panel:#1c1c1b;--fg:#e8e8e4;
+--muted:#9a9a93;--line:#2e2e2b;--accent:#7dc4a0;--accent-soft:#1e2a24;--code:#232322;
+--pos:#5fcf98;--neg:#f08b76;--hl:#4a3f10;--hl-fg:#ffe8a3;
+--danger:#f08b76;--danger-bg:#2b1c18;--key:#7dc4a0;--key-bg:#18241e;
+--info:#9db1d0;--info-bg:#1a1e26}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+-webkit-text-size-adjust:100%}
+.wrap{max-width:820px;margin:0 auto;padding:28px 20px 80px}
+a{color:var(--accent)}
+header.site{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:22px}
+header.site h1{font-size:19px;margin:0;letter-spacing:-.01em}
+header.site .sub{color:var(--muted);font-size:13px}
+.back{font-size:13px;text-decoration:none}
+.meta{color:var(--muted);font-size:13px;margin:0 0 18px}
+.badge{display:inline-block;background:var(--accent-soft);color:var(--accent);
+border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;margin-right:8px}
+h1.title{font-size:27px;line-height:1.3;margin:0 0 6px;letter-spacing:-.02em}
+.lede{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+border-radius:6px;padding:14px 16px;margin:0 0 26px;font-size:16px;font-weight:500}
+.lede .lbl{display:block;color:var(--muted);font-size:11px;font-weight:700;
+letter-spacing:.09em;text-transform:uppercase;margin-bottom:5px}
+h2{font-size:20px;margin:34px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin:24px 0 8px}
+h4{font-size:15px;margin:20px 0 6px;color:var(--muted)}
+p{margin:0 0 12px}
+ul{margin:0 0 14px;padding-left:20px}
+li{margin-bottom:5px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+figure{margin:20px 0}
+figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+figcaption{color:var(--muted);font-size:13px;margin-top:7px;text-align:center}
+.table-wrap{overflow-x:auto;margin:0 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:420px}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--code);font-weight:600}
+.missing{color:#b4553c;font-size:14px}
+.note{color:var(--muted);font-size:13px;line-height:1.6;margin:-2px 0 16px}
+.pos{color:var(--pos);font-weight:600;font-variant-numeric:tabular-nums}
+.neg{color:var(--neg);font-weight:600;font-variant-numeric:tabular-nums}
+mark{background:var(--hl);color:var(--hl-fg);padding:0 3px;border-radius:3px}
+td strong,th strong{font-weight:700}
+.callout{border:1px solid var(--line);border-left:4px solid var(--info);
+background:var(--info-bg);border-radius:6px;padding:12px 15px;margin:0 0 18px}
+.callout .ct{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;
+text-transform:uppercase;color:var(--info);margin-bottom:6px}
+.callout p{margin:0 0 7px;font-size:15px}
+.callout p:last-child{margin-bottom:0}
+.callout.danger{border-left-color:var(--danger);background:var(--danger-bg)}
+.callout.danger .ct{color:var(--danger)}
+.callout.key{border-left-color:var(--key);background:var(--key-bg)}
+.callout.key .ct{color:var(--key)}
+.dl{display:inline-block;font-size:13px;text-decoration:none;border:1px solid var(--line);
+border-radius:6px;padding:6px 12px;margin-top:8px}
+.warn{background:var(--accent-soft);border:1px solid var(--line);border-radius:6px;
+padding:10px 14px;font-size:13px;color:var(--muted);margin:0 0 20px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filters input{flex:1;min-width:160px;padding:8px 12px;border:1px solid var(--line);
+border-radius:6px;background:var(--panel);color:var(--fg);font-size:14px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--muted);
+border-radius:999px;padding:6px 13px;font-size:13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);
+border-color:var(--accent);font-weight:600}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;
+padding:15px 17px;margin-bottom:11px;text-decoration:none;color:inherit}
+.card:hover{border-color:var(--accent)}
+.card h2{font-size:17px;margin:0 0 5px;border:0;padding:0}
+.card .sum{color:var(--muted);font-size:14px;margin:0}
+.card .row{display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
+.card time{color:var(--muted);font-size:12px}
+.empty{color:var(--muted);text-align:center;padding:40px 0;font-size:14px}
+footer{color:var(--muted);font-size:12px;margin-top:44px;padding-top:14px;
+border-top:1px solid var(--line)}
+</style>
+</head><body><div class="wrap"><header class="site"><a class="back" href="../../index.html">← 전체 리포트</a></header>
+<p class="meta"><span class="badge">시황</span>2026-09-17 00:36</p>
+<h1 class="title">시황 리포트 · 2026-09-17</h1>
+<div class="lede"><span class="lbl">한 줄 결론</span>FOMC 발표를 두 시간 반 앞둔 뉴욕 정규장에서 S&amp;P 500이 7,615로 50일선 7,603을 장중에 되찾았고 30년 국채 금리는 5.338%로 경고 해제 조건선 5.286%까지 0.052%포인트를 남겼습니다 — <mark>신규 위험자산 편입 중단(경고 단계)을 그대로 유지하며, 해제는 S&amp;P 500이 정규장 종가로 7,668 위에서 마치는 동시에 30년 금리가 5.286% 아래로 내려올 때이고, 악화는 S&amp;P 500이 정규장 종가로 7,580 아래에서 마칠 때입니다.</mark> 지금 올라 있는 것은 장중 수치이고 판정은 한국시간 9월 17일 05:00 마감으로 하며, 그 사이 03:00 FOMC 결과가 나오므로 이번 브리핑은 방향을 말하지 않고 기준선과 두 갈래만 냅니다.</div>
+<p class="note">이 브리핑의 미국 지수·섹터·금리·유가·변동성지수는 한국시간 9월 17일 00:30~00:35 조회분으로, 뉴욕 정규장(현지 9월 16일)이 열린 지 약 두 시간 지난 <strong>장중 수치</strong>이며 확정 종가가 아닙니다. 코스피와 니케이 225는 9월 16일 값이되 확정 종가가 제공되지 않아 같은 날 시간별 거래 자료의 마지막 체결가로 채운 값입니다.</p>
+<aside class="callout danger"><span class="ct">이 브리핑이 틀렸다고 볼 기준</span><p><strong>① 경고 해제</strong> — S&amp;P 500이 정규장 종가로 7,668 위에서 마치고, 동시에 30년 국채 금리가 5.286% 아래로 내려올 것. 두 조건이 같이 충족돼야 합니다.</p><p><strong>② 한 단계 더 악화</strong> — S&amp;P 500이 7,580 아래에서 정규장을 마칠 것. 그때 보유분 축소를 검토하십시오. 장중에 그 아래를 지나가는 것은 판정이 아닙니다.</p><p><strong>③ 사다리 취소</strong> — 코스피가 일봉 종가로 6,024 아래, 나스닥이 일봉 종가로 25,526 아래에서 마칠 것. 그때는 남은 회차를 집행하지 않습니다.</p></aside>
+<hr>
+<h3>직전 브리핑(2026-09-16) 판정</h3>
+<p>직전은 한국시간 9월 16일 12:07에 코스피 장중 수치로 썼습니다. 지금은 코스피 9월 16일 마감분과 진행 중인 뉴욕 9월 16일 장중으로 채점합니다.</p>
+<div class="table-wrap"><table><thead><tr><th>직전에 건 조건</th><th>판정</th><th>근거</th></tr></thead><tbody><tr><td>S&amp;P 500 종가 7,668 회복 <strong>그리고</strong> 30년 금리 5.286% 아래 → 경고 해제</td><td><strong>아직 진행 중</strong></td><td>장중 7,615로 조건선 53포인트(하루 평균 변동폭의 0.89배) 아래입니다. 30년 금리는 5.338%로 조건선보다 0.052%포인트 높아, 직전의 0.078%포인트에서 0.026%포인트 좁혀졌습니다</td></tr><tr><td>S&amp;P 500이 7,580 아래에서 정규장 마감 → 보유분 축소 검토</td><td><strong>아직 진행 중</strong></td><td>장중 저가 7,598로 7,580 위에서 멈췄고 현재 7,615입니다. 마감은 한국시간 05:00입니다</td></tr><tr><td>S&amp;P 500 다음 지지 7,565</td><td><strong>지킴</strong></td><td>저가 7,598에서 멈춰 33포인트(0.55배) 위입니다</td></tr><tr><td>나스닥 다음 지지 25,888</td><td><strong>지킴</strong></td><td>저가 26,076에서 멈춰 188포인트(0.63배) 위입니다</td></tr><tr><td>미국 두 지수가 50일선 이탈을 종가로 굳히는지</td><td><strong>장중 되찾음 · 종가 미정</strong></td><td>S&amp;P 500 7,615가 50일선 7,603 위로, 나스닥 26,191이 50일선 26,091 위로 올라왔습니다. 되찾은 것으로 보려면 마감 종가가 그 위여야 합니다</td></tr><tr><td>코스피 사다리 1차 6,662 도달</td><td><strong>가격 충족 · 집행 조건 미충족</strong></td><td>9월 16일 저가 6,598로 닿았습니다. 집행 조건인 &quot;FOMC 확인 후&quot;는 발표 자체가 아직이라 여전히 미충족입니다</td></tr><tr><td>나스닥 사다리 1차 25,998 도달</td><td><strong>충족 이력 있음 · 현재가는 위</strong></td><td>9월 15일 저가 25,943으로 닿았으나, 지금은 25,998보다 193포인트(0.65배) 위입니다</td></tr><tr><td>코스피 다음 지지 6,409</td><td><strong>미도달</strong></td><td>9월 16일 저가 6,599로 190포인트(0.75배) 위에서 멈췄습니다</td></tr><tr><td>코스피가 6,662를 종가로 되찾는지</td><td><strong>충족</strong></td><td>9월 16일 6,679로 마쳐 17포인트(0.07배) 위입니다</td></tr><tr><td>코스피·나스닥 사다리 취소선(6,024 / 25,526)</td><td>미충족</td><td>코스피는 655포인트(2.58배), 나스닥은 665포인트(2.23배) 위입니다</td></tr></tbody></table></div>
+<p><strong>직전이 &quot;못 지키면 어디까지&quot;로 적어 둔 세 가격에는 이번에도 전부 닿지 않았습니다.</strong> S&amp;P 500은 7,565까지 33포인트, 나스닥은 25,888까지 188포인트, 코스피는 6,409까지 190포인트를 남기고 멈췄습니다.</p>
+<p><strong>직전 계획은 살아 있고, 여섯 개 가격을 하나도 옮기지 않습니다.</strong> 기준선 코스피 6,815 · 나스닥 26,271 · S&amp;P 500 7,668, 다음 지지 6,409 · 25,888 · 7,565가 직전과 같은 숫자입니다. 어느 조건도 충족되지 않았습니다. 20일선은 코스피가 6,778에서 6,781로, 나스닥이 26,241에서 26,237로, S&amp;P 500이 7,655에서 7,651로 움직였는데, S&amp;P 500 기준선 7,668을 처음 그렸을 때의 20일선 7,662에서 누적 11포인트(0.18배) 내려온 것이라 다시 그릴 크기가 아닙니다. 사다리 회차와 취소선도 같은 숫자입니다.</p>
+<p><strong>직전 판단에서 맞은 것 하나와 놓친 것 하나를 적습니다.</strong> 코스피 투자심리 점수가 안전자산 선호 항목 하나로 9.3포인트 올랐고 &quot;하루 만에 되돌려질 수 있다&quot;고 적었는데, 그 항목이 70.5에서 38.8로 31.7포인트 되돌아와 점수가 42.6에서 33.0으로 내려왔습니다. 반면 에너지를 20일 초과수익 1위로 적으며 &quot;유가가 이 자리에 머무는 동안&quot;을 전제로 달았는데, 유가는 하루 만에 WTI <span class="neg">-4.12%</span>로 빠졌고 에너지 20일 초과수익은 <span class="pos">+7.41%</span>에서 <span class="pos">+1.96%</span>로 줄었습니다. 전제가 하루 만에 깨졌다는 점에서 에너지 주도 판정은 오래 쓸 수 없는 것이었습니다.</p>
+<p><strong>직전 브리핑의 유가 수치를 정정합니다.</strong> 9월 15일 종가를 WTI 104.72달러 · 브렌트 107.96달러로 적었으나, 같은 자료가 지금은 같은 날을 WTI 105.83달러 · 브렌트 108.75달러로 줍니다. 아래 등락률은 새 값을 기준으로 다시 계산한 것입니다.</p>
+<p><strong>하루 평균 변동폭이 셋 다 바뀌었습니다.</strong> 코스피 251 → 254, 나스닥 302 → 298, S&amp;P 500 61 → 59입니다. 아래 배수는 모두 새 값으로 계산했습니다.</p>
+<hr>
+<h3>지수 계획</h3>
+<h4>S&amp;P 500 (^GSPC)</h4>
+<div class="table-wrap"><table><thead><tr><th>줄</th><th>내용</th></tr></thead><tbody><tr><td><strong>현재 위치</strong></td><td>7,615 (9/16 장중, <strong><span class="pos">+0.39%</span></strong>, 고가 7,621 · 저가 7,598). 20일선(최근 20일 평균 가격선이되 최근 가격에 더 무게를 두는 지수이동평균) 7,651보다 36포인트(하루 평균 변동폭 59의 0.61배) 아래, 50일선 7,603보다 12포인트(0.20배) <strong>위</strong>. 상대강도지수(최근 14일 동안 오른 폭과 내린 폭의 비율을 0~100으로 나타낸 값) 47.0</td></tr><tr><td><strong>기준선</strong></td><td><strong>7,668</strong> (직전 그대로) — <strong>정규장 종가</strong>로 위에서 마쳐야 인정합니다. 장중에 넘는 것은 판정이 아닙니다. 현재가에서 53포인트(0.89배) 위입니다</td></tr><tr><td><strong>지키면</strong></td><td><strong>7,801</strong>. 8월 5일 고점 7,794와 8월 13일 고점 7,817, 90일 박스 상단 7,794가 겹칩니다(겹침 점수 2.9). 현재가에서 186포인트(3.13배) 위입니다</td></tr><tr><td><strong>못 지키면</strong></td><td><strong>7,565</strong>. 5월 28일부터 이어진 5회 반응 가격대에 7,550 단위 가격과 스윙 고점이 겹칩니다(겹침 점수 4.5). 현재가에서 50포인트(0.84배) 아래이며, 그 위 7,580이 보유분 축소 검토선입니다. 7,565마저 종가로 잃으면 다음은 7,514(6회 반응 선반 + 7,500 단위 가격, 겹침 점수 3.3)로 51포인트(0.86배) 더 아래입니다</td></tr><tr><td><strong>매수 사다리</strong></td><td><strong>이번에도 S&amp;P 500에는 매수 사다리를 내지 않습니다.</strong> 아래 설명 참조</td></tr><tr><td><strong>예상 기간</strong></td><td>기준선까지 0.89일치, 도착지까지 3.13일치, 다음 지지까지 0.84일치, 축소 검토선까지 0.59일치 변동폭입니다. 기준선과 축소 검토선은 모두 오늘 마감 안에 판정될 거리이고, 도착지는 되돌림 없이 진행할 때의 최단이 4 거래일입니다</td></tr></tbody></table></div>
+<p>사다리를 내지 않는 이유는 직전과 같습니다. 보유분 축소 검토선 7,580과 다음 지지 7,565 사이가 15포인트, 하루 평균 변동폭의 0.25배뿐이라 1차를 사는 가격과 보유분을 줄이라는 신호가 같은 구간에 들어갑니다. 그 아래 7,514까지 내려가야 다음 자리가 나오는데, 거기까지 가려면 7,580을 이미 종가로 잃은 뒤입니다. S&amp;P 500 노출은 나스닥 사다리로 갈음하십시오.</p>
+<p>현재가 바로 아래 7,582~7,611 구간은 50일선 7,603과 5회 반응 선반, 7,600 단위 가격, 9월 1일 스윙 저점 7,611이 한데 모여 이 부근에서 가장 두꺼운 자리입니다(겹침 점수 5.5). 오늘 장중 저가 7,598이 이 구간 안에서 멈췄고, 축소 검토선 7,580은 이 구간의 아래 끝에 걸쳐 있습니다.</p>
+<h4>나스닥 종합 (^IXIC)</h4>
+<div class="table-wrap"><table><thead><tr><th>줄</th><th>내용</th></tr></thead><tbody><tr><td><strong>현재 위치</strong></td><td>26,191 (9/16 장중, <strong><span class="pos">+0.80%</span></strong>, 고가 26,218 · 저가 26,076). 20일선 26,237보다 46포인트(하루 평균 변동폭 298의 0.15배) 아래, 50일선 26,091보다 100포인트(0.34배) <strong>위</strong>. 상대강도지수 49.5</td></tr><tr><td><strong>기준선</strong></td><td><strong>26,271</strong> (직전 그대로) — 20일선 26,237과 8회 반응 가격대, 26,200 단위 가격이 겹치는 자리입니다(겹침 점수 3.4, 구간 26,237~26,317). <strong>일봉 종가</strong>로 위에서 마쳐야 인정합니다. 현재가에서 80포인트(0.27배) 위입니다</td></tr><tr><td><strong>지키면</strong></td><td><strong>26,680</strong>. 8월 5일 고점 26,739와 26,600 단위 가격이 겹치고 8거래일 전에도 반응했습니다(겹침 점수 2.3). 현재가에서 489포인트(1.64배) 위입니다</td></tr><tr><td><strong>못 지키면</strong></td><td><strong>25,888</strong>. 8월 24일 저점 25,911과 25,800 단위 가격이 겹치는 구간(25,800~25,911) 안입니다. 현재가에서 303포인트(1.02배) 아래이며, 그 위 25,953~26,091 구간이 먼저 받칩니다 — 7회 반응 선반에 50일선 26,091과 9월 1일 스윙 저점 25,996이 겹쳐 이 지수에서 가장 두꺼운 자리입니다(겹침 점수 5.5)</td></tr><tr><td><strong>매수 사다리</strong></td><td>1차 <strong>25,998</strong> 계좌의 5%, 2차 <strong>25,855</strong> 계좌의 5%. 취소선 <strong>25,526</strong>(7월 8일 저점) — 일봉 종가로 잃으면 남은 회차를 집행하지 않습니다</td></tr><tr><td><strong>예상 기간</strong></td><td>기준선까지 0.27일치, 도착지까지 1.64일치, 다음 지지까지 1.02일치 변동폭입니다. 기준선은 오늘 마감 안에 판정될 거리이고, 도착지는 되돌림 없이 진행할 때의 최단이 2 거래일입니다</td></tr></tbody></table></div>
+<p>사다리 1차 25,998은 9월 15일 저가 25,943으로 닿았지만 그때는 FOMC 이전이라 집행 대상이 아니었고, 지금은 현재가가 그보다 193포인트(0.65배) 위에 있습니다. FOMC 발표 뒤 다시 25,998 아래로 내려오는 경우에만 계좌의 5%를 집행하고, 내려오지 않으면 이 회차는 집행하지 않습니다. 취소선까지 전부 물리면 1차는 <strong><span class="neg">-1.82%</span></strong>, 2차는 <span class="neg">-1.27%</span>가 되어 계좌 대비 <span class="neg">-0.15%</span> 손실입니다. 회차 가격과 취소선이 가까워 손실이 작고, 그만큼 취소선에 닿기도 쉽습니다.</p>
+<p>90일 박스는 24,807~26,951이고 박스 안에서 저점이 낮아지고 있어 매집·분산 어느 쪽 우위도 판정되지 않았습니다. 직전 90일 구간(21,425~23,707)에서 위로 올라와 이 박스에 들어온 상태입니다.</p>
+<h4>코스피 (^KS11)</h4>
+<div class="table-wrap"><table><thead><tr><th>줄</th><th>내용</th></tr></thead><tbody><tr><td><strong>현재 위치</strong></td><td>6,679 (9/16, <strong><span class="pos">+0.78%</span></strong>, 고가 6,718 · 저가 6,599). 20일선 6,781보다 102포인트(하루 평균 변동폭 254의 0.40배) 아래, 50일선 6,879보다 200포인트(0.79배) 아래. 상대강도지수 47.0</td></tr><tr><td><strong>기준선</strong></td><td><strong>6,815</strong> (직전 그대로) — <strong>일봉 종가</strong>로 위에서 마쳐야 인정합니다. 20일선 6,781과 50일선 6,879, 6,800 단위 가격이 모인 구간(6,781~6,879) 안입니다. 현재가에서 136포인트(0.54배) 위입니다</td></tr><tr><td><strong>지키면</strong></td><td><strong>7,025</strong>. 5월 20일부터 이어진 6회 반응 가격대에 7,000 단위 가격과 스윙 고점 6,996·스윙 저점 7,054가 겹치며 지지에서 저항으로 역할이 바뀌었습니다(겹침 점수 4.5). 현재가에서 346포인트(1.36배) 위입니다</td></tr><tr><td><strong>못 지키면</strong></td><td><strong>6,409</strong>. 5회 반응 가격대에 6,400 단위 가격과 9월 3일 스윙 저점 6,439가 겹치고 저항에서 지지로 바뀐 자리입니다(겹침 점수 4.5). 현재가에서 270포인트(1.06배) 아래이며, 그 아래는 40일 박스 하단 6,024까지 385포인트(1.52배)가 비어 있습니다</td></tr><tr><td><strong>매수 사다리</strong></td><td>1차 <strong>6,662</strong> 계좌의 5%, 2차 <strong>6,409</strong> 계좌의 5%. 취소선 <strong>6,024</strong>(40일 박스 하단) — 일봉 종가로 잃으면 남은 회차를 집행하지 않습니다</td></tr><tr><td><strong>예상 기간</strong></td><td>기준선까지 0.54일치, 도착지까지 1.36일치, 다음 지지까지 1.06일치 변동폭입니다. 되돌림 없이 한 방향으로 갈 때의 최단이 각각 1·2·2 거래일이며, 그 이상은 근거를 댈 수 없어 상한을 적지 않습니다</td></tr></tbody></table></div>
+<p>사다리 1차 6,662는 9월 16일 저가 6,599로 닿았으나 종가 6,679는 그 위입니다. 집행 조건인 FOMC 확인은 한국시간 오늘 03:00 발표로 채워지며, <mark>09:00 개장 시점 가격이 6,662 아래면 계좌의 5%를 집행하고 위면 집행하지 않습니다.</mark> 취소선까지 전부 물리면 1차는 <span class="neg">-9.58%</span>, 2차는 <span class="neg">-6.01%</span>가 되어 계좌 대비 <span class="neg">-0.78%</span> 손실입니다. 직전과 같은 숫자입니다.</p>
+<p>현재가 6,679와 기준선 6,815 사이에는 6,600~6,702 구간이 있습니다. 주봉 38.2% 되돌림선 6,673과 일봉 61.8% 되돌림선 6,702, 6,600 단위 가격이 모여 겹침 점수 4.8이고, 현재가 6,679는 이 구간 안에 있습니다. 기준선 6,815까지 가는 경로에서 이 구간 위에서 마치는 일봉이 먼저 나와야 합니다.</p>
+<p>40일 박스는 6,024~7,128이고 박스 안쪽은 매집 우위로 판정됩니다. 다만 직전 40일 구간(7,308~9,160)에서 아래로 내려와 이 박스에 들어온 상태라, 매물을 소화하고 올라가는 국면인지 한 번 더 내려가기 전의 쉬어 가는 국면인지는 아직 갈리지 않았습니다.</p>
+<p><strong>코스피 계획은 미국장 결과에 선행 종속됩니다.</strong> 세 지수 기준선이 모두 현재가 위에 있어 같은 방향을 가리키고, 코스피의 9월 17일 시가는 그 사이 나오는 FOMC 결과와 뉴욕 마감이 정합니다. 코스피 단독 신호만으로 사다리를 앞당기지 마십시오.</p>
+<h4>사다리 공통 조건</h4>
+<p>FOMC 발표는 한국시간 오늘 03:00이며, 그 이후부터 회차가 유효합니다. 두 사다리를 모두 채우고 취소선까지 전부 물리면 계좌 대비 합계 <span class="neg">-0.93%</span>입니다. <strong>발표 직후 변동성 구간에서 가격에 닿았다는 이유만으로 들어가지 말고, 해당 세션 마감 무렵 가격으로 판단하십시오.</strong> S&amp;P 500에는 사다리를 내지 않습니다.</p>
+<hr>
+<h3>지수</h3>
+<div class="table-wrap"><table><thead><tr><th>지수</th><th>종가/현재</th><th>등락</th><th>고가</th><th>저가</th></tr></thead><tbody><tr><td><strong>S&amp;P 500</strong> (9/16 장중)</td><td>7,616</td><td><strong><span class="pos">+0.39%</span></strong></td><td>7,621</td><td>7,598</td></tr><tr><td>나스닥 종합 (9/16 장중)</td><td>26,189</td><td><strong><span class="pos">+0.80%</span></strong></td><td>26,218</td><td>26,076</td></tr><tr><td>코스피 (9/16)</td><td>6,679</td><td><span class="pos">+0.78%</span></td><td>6,718</td><td>6,599</td></tr><tr><td>니케이 225 (9/16)</td><td>63,857</td><td><span class="pos">+0.59%</span></td><td>63,923</td><td>63,210</td></tr></tbody></table></div>
+<p>미국 두 지수는 전 세션 종가 위에서 출발해 더 위로 갔습니다. S&amp;P 500은 시가 7,601에서 저가 7,598까지만 내려갔다 7,616까지 올라와 50일선 7,603 위에 있고, 나스닥은 시가 26,108에서 저가 26,076을 찍은 뒤 26,189로 50일선 26,091 위에 있습니다. 어제 종가로 내준 50일선을 둘 다 장중에 되찾은 상태이며, 되찾은 것으로 보려면 마감 종가가 그 위여야 합니다. 위쪽으로 가장 가까운 저항은 각각 20일선 7,651과 26,237입니다.</p>
+<p>코스피는 시가 6,611로 출발해 저가 6,599까지 밀린 뒤 6,679로 마쳐, 전 세션 6,627보다 52포인트 위이자 사다리 1차 6,662보다 17포인트 위입니다. 니케이 225는 <span class="pos">+0.59%</span>로 같은 방향입니다. 다만 코스피와 니케이 225 값은 확정 종가가 제공되지 않아 같은 날 시간별 거래 자료의 마지막 체결가로 채운 것이라 확정치와 다를 수 있습니다.</p>
+<p>지수 계획의 거리·배수는 00:35 조회분(S&amp;P 500 7,615 · 나스닥 26,191)으로 계산했고 위 표는 00:30 조회분입니다. 장이 열려 있는 동안 받은 값이라 조회 시각에 따라 달라집니다.</p>
+<hr>
+<h3>주도섹터</h3>
+<p>미국 섹터를 20일 초과수익(SPDR 업종 ETF의 지수 대비 초과 성과)으로 줄 세운 결과입니다. 하루치 등락률이 아니라 이 값이 주도섹터 판정 기준입니다.</p>
+<div class="table-wrap"><table><thead><tr><th>주도 (20일 초과)</th><th>20일</th><th>5일</th><th>1일</th><th></th><th>부진 (20일 초과)</th><th>20일</th><th>1일</th></tr></thead><tbody><tr><td><strong>커뮤니케이션 (XLC)</strong></td><td><strong><span class="pos">+4.25%</span></strong></td><td><span class="pos">+3.20%</span></td><td><span class="pos">+0.09%</span></td><td></td><td>산업재 (XLI)</td><td><strong><span class="neg">-6.30%</span></strong></td><td><span class="pos">+0.79%</span></td></tr><tr><td>에너지 (XLE)</td><td><span class="pos">+1.96%</span></td><td><span class="neg">-1.28%</span></td><td><span class="neg">-2.46%</span></td><td></td><td>유틸리티 (XLU)</td><td><span class="neg">-4.55%</span></td><td><span class="pos">+0.63%</span></td></tr><tr><td>기술 (XLK)</td><td><span class="pos">+1.03%</span></td><td><span class="neg">-0.89%</span></td><td><span class="pos">+1.09%</span></td><td></td><td>임의소비재 (XLY)</td><td><span class="neg">-3.45%</span></td><td><span class="pos">+0.28%</span></td></tr></tbody></table></div>
+<p>주도가 바뀌었습니다. 에너지는 20일 초과수익 <span class="pos">+7.41%</span>에서 <span class="pos">+1.96%</span>로 5.45%포인트 줄며 1위를 내줬고, 커뮤니케이션이 <span class="pos">+4.25%</span>로 올라섰습니다. 에너지 한 업종만 오늘 <span class="neg">-2.46%</span>로 내리고 나머지 열 업종이 모두 오른 하루이며, 유가가 WTI <span class="neg">-4.12%</span>로 빠진 것과 같은 방향입니다. 기술은 20일 초과수익이 <span class="neg">-1.40%</span>에서 <span class="pos">+1.03%</span>로 돌아서 지수 위로 올라왔고 오늘 하루도 <span class="pos">+1.09%</span>로 1위입니다. 20일 기준으로 보면 지수를 이끄는 자리가 유가 쪽에서 기술·커뮤니케이션 쪽으로 넘어가는 중입니다.</p>
+<p>한국 섹터는 테마형 ETF 기준이라 미국 업종 ETF와 성격이 다릅니다. 20일 초과수익 상위는 건설 <span class="pos">+5.50%</span>, 반도체 <span class="pos">+4.13%</span>, 은행 <span class="pos">+2.41%</span>, 2차전지 <span class="pos">+0.41%</span>이고, 하위는 자동차 <span class="neg">-16.43%</span>, 헬스케어 <span class="neg">-13.74%</span>, 방산 <span class="neg">-13.44%</span>입니다. 반도체가 <span class="pos">+1.61%</span>에서 <span class="pos">+4.13%</span>로 올라 2위가 됐고 오늘 하루도 <span class="pos">+2.56%</span>로 1위인데, 아래 핵심 뉴스 3번의 메모리 생산 협의 보도와 같은 날입니다. 건설은 20일 기준 1위를 지켰으나 오늘 하루는 <span class="neg">-3.16%</span>로 가장 뒤졌습니다.</p>
+<p>훑기 배치가 돌린 발굴에서 이번 브리핑으로 넘어온 새 후보는 없습니다. 관심종목 목록도 비어 있습니다.</p>
+<hr>
+<h3>금리·유가·변동성</h3>
+<div class="table-wrap"><table><thead><tr><th>항목</th><th>최근값</th><th>직전</th><th>등락</th><th>기준 시점</th></tr></thead><tbody><tr><td>미 10년 국채 금리</td><td><strong>4.955%</strong></td><td>4.996%</td><td><span class="neg">-0.82%</span></td><td>9/16 장중</td></tr><tr><td>미 30년 국채 금리</td><td>5.338%</td><td>5.364%</td><td><span class="neg">-0.48%</span></td><td>9/16 장중</td></tr><tr><td>WTI</td><td>101.47달러</td><td>105.83달러</td><td><strong><span class="neg">-4.12%</span></strong></td><td>9/16 장중</td></tr><tr><td>브렌트유</td><td>104.72달러</td><td>108.75달러</td><td><span class="neg">-3.71%</span></td><td>9/16 장중</td></tr><tr><td>변동성지수 (VIX)</td><td>16.70</td><td>17.20</td><td><span class="neg">-2.91%</span></td><td>9/16 장중</td></tr></tbody></table></div>
+<p>30년 금리 5.338%는 경고 해제 조건선 5.286%에서 0.052%포인트 위입니다. 9월 14일 0.043%포인트까지 좁혀졌다가 9월 15일 0.078%포인트로 벌어졌고, 오늘 다시 0.052%포인트로 좁혀졌습니다. 이 거리가 세 세션째 0.04~0.08%포인트 사이에서 오가고 있어, 해제 여부는 FOMC 발표가 금리를 이 구간 밖으로 밀어내는지에 달려 있습니다.</p>
+<p>유가가 WTI <span class="neg">-4.12%</span> · 브렌트 <span class="neg">-3.71%</span>로 빠지면서 금리와 에너지 업종이 같이 내렸습니다. 직전 브리핑이 &quot;유가가 이 자리에 머무는 동안에는 해제 조건이 채워지기 어렵다&quot;고 적었는데, 유가가 자리를 뜨자 금리 쪽 거리도 좁혀졌습니다.</p>
+<p>미국 국채 금리의 공식 일별 시계열은 9월 14일자(10년 4.97% · 30년 5.34%)까지만 발표돼 있어, 위 9월 15일·16일 수치는 국채 금리 지수의 값입니다.</p>
+<p>변동성지수는 17.20에서 16.70으로 내려왔고, 자기 과거 3년 분포에서 백분위 53.3 자리입니다(직전 59.9). FOMC를 앞두고 오르지 않고 오히려 내려온 상태입니다.</p>
+<hr>
+<h3>핵심 뉴스</h3>
+<p><strong>1. 나스닥·S&amp;P 500, FOMC 결정을 앞두고 상승 (Reuters, 9월 16일 14:09 UTC)</strong> 오늘 상승을 개별 기업 재료가 아닌 발표 전 자리잡기로 정리한 기사입니다. 50일선 회복도, 30년 금리가 조건선까지 0.052%포인트로 좁힌 것도 한국시간 03:00 이전의 수치이며, 판정은 05:00 마감 종가로 합니다. 이번 브리핑이 방향을 적지 않은 근거가 이 시간 배열입니다.</p>
+<p><strong>2. 이란 전쟁발 유가·금리 부담, 가구당 연 1,700달러 추정 (CNBC, 9월 16일 12:02 UTC)</strong> 유가와 국채 금리가 함께 오르며 가계 지출을 잠식했다는 추정인데, 같은 날 그 두 축이 동시에 내렸습니다(WTI <span class="neg">-4.12%</span>, 10년 금리 <span class="neg">-0.041%</span>포인트). 에너지 20일 초과수익이 <span class="pos">+7.41%</span>에서 <span class="pos">+1.96%</span>로 줄고 나머지 열 업종이 오른 오늘의 모양이 이 전제가 흔들린 결과입니다. 유가가 이 자리에 머무는지가 30년 금리 5.286% 조건과 바로 연결됩니다.</p>
+<p><strong>3. 인텔·SK하이닉스, 미국 메모리 생산 논의 보도 (CNBC, 9월 16일 13:42 UTC)</strong> 두 회사가 미국 내 메모리 칩 생산을 논의 중이라는 보도에 양사 주가가 올랐습니다. 한국 반도체 ETF의 20일 초과수익이 <span class="pos">+1.61%</span>에서 <span class="pos">+4.13%</span>로 오르고 오늘 하루 <span class="pos">+2.56%</span>로 1위가 된 것이 같은 날입니다. 이 계좌는 SK하이닉스 (000660.KS) 2주와 SOL AI반도체TOP2플러스 (0167A0.KS) 200주, SOL 반도체전공정 (475300.KS) 350주를 들고 있어 이 흐름에 직접 걸려 있습니다.</p>
+<p>뉴스 수집에서 MarketWatch Top Stories와 MarketWatch MarketPulse 두 피드는 응답이 없어 이번 선별에서 빠졌습니다.</p>
+<hr>
+<h3>투자심리</h3>
+<div class="table-wrap"><table><thead><tr><th>지수</th><th>점수</th><th>구간</th><th>직전(9/16 낮)</th></tr></thead><tbody><tr><td>S&amp;P 500</td><td>51.6</td><td>중립</td><td>47.9</td></tr><tr><td>나스닥</td><td>52.7</td><td>중립</td><td>47.1</td></tr><tr><td>코스피</td><td>33.0</td><td><strong>공포</strong></td><td>42.6</td></tr></tbody></table></div>
+<figure><a href="feargreed_20260916.png" target="_blank" rel="noopener"><img src="feargreed_20260916.png" alt="Fear/Greed 게이지 (2026-09-16)" loading="lazy"></a><figcaption>Fear/Greed 게이지 (2026-09-16)</figcaption></figure>
+<p>세 점수 모두 공식 CNN Fear &amp; Greed 지수가 아니라 모멘텀·상대강도·변동성·안전자산 선호 네 항목으로 계산한 대용 지표입니다. 변동성 항목은 그 지수의 변동성이 자기 과거 3년 분포에서 차지하는 자리로 산출하며, 미국은 변동성지수 16.7이 백분위 53.3(표본 754일), 코스피는 내재변동성 지수가 없어 20일 실현변동성 연율화 43.5%가 백분위 83.0(표본 707일)입니다. 직전과 같은 잣대이므로 점수를 그대로 비교할 수 있습니다.</p>
+<p>미국 두 지수는 47.9·47.1에서 51.6·52.7로 올라 중립 구간의 가운데를 넘었습니다. 네 항목은 모멘텀 61.6·61.0, 상대강도 47.0·49.5, 변동성 46.7, 안전자산 선호 48.4·51.4이고, 상승분은 변동성 항목이 40.1에서 46.7로 6.6포인트 오른 것과 상대강도가 44.1·45.3에서 47.0·49.5로 오른 데서 나왔습니다.</p>
+<p>코스피는 42.6에서 33.0으로 9.6포인트 내려 공포 구간의 아래쪽으로 돌아왔습니다. 네 항목은 모멘텀 33.2(직전 34.1), 상대강도 45.6(46.3), 변동성 17.0(21.9), 안전자산 선호 38.8(70.5)이고, 하락분은 안전자산 선호 항목 31.7포인트에서 거의 전부 나왔습니다. 직전 브리핑이 이 항목의 상승을 두고 &quot;하루 만에 되돌려질 수 있다&quot;고 적었고 그대로 되돌아왔습니다. 지수가 <span class="pos">+0.78%</span>로 오른 날 점수가 내린 것도 같은 이유이며, 20일 실현변동성이 38.0%에서 43.5%로 올라 변동성 항목이 21.9에서 17.0으로 내려온 것이 나머지입니다.</p>
+<hr>
+<h3>확인 캘린더</h3>
+<div class="table-wrap"><table><thead><tr><th>날짜 (한국시간)</th><th>이벤트</th><th>확인할 것</th></tr></thead><tbody><tr><td><strong>9월 17일 03:00~03:30</strong></td><td>FOMC 금리 결정과 기자회견 (현지 9/16)</td><td>인상 폭, 12월 이후 경로, 30년 금리가 5.286% 아래로 오는지</td></tr><tr><td><strong>9월 17일 05:00</strong></td><td>뉴욕 정규장 마감 (미국 9/16)</td><td>S&amp;P 500이 7,668 위에서 마치는지 · 7,580 위를 지키는지 · 50일선 7,603 회복을 종가로 굳히는지, 나스닥이 26,271 위에서 마치는지</td></tr><tr><td>9월 17일 09:00</td><td>코스피 개장</td><td>사다리 1차 집행 조건 개시 — 그 시점 가격이 6,662 아래면 집행, 위면 미집행</td></tr><tr><td>9월 17일 15:30</td><td>코스피 마감</td><td>6,662를 종가로 지키는지, 기준선 6,815까지 남은 136포인트</td></tr><tr><td>9월 17일 20:00</td><td>영란은행 금리 결정</td><td>영국 8월 물가가 3.1%로 올라온 뒤의 결정 — 글로벌 장기금리 방향의 참고</td></tr><tr><td>9월 17일 21:30</td><td>주간 신규 실업수당 청구</td><td>고용 둔화가 금리 부담을 상쇄하는지</td></tr><tr><td>10월 28일</td><td>다음 FOMC</td><td>이번 결정 이후 경로를 다시 시험하는 자리</td></tr></tbody></table></div>
+<aside class="callout info"><span class="ct">자료 한계</span><p>매크로 일정 조회에 향후 5일 안으로 담겨 나온 것은 9월 17일 주간 실업수당 청구 하나뿐입니다. FOMC는 미국 날짜로 9월 16일이라 &quot;다가오는 일정&quot; 목록에서 빠졌으며, 위 날짜는 연준 일정(federalreserve.gov)을 받아 둔 자료에 적힌 2026년 9월 16일과 10월 28일을 한국시간으로 옮긴 것입니다. 영란은행 결정 시각은 매크로 일정 조회에 담겨 있지 않고 뉴스 기사의 &quot;정책 발표 하루 전&quot;이라는 표현에서 날짜만 취한 것이라, 시각은 통상 일정 기준이며 다를 수 있습니다. 미국 지수·섹터·금리·유가 수치는 전부 진행 중인 세션의 장중 값이고, 코스피·니케이 225는 확정 종가가 제공되지 않아 시간별 거래 자료의 마지막 체결가로 채운 값입니다. 미국 국채 금리의 공식 일별 시계열은 9월 14일까지만 나와 있습니다. 지수의 이동평균·변동폭을 받아오는 과정에서 지수용 실적 컨센서스 자료는 조회되지 않았으나 이 브리핑은 그 항목을 쓰지 않습니다.</p></aside>
+<hr>
+<h3>집행</h3>
+<p>장부에 기록된 보유는 16개 종목이고 매도 기록은 없습니다. 직전 브리핑이 정리하라고 적은 두 종목도 아직 장부에 반영돼 있지 않습니다.</p>
+<p>1. <strong>신규 위험자산 편입 중단을 유지합니다.</strong> 해제 조건 두 개 중 어느 것도 아직 충족되지 않았고, FOMC 결과는 나오지 않았습니다. 발표 전 현재가에서 지수든 종목이든 새로 담지 마십시오. 2. <strong>매수 쪽 — 발표 전인 지금은 살 자리가 없고, 발표 뒤 가격이 정한 자리만 유효합니다.</strong> 코스피 1차 6,662는 한국시간 09:00 개장 시점 가격이 그 아래일 때만 계좌의 5%로 집행하고, 나스닥 1차 25,998은 현재가가 193포인트 위이므로 발표 뒤 그 아래로 내려오는 경우에만 집행합니다. 취소선은 6,024와 25,526이며 판정은 일봉 종가입니다. S&amp;P 500에는 사다리를 내지 않습니다. 3. <strong>USA Rare Earth (USAR) 30주는 전량 손절 조건을 두 세션 연속 채웠습니다.</strong> 9월 16일 장중 저가 15.18달러로 집행 손절 15.34달러 아래를 다시 지났고, 같은 날 15.28달러는 무효화 2단계 경고선 15.76달러 아래입니다. 보유 30주·평단 17.88달러·현재 15.28달러 기준 <strong><span class="neg">-14.5%</span></strong>(-77.99달러)이며, 오늘 미국장에서 정리하십시오. 4. <strong>Fluence Energy (FLNC) 270주는 정리 조건을 채웠습니다.</strong> 폐기선 9.95달러를 9월 15일 종가 9.30달러에 이어 9월 16일 현재 9.24달러로도 되찾지 못했습니다. 보유 270주·평단 27.42달러 기준 <span class="neg">-66.3%</span>(-4,909.11달러)입니다. 오늘 미국장에서 정리하십시오. 5. <strong>GE Vernova (GEV) 1주는 회복선을 장중에 넘겼으나 판정은 05:00 종가입니다.</strong> 현재 929.32달러로 회복선 898.84달러보다 30달러 위이고 폐기선 875.90달러에서 하루 평균 변동폭(42.02달러)의 1.27배 위입니다. 넘겨도 1번에 따라 추가 매수는 하지 않으며, 이 줄은 조건 충족 여부만 기록합니다. 보유 1주·평단 1,009.58달러 기준 <span class="neg">-8.0%</span>(-80.26달러)입니다. 6. <strong>Bloom Energy (BE) 1주도 회복선 270.25달러를 장중 270.40달러로 막 넘긴 상태입니다.</strong> 하루 평균 변동폭의 0.01배 차이이므로 마감까지 뒤집힐 수 있는 거리이고, 넘겨도 1번에 따라 추가 매수는 하지 않습니다. 아래쪽은 집행 손절 225.81달러, 무효화 2단계 경고선 226.76달러입니다. 보유 1주·평단 258.87달러 기준 <span class="pos">+4.5%</span>(+11.53달러)입니다. 7. <strong>Netflix (NFLX) 10주는 집행 손절 조건을 채웠습니다.</strong> 현재 77.18달러로 집행 손절 77.46달러 아래이며, 이 손절은 장중 저가 도달로 집행하는 기준이므로 조건은 이미 충족입니다. 보유 10주·평단 88.95달러 기준 <span class="neg">-13.2%</span>(-117.68달러)이고, 오늘 미국장에서 정리하십시오. 자동 훑기는 리포트 발행일 당일 봉을 채점에서 빼기 때문에 어제 나온 리포트의 이 도달이 자동 결과에는 &quot;보유 유지&quot;로 나와 있습니다 — 위 판정은 9월 16일 장중 값 77.18달러를 손절 가격에 직접 대고 내린 것입니다. 8. <strong>LightPath (LPTH) 200주는 유지, 추가 매수는 보류입니다.</strong> 현재 9.20달러로 8.93달러를 일봉 종가로 잃으면 전량 정리, 9.38달러를 종가로 되찾으면 경고를 내립니다. 집행 손절 8.68달러까지는 하루 평균 변동폭(1.03달러)의 0.50배 남았습니다. 보유 200주·평단 13.18달러 기준 <span class="neg">-30.2%</span>(-796.42달러)입니다. 9. <strong>한국 보유 4개는 전부 유지입니다.</strong> 삼성전자 (005930.KS) 10주는 252,000원으로 주봉 38% 반납선 250,503원 위, SK하이닉스 (000660.KS) 2주는 1,741,000원으로 되돌림 매수 진입선 1,717,122원 위, LS ELECTRIC (010120.KS) 39주는 198,100원으로 회복선 198,956원 아래 857원, 삼성물산 (028260.KS) 3주는 351,000원으로 회복선 356,950원 아래 5,950원입니다. 넷 다 1번에 따라 추가 매수는 하지 않습니다. 10. <strong>분석한 적 없는 6개는 이번에도 판정 불가입니다.</strong> SOL AI반도체TOP2플러스 (0167A0.KS)·TIGER 코리아AI전력기기TOP3플러스 (0117V0.KS)·SOL 반도체전공정 (475300.KS)·TIGER 미국배당다우존스 (458730.KS)·Alibaba (BABA)·MP Materials (MP)에는 등록된 기준 가격이 없어 손절선도 목표도 없습니다. 반도체 ETF 두 개는 오늘 한국 반도체 섹터가 하루 <span class="pos">+2.56%</span>로 앞섰지만 기준 가격이 없는 것은 그대로이므로, 리포트가 나오기 전까지 추가 매수도 정리도 하지 마십시오.</p>
+<p><strong>다음 세션에 볼 것 하나</strong> — 한국시간 05:00 뉴욕 마감에서 S&amp;P 500이 50일선 7,603 위에서 마치는지입니다. 위에서 마치면 어제 종가로 내준 선을 하루 만에 되찾은 것이 되고, 아래에서 마치면 오늘 장중 회복은 발표 전 자리잡기였던 것으로 남습니다. 어느 쪽이든 경고 단계 해제는 7,668과 30년 금리 5.286%를 같이 채울 때뿐입니다.</p>
+<p class="note">이 문서는 참고 정보이며 투자자문이 아닙니다. 모든 수치는 위에 적은 기준 시각의 시장 자료에서 가져온 것이고, 투자 판단과 그 결과에 대한 책임은 투자자 본인에게 있습니다.</p>
+<p><a class="dl" href="report.md">Markdown 원문</a></p>
+<footer>본 자료는 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단과 그 결과의 책임은 투자자 본인에게 있습니다.</footer></div></body></html>
