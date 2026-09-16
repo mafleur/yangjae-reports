@@ -1,6 +1,16 @@
 {
   "reports": [
     {
+      "slug": "lightpath-technologies-inc-lpth-20260917",
+      "title": "LightPath (LPTH) 종목 리포트 · 2026-09-17",
+      "summary": "보유 200주는 유지하되, 일봉 종가가 8.93달러 아래로 마감하면 전량 정리합니다. 신규 매수는 일봉 종가가 10.04달러를 회복할 때만 하고(손익비 1:1.94, 손절 폭 1.33 ATR), 진입한 경우 집행 손절은 8.76달러, 목표는 12.51달러 전량 청산입니다. 직전 리포트가 9월 16일 종가까지의 조건으로 걸어 둔 9.38달러는 그날 종가 9.39달러로 회복돼, 경고 단계로 넘어가지 않고 관찰 단계가 해제됐습니다.",
+      "kind": "ticker",
+      "symbol": "LPTH",
+      "name": "LightPath",
+      "published_at": "2026-09-17T06:33:28+09:00",
+      "url": "r/lightpath-technologies-inc-lpth-20260917/"
+    },
+    {
       "slug": "holdings-US-20260917",
       "title": "보유종목 점검 · 2026-09-17",
       "summary": "보유종목 16개 중 4개에 조치가 필요합니다 — 전량 손절 1개(USA Rare Earth (USAR)) · 보유분 정리 1개(Fluence Energy (FLNC)) · 보유 유지 (추가 진입 판단) 1개(LS ELECTRIC (010120.KS)) · 경고 해제 1개(LightPath (LPTH)). 아직 분석하지 않은 6개(SOL AI반도체TOP2플러스 (0167A0.KS), TIGER 코리아AI전력기기TOP3플러스 (0117V0.KS), SOL 반도체전공정 (475300.KS), TIGER 미국배당다우존스 (458730.KS), Alibaba (BABA), MP Materials (MP))는 이번 점검에서 판정 자체가 불가능했습니다. Bloom Energy (BE)의 회복선 270.25달러를 일봉 종가로 넘으면 매수 진입 대상이 되며, 이 판단은 다시 봅니다.",
