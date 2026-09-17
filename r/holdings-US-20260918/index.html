@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>보유종목 점검 · 2026-09-18</title>
+<style>
+:root{--bg:#fbfbfa;--panel:#fff;--fg:#1c1c1a;--muted:#6b6b66;--line:#e3e3df;
+--accent:#2f6f4f;--accent-soft:#e8f1ec;--code:#f3f3f0;
+--pos:#1a7d4f;--neg:#c2402c;--hl:#fff3b8;--hl-fg:#3d3200;
+--danger:#c2402c;--danger-bg:#fdf1ee;--key:#2f6f4f;--key-bg:#eef5f1;
+--info:#5a6b86;--info-bg:#f0f3f8}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--panel:#1c1c1b;--fg:#e8e8e4;
+--muted:#9a9a93;--line:#2e2e2b;--accent:#7dc4a0;--accent-soft:#1e2a24;--code:#232322;
+--pos:#5fcf98;--neg:#f08b76;--hl:#4a3f10;--hl-fg:#ffe8a3;
+--danger:#f08b76;--danger-bg:#2b1c18;--key:#7dc4a0;--key-bg:#18241e;
+--info:#9db1d0;--info-bg:#1a1e26}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+-webkit-text-size-adjust:100%}
+.wrap{max-width:820px;margin:0 auto;padding:28px 20px 80px}
+a{color:var(--accent)}
+header.site{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:22px}
+header.site h1{font-size:19px;margin:0;letter-spacing:-.01em}
+header.site .sub{color:var(--muted);font-size:13px}
+.back{font-size:13px;text-decoration:none}
+.meta{color:var(--muted);font-size:13px;margin:0 0 18px}
+.badge{display:inline-block;background:var(--accent-soft);color:var(--accent);
+border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;margin-right:8px}
+h1.title{font-size:27px;line-height:1.3;margin:0 0 6px;letter-spacing:-.02em}
+.lede{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+border-radius:6px;padding:14px 16px;margin:0 0 26px;font-size:16px;font-weight:500}
+.lede .lbl{display:block;color:var(--muted);font-size:11px;font-weight:700;
+letter-spacing:.09em;text-transform:uppercase;margin-bottom:5px}
+h2{font-size:20px;margin:34px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin:24px 0 8px}
+h4{font-size:15px;margin:20px 0 6px;color:var(--muted)}
+p{margin:0 0 12px}
+ul{margin:0 0 14px;padding-left:20px}
+li{margin-bottom:5px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+figure{margin:20px 0}
+figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+figcaption{color:var(--muted);font-size:13px;margin-top:7px;text-align:center}
+.table-wrap{overflow-x:auto;margin:0 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:420px}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--code);font-weight:600}
+.missing{color:#b4553c;font-size:14px}
+.note{color:var(--muted);font-size:13px;line-height:1.6;margin:-2px 0 16px}
+.pos{color:var(--pos);font-weight:600;font-variant-numeric:tabular-nums}
+.neg{color:var(--neg);font-weight:600;font-variant-numeric:tabular-nums}
+mark{background:var(--hl);color:var(--hl-fg);padding:0 3px;border-radius:3px}
+td strong,th strong{font-weight:700}
+.callout{border:1px solid var(--line);border-left:4px solid var(--info);
+background:var(--info-bg);border-radius:6px;padding:12px 15px;margin:0 0 18px}
+.callout .ct{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;
+text-transform:uppercase;color:var(--info);margin-bottom:6px}
+.callout p{margin:0 0 7px;font-size:15px}
+.callout p:last-child{margin-bottom:0}
+.callout.danger{border-left-color:var(--danger);background:var(--danger-bg)}
+.callout.danger .ct{color:var(--danger)}
+.callout.key{border-left-color:var(--key);background:var(--key-bg)}
+.callout.key .ct{color:var(--key)}
+.dl{display:inline-block;font-size:13px;text-decoration:none;border:1px solid var(--line);
+border-radius:6px;padding:6px 12px;margin-top:8px}
+.warn{background:var(--accent-soft);border:1px solid var(--line);border-radius:6px;
+padding:10px 14px;font-size:13px;color:var(--muted);margin:0 0 20px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filters input{flex:1;min-width:160px;padding:8px 12px;border:1px solid var(--line);
+border-radius:6px;background:var(--panel);color:var(--fg);font-size:14px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--muted);
+border-radius:999px;padding:6px 13px;font-size:13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);
+border-color:var(--accent);font-weight:600}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;
+padding:15px 17px;margin-bottom:11px;text-decoration:none;color:inherit}
+.card:hover{border-color:var(--accent)}
+.card h2{font-size:17px;margin:0 0 5px;border:0;padding:0}
+.card .sum{color:var(--muted);font-size:14px;margin:0}
+.card .row{display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
+.card time{color:var(--muted);font-size:12px}
+.empty{color:var(--muted);text-align:center;padding:40px 0;font-size:14px}
+footer{color:var(--muted);font-size:12px;margin-top:44px;padding-top:14px;
+border-top:1px solid var(--line)}
+</style>
+</head><body><div class="wrap"><header class="site"><a class="back" href="../../index.html">← 전체 리포트</a></header>
+<p class="meta"><span class="badge">보유종목 점검</span>2026-09-18 06:30</p>
+<h1 class="title">보유종목 점검 · 2026-09-18</h1>
+<div class="lede"><span class="lbl">한 줄 결론</span>보유종목 16개 중 3개에 조치가 필요합니다 — 전량 손절 1개(Netflix (NFLX)) · 보유 유지 (추가 진입 판단) 2개(GE Vernova (GEV), Bloom Energy (BE)). 아직 분석하지 않은 4개(SOL 반도체전공정 (475300.KS), TIGER 미국배당다우존스 (458730.KS), Alibaba (BABA), MP Materials (MP))는 이번 점검에서 판정 자체가 불가능했습니다. LS ELECTRIC (010120.KS)의 경고 단계 이탈선 201,700원을 일봉 종가로 이탈하면 신규 진입 보류 대상이 되며, 이 판단은 다시 봅니다.</div>
+<aside class="callout key"><span class="ct">오늘 조치</span><p><strong>전량 손절</strong> — Netflix (NFLX) · 2026-09-17 집행 손절 77.46달러 저가 도달 · 보유 10주 · 평단 88.95달러 · 평가 <span class="neg">-15.3%</span> (-136.43달러)</p><p><strong>보유 유지 (추가 진입 판단)</strong> — GE Vernova (GEV) · 2026-09-17 회복선 898.84달러 종가 상회 · 보유 1주 · 평단 1,009.58달러 · 평가 <span class="neg">-8.4%</span> (-84.65달러)</p><p><strong>보유 유지 (추가 진입 판단)</strong> — Bloom Energy (BE) · 2026-09-17 회복선 270.25달러 종가 상회 · 보유 1주 · 평단 258.87달러 · 평가 <span class="pos">+8.5%</span> (+21.89달러)</p></aside>
+<div class="table-wrap"><table><thead><tr><th>종목</th><th>현재가</th><th>보유</th><th>조치</th><th>상태</th><th>마지막 리포트</th></tr></thead><tbody><tr><td>삼성전자 (005930.KS)</td><td>252,500원</td><td>10주 · 평단 336,535원 · 평가 <span class="neg">-25.0%</span> (-840,350원)</td><td><strong>보유 유지</strong></td><td>기준 가격(주봉 38% 반납선 재이탈)까지 하루 평균 변동폭의 0.15배 이내입니다</td><td>2026-09-16</td></tr><tr><td>SK하이닉스 (000660.KS)</td><td>1,745,000원</td><td>2주 · 평단 2,132,667원 · 평가 <span class="neg">-18.2%</span> (-775,334원)</td><td><strong>보유 유지</strong></td><td>기준 가격(되돌림 매수 진입)까지 하루 평균 변동폭의 0.25배 이내입니다</td><td>2026-09-16</td></tr><tr><td>LS ELECTRIC (010120.KS)</td><td>202,000원</td><td>39주 · 평단 233,648원 · 평가 <span class="neg">-13.5%</span> (-1,234,272원)</td><td><strong>보유 유지</strong></td><td>기준 가격(경고 단계 이탈선)까지 하루 평균 변동폭의 0.03배 이내입니다</td><td>2026-09-17</td></tr><tr><td>삼성물산 (028260.KS)</td><td>355,500원</td><td>3주 · 평단 486,166원 · 평가 <span class="neg">-26.9%</span> (-391,998원)</td><td><strong>보유 유지</strong></td><td>기준 가격(회복선)까지 하루 평균 변동폭의 0.07배 이내입니다</td><td>2026-09-16</td></tr><tr><td>SOL AI반도체TOP2플러스 (0167A0.KS)</td><td>17,050원</td><td>200주 · 평단 18,656원 · 평가 <span class="neg">-8.6%</span> (-321,200원)</td><td><strong>보유 유지</strong></td><td>기준 가격(회복선)까지 하루 평균 변동폭의 0.21배 이내입니다</td><td>2026-09-17</td></tr><tr><td>TIGER 코리아AI전력기기TOP3플러스 (0117V0.KS)</td><td>18,675원</td><td>400주 · 평단 18,375원 · 평가 <span class="pos">+1.6%</span> (+120,000원)</td><td><strong>보유 유지</strong></td><td>기준 가격(회복선)까지 하루 평균 변동폭의 0.24배 이내입니다</td><td>2026-09-17</td></tr><tr><td>SOL 반도체전공정 (475300.KS)</td><td>22,365원</td><td>350주 · 평단 23,394원 · 평가 <span class="neg">-4.4%</span> (-360,150원)</td><td><strong>분석 필요</strong></td><td>아직 분석한 적이 없습니다</td><td>없음</td></tr><tr><td>TIGER 미국배당다우존스 (458730.KS)</td><td>14,835원</td><td>1006주 · 평단 13,025원 · 평가 <span class="pos">+13.9%</span> (+1,820,860원)</td><td><strong>분석 필요</strong></td><td>아직 분석한 적이 없습니다</td><td>없음</td></tr><tr><td>Netflix (NFLX)</td><td>75.31달러</td><td>10주 · 평단 88.95달러 · 평가 <span class="neg">-15.3%</span> (-136.43달러)</td><td><strong>전량 손절</strong></td><td>리포트가 건 가격을 건드렸습니다</td><td>2026-09-16</td></tr><tr><td>LightPath (LPTH)</td><td>10.11달러</td><td>200주 · 평단 13.18달러 · 평가 <span class="neg">-23.3%</span> (-614.42달러)</td><td><strong>보유 유지</strong></td><td>기준 가격(회복선)까지 하루 평균 변동폭의 0.07배 이내입니다</td><td>2026-09-17</td></tr><tr><td>USA Rare Earth (USAR)</td><td>15.63달러</td><td>30주 · 평단 17.88달러 · 평가 <span class="neg">-12.6%</span> (-67.64달러)</td><td><strong>보유 유지</strong></td><td>기준 가격(회복선)까지 하루 평균 변동폭의 0.12배 이내입니다</td><td>2026-09-17</td></tr><tr><td>Fluence Energy (FLNC)</td><td>7.66달러</td><td>270주 · 평단 27.42달러 · 평가 <span class="neg">-72.1%</span> (-5,335.71달러)</td><td><strong>보유 유지</strong></td><td>특이사항 없습니다</td><td>2026-09-17</td></tr><tr><td>GE Vernova (GEV)</td><td>924.93달러</td><td>1주 · 평단 1,009.58달러 · 평가 <span class="neg">-8.4%</span> (-84.65달러)</td><td><strong>보유 유지 (추가 진입 판단)</strong></td><td>리포트가 건 가격을 건드렸습니다</td><td>2026-09-16</td></tr><tr><td>Alibaba (BABA)</td><td>108.54달러</td><td>8주 · 평단 157.74달러 · 평가 <span class="neg">-31.2%</span> (-393.57달러)</td><td><strong>분석 필요</strong></td><td>아직 분석한 적이 없습니다</td><td>없음</td></tr><tr><td>MP Materials (MP)</td><td>49.38달러</td><td>8주 · 평단 51.49달러 · 평가 <span class="neg">-4.1%</span> (-16.90달러)</td><td><strong>분석 필요</strong></td><td>아직 분석한 적이 없습니다</td><td>없음</td></tr><tr><td>Bloom Energy (BE)</td><td>280.76달러</td><td>1주 · 평단 258.87달러 · 평가 <span class="pos">+8.5%</span> (+21.89달러)</td><td><strong>보유 유지 (추가 진입 판단)</strong></td><td>리포트가 건 가격을 건드렸습니다</td><td>2026-09-16</td></tr></tbody></table></div>
+<h3>조치 상세</h3>
+<h4>Netflix (NFLX) — 전량 손절</h4>
+<p class="note">체결 기록 기준 보유: 10주 · 평단 88.95달러 · 평가 <span class="neg">-15.3%</span> (-136.43달러)</p>
+<ul><li>2026-09-17 · 관망 종료 기준 75.43달러를 종가 75.31달러로 이탈했습니다 → <strong>신규 매수 보류</strong>: 이 리포트의 진입 계획은 더 쓰지 않습니다</li><li>2026-09-17 · 되돌림 진입 후보 75.72달러를 장중 저가 75.30달러로 찍었습니다 → <strong>눌림목 매수 검토</strong>: 눌림목 매수 검토</li><li>2026-09-17 · 집행 손절 77.46달러를 장중 저가 75.30달러로 찍었습니다 → <strong>전량 손절</strong>: 집행 손절 가격에 닿았습니다 — 보유 10주, 평단 88.95달러 대비 <span class="neg">-12.9%</span> (-114.93달러)</li></ul>
+<h4>GE Vernova (GEV) — 보유 유지 (추가 진입 판단)</h4>
+<p class="note">체결 기록 기준 보유: 1주 · 평단 1,009.58달러 · 평가 <span class="neg">-8.4%</span> (-84.65달러)</p>
+<ul><li>2026-09-17 · 회복선 898.84달러를 종가 924.93달러로 넘었습니다 → <strong>보유 유지 (추가 진입 판단)</strong>: 이미 1주를 보유 중입니다 — 추가 진입 여부만 판단합니다 (1주 · 평단 1,009.58달러 · 평가 <span class="neg">-8.4%</span> (-84.65달러))</li></ul>
+<h4>Bloom Energy (BE) — 보유 유지 (추가 진입 판단)</h4>
+<p class="note">체결 기록 기준 보유: 1주 · 평단 258.87달러 · 평가 <span class="pos">+8.5%</span> (+21.89달러)</p>
+<ul><li>2026-09-17 · 회복선 270.25달러를 종가 280.76달러로 넘었습니다 → <strong>보유 유지 (추가 진입 판단)</strong>: 이미 1주를 보유 중입니다 — 추가 진입 여부만 판단합니다 (1주 · 평단 258.87달러 · 평가 <span class="pos">+8.5%</span> (+21.89달러))</li></ul>
+<aside class="callout info"><span class="ct">오늘 심층 분석 대상</span><p>Netflix (NFLX), GE Vernova (GEV), Bloom Energy (BE)</p></aside>
+<p>다음 배치로 미룬 종목: Alibaba (BABA), MP Materials (MP), SOL 반도체전공정 (475300.KS), TIGER 미국배당다우존스 (458730.KS)</p>
+<hr>
+<h3>오늘 발굴된 후보</h3>
+<p>US 주도섹터 기술 · 에너지에서 후보 3개가 나왔고, 가장 앞선 것은 APA Corporation(APA)로 진입 42.84달러 · 손절 39.95달러 · 손익비 1:3.99입니다 — 제안일 뿐이며 관심종목에 넣을지는 확인 후 정합니다.</p>
+<p class="note">기준: 2026-09-17 · US</p>
+<h3>주도섹터</h3>
+<div class="table-wrap"><table><thead><tr><th>섹터</th><th>ETF</th><th>20일 초과수익</th><th>5일</th><th>1일</th></tr></thead><tbody><tr><td><strong>기술</strong></td><td>XLK</td><td><span class="pos">+3.32%</span></td><td><span class="pos">+0.93%</span></td><td><span class="pos">+1.11%</span></td></tr><tr><td><strong>에너지</strong></td><td>XLE</td><td><span class="pos">+2.33%</span></td><td><span class="neg">-1.30%</span></td><td><span class="neg">-0.44%</span></td></tr></tbody></table></div>
+<h3>후보</h3>
+<div class="table-wrap"><table><thead><tr><th>종목</th><th>섹터</th><th>셋업</th><th>진입</th><th>손절</th><th>목표</th><th>손익비</th><th>손절 폭</th><th>진입 근거</th></tr></thead><tbody><tr><td><strong>APA Corporation</strong> (APA)</td><td>에너지</td><td>pullback_long</td><td>42.84달러</td><td>39.95달러</td><td>54.39달러</td><td>1:3.99</td><td>1.78 ATR</td><td>일봉 0.786 되돌림, 라운드피겨, 최근 반응(8봉 전)</td></tr><tr><td><strong>Lumentum Holdings Inc.</strong> (LITE)</td><td>기술</td><td>pullback_long</td><td>835.55달러</td><td>767.49달러</td><td>967.40달러</td><td>1:1.94</td><td>1.00 ATR</td><td>스윙저점, 지지·저항 선반(10회 반응), 역할 전환(저항→지지), 주봉 0.236 되돌림, 일봉 0.5 되돌림, 라운드피겨, 최근 반응(9봉 전)</td></tr><tr><td><strong>United Microelectronics Corpora</strong> (UMC)</td><td>기술</td><td>pullback_long</td><td>23.92달러</td><td>22.74달러</td><td>25.98달러</td><td>1:1.74</td><td>1.15 ATR</td><td>스윙고점, 라운드피겨, 일봉 0.236 되돌림</td></tr></tbody></table></div>
+<p class="note">진입·손절·목표는 구조 엔진이 낸 값이며 리포트를 대신하지 않습니다. 관심종목에 등록하면 다음 배치가 정식 리포트를 씁니다.</p>
+<h3>걸러진 이유</h3>
+<p>1차로 200개를 훑었습니다.</p>
+<ul><li>거래대금 미달: 71개</li><li>추세 미달(현재가&gt;50일선&gt;200일선 아님): 59개</li><li>52주 고점 대비 위치 벗어남: 19개</li><li>지수 대비 상대강도 미달: 10개</li><li>이미 보고 있는 종목: 1개</li><li>복수 클래스 중복: 1개</li><li>구조 판정에서 탈락 — 현재가 추격 비권장: 6개</li><li>구조 판정에서 탈락 — 박스를 판정할 수 없음: 1개</li></ul>
+<p><a class="dl" href="report.md">Markdown 원문</a></p>
+<footer>본 자료는 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단과 그 결과의 책임은 투자자 본인에게 있습니다.</footer></div></body></html>
