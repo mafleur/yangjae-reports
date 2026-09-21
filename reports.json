@@ -1,6 +1,16 @@
 {
   "reports": [
     {
+      "slug": "lightpath-technologies-inc-lpth-20260922",
+      "title": "LightPath (LPTH) 종목 리포트 · 2026-09-22",
+      "summary": "보유 200주는 유지하고, 신규 매수는 일봉 종가가 10.63달러를 회복할 때만 합니다(손익비 `1:1.98`, 손절 폭 1.06 ATR). 진입한 경우 집행 손절은 9.67달러, 목표는 12.53달러 전량 청산입니다. 보유 200주의 정리 기준은 폐기선 8.79달러 종가 이탈 후 3단계 확인이고, 미진입 상태에서 일봉 종가가 9.90달러 아래로 마감하면 이 리포트의 매수 계획은 끝납니다. 조건 점검은 9항목 중 2개만 통과했고, 미달은 20일선 위·이동평균 정배열·200일선 위·52주 고점 대비·지수 대비 20일 초과수익·상대강도선 신고가·거래량 강도입니다.",
+      "kind": "ticker",
+      "symbol": "LPTH",
+      "name": "LightPath",
+      "published_at": "2026-09-22T06:35:17+09:00",
+      "url": "r/lightpath-technologies-inc-lpth-20260922/"
+    },
+    {
       "slug": "holdings-US-20260922",
       "title": "보유종목 점검 · 2026-09-22",
       "summary": "보유종목 15개 중 7개에 조치가 필요합니다 — 전량 손절 2개(Netflix (NFLX), Fluence Energy (FLNC)) · 전량 청산 1개(USA Rare Earth (USAR)) · 신규 매수 보류 1개(Bloom Energy (BE)) · 보유 유지 (이 리포트로는 추가 매수 없음) 1개(SOL AI반도체TOP2플러스 (0167A0.KS)) · 보유 유지 (추가 진입 판단) 2개(LightPath (LPTH), MP Materials (MP)). 아직 분석하지 않은 2개(SOL 반도체전공정 (475300.KS), TIGER 미국배당다우존스 (458730.KS))는 이번 점검에서 판정 자체가 불가능했습니다. GE Vernova (GEV)의 회복선 952.44달러를 일봉 종가로 넘으면 재분석 대상 대상이 되며, 이 판단은 다시 봅니다.",
