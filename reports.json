@@ -1,6 +1,16 @@
 {
   "reports": [
     {
+      "slug": "alibaba-group-holding-limited-baba-20260924",
+      "title": "Alibaba (BABA) 종목 리포트 · 2026-09-24",
+      "summary": "신규 진입은 111.99달러를 일봉 종가로 회복할 때까지 대기합니다. 미국 시장은 S&P 500이 200일 이동평균 위(+7.15%)라 신규 진입이 가능한 국면이고, 회복 확인 후 진입 계획의 손익비는 1:2.69(손절 폭 6.85달러 = 1.99 ATR)입니다. 진입한 경우 집행 손절은 105.14달러이고, 미진입 상태에서 매일 볼 선은 106.00달러 일봉 종가 이탈입니다. 보유 중인 8주(평단 157.736달러)는 폐기선 102.12달러를 종가로 잃고 3거래일 안에 되찾지 못하면 정리합니다.",
+      "kind": "ticker",
+      "symbol": "BABA",
+      "name": "Alibaba",
+      "published_at": "2026-09-24T06:36:16+09:00",
+      "url": "r/alibaba-group-holding-limited-baba-20260924/"
+    },
+    {
       "slug": "holdings-US-20260924",
       "title": "보유종목 점검 · 2026-09-24",
       "summary": "보유종목 16개 중 7개에 조치가 필요합니다 — 전량 손절 2개(Fluence Energy (FLNC), Alibaba (BABA)) · 새 셋업으로 재설정 1개(AMD (AMD)) · 신규 매수 보류 3개(Netflix (NFLX), LightPath (LPTH), Bloom Energy (BE)) · 잔여 비중 축소 1개(USA Rare Earth (USAR)). 아직 분석하지 않은 1개(TQQQ (TQQQ))는 이번 점검에서 판정 자체가 불가능했습니다. GE Vernova (GEV)의 회복선 952.44달러를 일봉 종가로 넘으면 재분석 대상 대상이 되며, 이 판단은 다시 봅니다.",
