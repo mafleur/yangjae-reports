@@ -1,6 +1,16 @@
 {
   "reports": [
     {
+      "slug": "bloom-energy-corporation-be-20260926",
+      "title": "Bloom Energy (BE) 종목 리포트 · 2026-09-26",
+      "summary": "BE는 보유 1주 유지 + 273달러 눌림 매수 대기입니다 — 대표 셋업인 눌림 매수는 진입 273달러 / 집행 손절 255달러 / 목표 321달러로 손익비 1:2.67(손절 폭 0.94 ATR)입니다. 손절은 종가·장중 구분 없이 255달러에 닿으면 보유분까지 전량 매도 (손절)이고, 2026-10-28 실적까지 273달러에 닿지 않으면 매수 계획 종료 — 새 리포트 대기입니다(보유분은 그대로). 구조 폐기선 126달러는 현재가에서 하루 평균 변동폭의 8.45배 아래라 실무상 작동하지 않습니다.",
+      "kind": "ticker",
+      "symbol": "BE",
+      "name": "Bloom Energy",
+      "published_at": "2026-09-26T06:39:32+09:00",
+      "url": "r/bloom-energy-corporation-be-20260926/"
+    },
+    {
       "slug": "holdings-US-20260926",
       "title": "보유종목 점검 · 2026-09-26",
       "summary": "보유종목 16개 중 4개에 조치가 필요합니다 — 전량 매도 (목표 도달) 1개(AMD (AMD)) · 매수 계획 종료 1개(Netflix (NFLX)) · 추가 매수 안 함 (보유분은 그대로) 1개(GE Vernova (GEV)) · 추가 매수 검토 1개(Bloom Energy (BE)). 매도 신호가 나왔는데 체결 기록이 없는 종목이 4개입니다 — USA Rare Earth (USAR) 6회, Netflix (NFLX) 2회, GE Vernova (GEV) 1회, Alibaba (BABA) 1회. 한화손해보험 (000370.KS)의 회복선 7,620원을 일봉 종가로 넘으면 재분석 대상이 되며, 이 판단은 다시 봅니다.",
