@@ -1,6 +1,16 @@
 {
   "reports": [
     {
+      "slug": "bloom-energy-corporation-be-20260930",
+      "title": "Bloom Energy (BE) 종목 리포트 · 2026-09-30",
+      "summary": "S&P 500이 200일선 위(+6.34%)라 신규 진입이 가능한 국면이며, BE는 보유 1주 유지 + 286달러 눌림 매수 대기입니다 — 진입 286달러 / 집행 손절 267달러 / 목표 321달러, 손익비 1:1.84(손절 폭은 하루 평균 변동폭(ATR)의 0.91배). 267달러에 장중 닿으면 보유분까지 전량 매도 (손절)이고, 2026-10-28 실적까지 286달러에 닿지 않으면 매수 계획 종료 — 새 리포트 대기(보유분은 그대로)입니다. 조건 점검 7/9, 미달은 거래량 강도와 박스 안쪽입니다.",
+      "kind": "ticker",
+      "symbol": "BE",
+      "name": "Bloom Energy",
+      "published_at": "2026-09-30T06:33:48+09:00",
+      "url": "r/bloom-energy-corporation-be-20260930/"
+    },
+    {
       "slug": "holdings-US-20260930",
       "title": "보유종목 점검 · 2026-09-30",
       "summary": "보유종목 16개 중 4개에 조치가 필요합니다 — 상승 확정 1개(AMD (AMD)) · 매수 계획 종료 1개(TIGER 미국배당다우존스 (458730.KS)) · 추가 매수 안 함 (보유분은 그대로) 1개(GE Vernova (GEV)) · 매수 진입 1개(Bloom Energy (BE)). 매도 신호가 나왔는데 체결 기록이 없는 종목이 7개입니다 — USA Rare Earth (USAR) 7회, Netflix (NFLX) 3회, GE Vernova (GEV) 1회, Alibaba (BABA) 1회, MP Materials (MP) 1회, 한화손해보험 (000370.KS) 1회, AMD (AMD) 1회. Netflix (NFLX)의 회복선 70.32달러를 일봉 종가로 넘으면 매수 진입 대상이 되며, 이 판단은 다시 봅니다.",
