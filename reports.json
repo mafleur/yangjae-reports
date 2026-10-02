@@ -1,6 +1,16 @@
 {
   "reports": [
     {
+      "slug": "coherent-corp-cohr-20261003",
+      "title": "Coherent (COHR) 종목 리포트 · 2026-10-03",
+      "summary": "시장 국면은 신규 진입 가능(S&P 500 7,723, 200일선 7,226 대비 +6.88%)이며, COHR는 331달러까지 눌리면 사는 되돌림 매수 대기입니다 — 손익비 1:3.07(손절 폭은 하루 평균 변동폭(ATR)의 0.97배), 진입 시 310달러에 닿으면 전량 매도 (손절), 2026-11-05 실적까지 331달러에 닿지 않거나 그 전에 352달러를 종가로 넘으면 매수 계획 종료 — 새 리포트 대기입니다. 조건 점검 9항목 중 6개 통과, 미달은 이동평균 정배열·상대강도선 신고가·거래량 강도입니다.",
+      "kind": "ticker",
+      "symbol": "COHR",
+      "name": "Coherent",
+      "published_at": "2026-10-03T06:35:20+09:00",
+      "url": "r/coherent-corp-cohr-20261003/"
+    },
+    {
       "slug": "holdings-US-20261003",
       "title": "보유종목 점검 · 2026-10-03",
       "summary": "보유종목 14개 중 7개에 조치가 필요합니다 — 전량 매도 (손절) 2개(GE Vernova (GEV), AMD (AMD)) · 전량 매도 (시나리오 폐기) 1개(Netflix (NFLX)) · 전량 매도 (목표 도달) 1개(TQQQ (TQQQ)) · 매수 계획 종료 2개(TIGER 미국배당다우존스 (458730.KS), Alibaba (BABA)) · 추가 매수 검토 1개(Bloom Energy (BE)). 매도 신호가 나왔는데 체결 기록이 없는 종목이 8개입니다 — USA Rare Earth (USAR) 8회, Netflix (NFLX) 5회, GE Vernova (GEV) 3회, 한화손해보험 (000370.KS) 2회, 현대해상 (001450.KS) 2회, AMD (AMD) 2회, Alibaba (BABA) 1회, MP Materials (MP) 1회. USA Rare Earth (USAR)의 관망 종료 기준 13.50달러를 일봉 종가로 이탈하면 매수 계획 종료 대상이 되며, 이 판단은 다시 봅니다.",
