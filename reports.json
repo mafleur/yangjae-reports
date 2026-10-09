@@ -1,6 +1,16 @@
 {
   "reports": [
     {
+      "slug": "alphabet-inc-googl-20261010",
+      "title": "GOOGL (GOOGL) 종목 리포트 · 2026-10-10",
+      "summary": "S&P 500이 200일 이동평균 위(+7.74%)라 신규 진입이 가능한 국면이며, 346달러까지 눌릴 때 사는 눌림 매수(→ 362달러 목표)를 손익비 1:1.84(손절 1.01 ATR)로 대기합니다. 진입하면 장중 338달러에서 전량 매도 (손절), 미진입 상태에서 일봉 종가가 335달러 아래로 마감하면 매수 계획 종료 — 새 리포트 대기입니다. 조건 점검 6/9, 미달은 이동평균 정배열·상대강도선 신고가·거래량 강도입니다.",
+      "kind": "ticker",
+      "symbol": "GOOGL",
+      "name": "GOOGL",
+      "published_at": "2026-10-10T06:33:38+09:00",
+      "url": "r/alphabet-inc-googl-20261010/"
+    },
+    {
       "slug": "holdings-US-20261010",
       "title": "보유종목 점검 · 2026-10-10",
       "summary": "보유종목 14개 중 8개에 조치가 필요합니다 — 전량 매도 (손절) 5개(USA Rare Earth (USAR), GE Vernova (GEV), Alibaba (BABA), MP Materials (MP), TQQQ (TQQQ)) · 매수 계획 종료 1개(TIGER 미국배당다우존스 (458730.KS)) · 추가 매수 검토 1개(Netflix (NFLX)) · 매수 진입 1개(Bloom Energy (BE)). 매도 신호가 나왔는데 체결 기록이 없는 종목이 10개입니다 — USA Rare Earth (USAR) 9회, Netflix (NFLX) 5회, GE Vernova (GEV) 4회, Alibaba (BABA) 3회, MP Materials (MP) 2회, 한화손해보험 (000370.KS) 2회, 현대해상 (001450.KS) 2회, AMD (AMD) 2회, TQQQ (TQQQ) 2회, LS ELECTRIC (010120.KS) 1회. LS ELECTRIC (010120.KS)의 눌림 진입선 195,400원을 장중 저가로 찍으면 매수 진입 (92주, 보유 39주 미매도 시 53주) 대상이 되며, 이 판단은 다시 봅니다.",
