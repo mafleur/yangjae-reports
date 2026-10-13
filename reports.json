@@ -1,6 +1,16 @@
 {
   "reports": [
     {
+      "slug": "holdings-KR-20261013",
+      "title": "보유종목 점검 · 2026-10-13",
+      "summary": "보유종목 14개 중 10개에 조치가 필요합니다 — 전량 매도 (손절) 6개(LS ELECTRIC (010120.KS), USA Rare Earth (USAR), GE Vernova (GEV), Alibaba (BABA), MP Materials (MP), TQQQ (TQQQ)) · 매수 계획 종료 1개(TIGER 미국배당다우존스 (458730.KS)) · 추가 매수 검토 1개(Netflix (NFLX)) · 매수 진입 1개(Bloom Energy (BE)) · 되돌림 매수 진입 1개(AMD (AMD)). 매도 신호가 나왔는데 체결 기록이 없는 종목이 10개입니다 — USA Rare Earth (USAR) 10회, Netflix (NFLX) 5회, GE Vernova (GEV) 4회, LS ELECTRIC (010120.KS) 3회, Alibaba (BABA) 3회, MP Materials (MP) 2회, 한화손해보험 (000370.KS) 2회, 현대해상 (001450.KS) 2회, AMD (AMD) 2회, TQQQ (TQQQ) 2회. 현대해상 (001450.KS)의 단기 회복선 48,850원을 일봉 종가로 넘으면 상승 전환 1단계 확인 대상이 되며, 이 판단은 다시 봅니다.",
+      "kind": "watch",
+      "symbol": null,
+      "name": null,
+      "published_at": "2026-10-13T23:25:29+09:00",
+      "url": "r/holdings-KR-20261013/"
+    },
+    {
       "slug": "paper-account",
       "title": "모의 계좌 · 2026-10-13",
       "summary": "이 시스템의 계획만 그대로 집행한 가상 계좌는 2026-09-11 1억원으로 시작해 2026-10-12 기준 98,513,019원(-1.49%)이고, 보유 3종목(Netflix 13.1%, 475300.KS 6.2%, Bloom Energy 4.3%)입니다. 실현 손익 -1,138,284원, 최대 낙폭 -2.52%이며, 이 계좌는 사용자의 실제 보유와 아무 관계가 없습니다.",
