@@ -1,6 +1,16 @@
 {
   "reports": [
     {
+      "slug": "alphabet-inc-googl-20261016",
+      "title": "GOOGL (GOOGL) 종목 리포트 · 2026-10-16",
+      "summary": "S&P 500이 200일 이동평균 위(+6.56%)라 신규 진입이 가능한 국면이며, 일봉 종가가 352달러를 넘으면 사는 돌파 매수(→ 362달러 목표)를 손익비 1:1.06(손절 1.07 ATR)로 대기합니다. 진입하면 장중 343달러에서 전량 매도 (손절), 미진입 상태에서 일봉 종가가 335달러 아래로 마감하면 매수 계획 종료 — 새 리포트 대기입니다. 조건 점검 6/9, 미달은 지수 대비 20일 초과수익·상대강도선 신고가·거래량 강도입니다.",
+      "kind": "ticker",
+      "symbol": "GOOGL",
+      "name": "GOOGL",
+      "published_at": "2026-10-16T15:44:04+09:00",
+      "url": "r/alphabet-inc-googl-20261016/"
+    },
+    {
       "slug": "holdings-KR-20261016",
       "title": "보유종목 점검 · 2026-10-16",
       "summary": "보유종목 14개 중 12개에 조치가 필요합니다 — 전량 매도 (손절) 5개(LS ELECTRIC (010120.KS), USA Rare Earth (USAR), Alibaba (BABA), Bloom Energy (BE), AMD (AMD)) · 전량 매도 (시나리오 폐기) 1개(MP Materials (MP)) · 매수 계획 종료 3개(TIGER 미국배당다우존스 (458730.KS), GE Vernova (GEV), TQQQ (TQQQ)) · 추가 매수 검토 1개(Netflix (NFLX)) · 매수 진입 (2,922주) 1개(한화손해보험 (000370.KS)) · 매수 진입 1개(현대해상 (001450.KS)). 매도 신호가 나왔는데 체결 기록이 없는 종목이 11개입니다 — USA Rare Earth (USAR) 10회, Netflix (NFLX) 5회, GE Vernova (GEV) 4회, LS ELECTRIC (010120.KS) 3회, Alibaba (BABA) 3회, MP Materials (MP) 3회, AMD (AMD) 3회, 한화손해보험 (000370.KS) 2회, 현대해상 (001450.KS) 2회, TQQQ (TQQQ) 2회, Bloom Energy (BE) 1회. 가장 가까운 기준 가격을 계산할 근거(하루 평균 변동폭 등)가 부족해 이번 점검에서는 무효화 기준을 구체적인 가격으로 제시하지 못합니다.",
