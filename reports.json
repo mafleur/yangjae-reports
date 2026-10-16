@@ -1,6 +1,16 @@
 {
   "reports": [
     {
+      "slug": "holdings-US-20261017",
+      "title": "보유종목 점검 · 2026-10-17",
+      "summary": "보유종목 14개 중 10개에 조치가 필요합니다 — 전량 매도 (손절) 5개(LS ELECTRIC (010120.KS), USA Rare Earth (USAR), Alibaba (BABA), Bloom Energy (BE), AMD (AMD)) · 전량 매도 (시나리오 폐기) 1개(MP Materials (MP)) · 매수 계획 종료 3개(TIGER 미국배당다우존스 (458730.KS), GE Vernova (GEV), TQQQ (TQQQ)) · 추가 매수 검토 1개(Netflix (NFLX)). 매도 신호가 나왔는데 체결 기록이 없는 종목이 11개입니다 — USA Rare Earth (USAR) 10회, Netflix (NFLX) 5회, GE Vernova (GEV) 4회, LS ELECTRIC (010120.KS) 3회, Alibaba (BABA) 3회, MP Materials (MP) 3회, AMD (AMD) 3회, 한화손해보험 (000370.KS) 2회, 현대해상 (001450.KS) 2회, TQQQ (TQQQ) 2회, Bloom Energy (BE) 1회. 현대해상 (001450.KS)의 폐기선 41,850원을 일봉 종가로 이탈하면 전량 매도 (시나리오 폐기) 대상이 되며, 이 판단은 다시 봅니다.",
+      "kind": "watch",
+      "symbol": null,
+      "name": null,
+      "published_at": "2026-10-17T06:30:27+09:00",
+      "url": "r/holdings-US-20261017/"
+    },
+    {
       "slug": "market-us-20261017",
       "title": "시황 리포트 · 2026-10-17",
       "summary": "미국 개장 2시간 시점에 S&P 500 7,716 · 나스닥 26,407로 세 지수 모두 직전 기준선 아래이며, 어느 선도 새로 확정되지 않아 직전 계획을 그대로 유지합니다. 오늘 밤 뉴욕 일봉 종가로 S&P 500 7,794 · 나스닥 26,992 위면 상방 회복, S&P 500 7,665 · 나스닥 26,432 아래면 하방 갈래이고, 일봉 종가로 S&P 500 7,517 · 나스닥 25,967 · 코스피 4,900 아래면 매수 계획 종료 — 새 리포트 대기입니다. 나스닥은 장중 26,407로 26,432 아래에 있으나 장중 이탈은 판정이 아닙니다.",
