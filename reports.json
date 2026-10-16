@@ -1,6 +1,16 @@
 {
   "reports": [
     {
+      "slug": "bloom-energy-corporation-be-20261017",
+      "title": "Bloom Energy (BE) 종목 리포트 · 2026-10-17",
+      "summary": "S&P 500이 200일선 위(+5.34%)라 신규 진입이 가능한 국면이며, BE는 228달러 일봉 종가 회복 시 돌파 매수 대기입니다 — 진입 228달러 / 집행 손절 205달러 / 목표 253달러, 손익비 1:1.05(손절 폭은 하루 평균 변동폭(ATR)의 1.18배). 205달러에 장중 닿으면 보유 1주까지 전량 매도 (손절)이고, 228달러 회복 전에 210달러를 종가로 잃거나 2026-10-23 실적이 먼저 오면 매수 계획 종료 — 새 리포트 대기(보유분은 그대로)입니다. 조건 점검 4/9, 미달은 20일선 위·52주 고점 대비·지수 대비 20일 초과수익·상대강도선 신고가·박스 안쪽입니다.",
+      "kind": "ticker",
+      "symbol": "BE",
+      "name": "Bloom Energy",
+      "published_at": "2026-10-17T06:34:39+09:00",
+      "url": "r/bloom-energy-corporation-be-20261017/"
+    },
+    {
       "slug": "holdings-US-20261017",
       "title": "보유종목 점검 · 2026-10-17",
       "summary": "보유종목 14개 중 10개에 조치가 필요합니다 — 전량 매도 (손절) 5개(LS ELECTRIC (010120.KS), USA Rare Earth (USAR), Alibaba (BABA), Bloom Energy (BE), AMD (AMD)) · 전량 매도 (시나리오 폐기) 1개(MP Materials (MP)) · 매수 계획 종료 3개(TIGER 미국배당다우존스 (458730.KS), GE Vernova (GEV), TQQQ (TQQQ)) · 추가 매수 검토 1개(Netflix (NFLX)). 매도 신호가 나왔는데 체결 기록이 없는 종목이 11개입니다 — USA Rare Earth (USAR) 10회, Netflix (NFLX) 5회, GE Vernova (GEV) 4회, LS ELECTRIC (010120.KS) 3회, Alibaba (BABA) 3회, MP Materials (MP) 3회, AMD (AMD) 3회, 한화손해보험 (000370.KS) 2회, 현대해상 (001450.KS) 2회, TQQQ (TQQQ) 2회, Bloom Energy (BE) 1회. 현대해상 (001450.KS)의 폐기선 41,850원을 일봉 종가로 이탈하면 전량 매도 (시나리오 폐기) 대상이 되며, 이 판단은 다시 봅니다.",
