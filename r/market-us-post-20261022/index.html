@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>시황 리포트 · 2026-10-23</title>
+<style>
+:root{--bg:#fbfbfa;--panel:#fff;--fg:#1c1c1a;--muted:#6b6b66;--line:#e3e3df;
+--accent:#2f6f4f;--accent-soft:#e8f1ec;--code:#f3f3f0;
+--pos:#1a7d4f;--neg:#c2402c;--hl:#fff3b8;--hl-fg:#3d3200;
+--danger:#c2402c;--danger-bg:#fdf1ee;--key:#2f6f4f;--key-bg:#eef5f1;
+--info:#5a6b86;--info-bg:#f0f3f8;--sec:#f5f5f3}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--panel:#1c1c1b;--fg:#e8e8e4;
+--muted:#9a9a93;--line:#2e2e2b;--accent:#7dc4a0;--accent-soft:#1e2a24;--code:#232322;
+--pos:#5fcf98;--neg:#f08b76;--hl:#4a3f10;--hl-fg:#ffe8a3;
+--danger:#f08b76;--danger-bg:#2b1c18;--key:#7dc4a0;--key-bg:#18241e;
+--info:#9db1d0;--info-bg:#1a1e26;--sec:#1a1a19}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+-webkit-text-size-adjust:100%}
+.wrap{max-width:820px;margin:0 auto;padding:28px 20px 80px}
+a{color:var(--accent)}
+header.site{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:22px}
+header.site h1{font-size:19px;margin:0;letter-spacing:-.01em}
+header.site .sub{color:var(--muted);font-size:13px}
+.back{font-size:13px;text-decoration:none}
+.meta{color:var(--muted);font-size:13px;margin:0 0 18px}
+.badge{display:inline-block;background:var(--accent-soft);color:var(--accent);
+border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;margin-right:8px}
+h1.title{font-size:22px;line-height:1.3;margin:0 0 6px;letter-spacing:-.02em}
+.lede{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+border-radius:6px;padding:14px 16px;margin:0 0 22px;font-size:15px;font-weight:500}
+.lede .lbl{display:block;color:var(--muted);font-size:11px;font-weight:700;
+letter-spacing:.09em;text-transform:uppercase;margin-bottom:5px}
+h2{font-size:20px;margin:34px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:16px;margin:20px 0 8px}
+h4{font-size:15px;margin:20px 0 6px;color:var(--muted)}
+p{margin:0 0 12px}
+ul{margin:0 0 14px;padding-left:20px}
+li{margin-bottom:5px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+figure{margin:20px 0}
+figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+figcaption{color:var(--muted);font-size:13px;margin-top:7px;text-align:center}
+.table-wrap{overflow-x:auto;margin:0 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:420px}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--code);font-weight:600}
+.missing{color:#b4553c;font-size:14px}
+.note{color:var(--muted);font-size:12px;line-height:1.55;margin:-2px 0 14px;opacity:.78}
+.sec{background:var(--sec);border-radius:6px;padding:2px 14px 6px;margin:0 0 12px}
+.sec>h2:first-child,.sec>h3:first-child{margin-top:12px}
+.gloss{background:var(--sec);border-radius:6px;padding:10px 14px;margin:0 0 12px}
+.gloss .note{margin:0 0 4px}
+.gloss .note:last-child{margin-bottom:0}
+.rr{font-size:1.06em;font-weight:800;font-variant-numeric:tabular-nums;
+white-space:nowrap;padding:1px 6px;border-radius:5px;
+color:var(--pos);background:var(--key-bg);box-shadow:inset 0 0 0 1px var(--pos)}
+.rr.low{color:var(--neg);background:var(--danger-bg);box-shadow:inset 0 0 0 1px var(--neg)}
+.pos{color:var(--pos);font-weight:600;font-variant-numeric:tabular-nums}
+.neg{color:var(--neg);font-weight:600;font-variant-numeric:tabular-nums}
+mark{background:var(--hl);color:var(--hl-fg);padding:0 3px;border-radius:3px}
+td strong,th strong{font-weight:700}
+.callout{border:1px solid var(--line);border-left:4px solid var(--info);
+background:var(--info-bg);border-radius:6px;padding:12px 15px;margin:0 0 18px}
+.callout .ct{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;
+text-transform:uppercase;color:var(--info);margin-bottom:6px}
+.callout p{margin:0 0 7px;font-size:14px}
+.callout p:last-child{margin-bottom:0}
+.callout.danger{border-left-color:var(--danger);background:var(--danger-bg)}
+.callout.danger .ct{color:var(--danger)}
+.callout.key{border-left-color:var(--key);background:var(--key-bg)}
+.callout.key .ct{color:var(--key)}
+.dl{display:inline-block;font-size:13px;text-decoration:none;border:1px solid var(--line);
+border-radius:6px;padding:6px 12px;margin-top:8px}
+.warn{background:var(--accent-soft);border:1px solid var(--line);border-radius:6px;
+padding:10px 14px;font-size:13px;color:var(--muted);margin:0 0 20px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filters input{flex:1;min-width:160px;padding:8px 12px;border:1px solid var(--line);
+border-radius:6px;background:var(--panel);color:var(--fg);font-size:14px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--muted);
+border-radius:999px;padding:6px 13px;font-size:13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);
+border-color:var(--accent);font-weight:600}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;
+padding:15px 17px;margin-bottom:11px;text-decoration:none;color:inherit}
+.card:hover{border-color:var(--accent)}
+.card h2{font-size:17px;margin:0 0 5px;border:0;padding:0}
+.card .sum{color:var(--muted);font-size:14px;margin:0}
+.card .row{display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
+.card time{color:var(--muted);font-size:12px}
+.empty{color:var(--muted);text-align:center;padding:40px 0;font-size:14px}
+footer{color:var(--muted);font-size:12px;margin-top:44px;padding-top:14px;
+border-top:1px solid var(--line)}
+
+:root{--v-up:#1a7d4f;--v-trigger:#2f6f4f;--v-now:#1c1c1a;--v-down:#c98a2e;
+--v-buy:#3b74c4;--v-cancel:#c2402c;--v-bandup:rgba(26,125,79,.07);
+--v-banddn:rgba(194,64,44,.07)}
+@media (prefers-color-scheme:dark){:root{--v-up:#5fcf98;--v-trigger:#7dc4a0;
+--v-now:#e8e8e4;--v-down:#e0ac57;--v-buy:#6f9fe0;--v-cancel:#f08b76;
+--v-bandup:rgba(95,207,152,.09);--v-banddn:rgba(240,139,118,.09)}}
+.viz{background:var(--panel);border:1px solid var(--line);border-radius:8px;
+padding:14px 16px 12px;margin:0 0 16px}
+.viz .v-h{font-size:13px;font-weight:700;color:var(--muted);margin-bottom:8px}
+.viz svg{width:100%;height:auto;display:block;overflow:visible}
+.v-rail{stroke:var(--line);stroke-width:2}
+.v-lead{fill:none;stroke:var(--line);stroke-width:1.2}
+.v-lead.ev{stroke-width:.9;opacity:.55}
+.v-band.up{fill:var(--v-bandup)}
+.v-band.dn{fill:var(--v-banddn)}
+.v-nowline{stroke:var(--v-now);stroke-width:1;stroke-dasharray:2 4;opacity:.45}
+.v-dot{stroke:var(--panel);stroke-width:2}
+.v-dot.now{stroke-width:3}
+.v-ev{stroke:var(--muted);stroke-width:1.6;opacity:.7}
+.v-ev.calc{stroke-dasharray:3 2.5;opacity:.55}
+.v-evlab{font-size:10.5px;fill:var(--muted);opacity:.9}
+.v-evnum{font-variant-numeric:tabular-nums;font-weight:600}
+.v-lab{font-size:14px;fill:var(--fg)}
+.v-lab.now .v-price{font-weight:800}
+.v-tag{font-size:12px;font-weight:700}
+.v-price{font-weight:700;font-variant-numeric:tabular-nums}
+.v-dist{font-size:11px;fill:var(--muted);font-variant-numeric:tabular-nums}
+.v-leg{font-size:11px;color:var(--muted);margin:8px 0 0;opacity:.8;line-height:1.5}
+.v-why{list-style:none;margin:9px 0 0;padding:9px 0 0;border-top:1px solid var(--line)}
+.v-why li{position:relative;padding-left:15px;margin-bottom:4px;font-size:12.5px;
+line-height:1.5;color:var(--muted)}
+.v-why li i{position:absolute;left:0;top:6px;width:7px;height:7px;border-radius:50%}
+.v-why li b{color:var(--fg);font-weight:700;font-variant-numeric:tabular-nums}
+.v-brow{display:grid;grid-template-columns:150px 1fr 88px;gap:8px;align-items:center;
+margin-bottom:5px}
+.v-blab{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.v-btrack{position:relative;height:17px;background:var(--code);border-radius:3px}
+.v-bzero{position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:var(--line)}
+.v-bar{position:absolute;top:3px;bottom:3px;border-radius:2px}
+.v-bar.pos{background:var(--pos)}
+.v-bar.neg{background:var(--neg)}
+.v-bval{font-size:13px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.v-bval.pos{color:var(--pos)}
+.v-bval.neg{color:var(--neg)}
+.v-bnote{grid-column:2/4;font-size:11px;color:var(--muted);margin:-3px 0 5px}
+.v-grow{display:grid;grid-template-columns:96px 1fr 152px;gap:10px;align-items:center;
+margin-bottom:9px}
+.v-glab{font-size:13px}
+.v-gtrack{position:relative;height:9px;border-radius:5px;
+background:linear-gradient(90deg,var(--neg) 0%,#c98a2e 34%,var(--muted) 50%,
+#6f9f5a 66%,var(--pos) 100%);opacity:.9}
+.v-gmove{position:absolute;top:-3px;height:15px;background:var(--fg);opacity:.16;
+border-radius:3px}
+.v-gprev{position:absolute;top:-1px;width:11px;height:11px;margin-left:-5px;
+border-radius:50%;border:2px solid var(--muted);background:var(--panel);opacity:.85}
+.v-gcur{position:absolute;top:-5px;width:19px;height:19px;margin-left:-9px;
+border-radius:50%;border:3px solid var(--fg);background:var(--panel)}
+.v-gval{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.v-gval b{color:var(--fg);font-size:15px;margin-right:3px}
+.v-chead{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.v-cscore{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.v-cscore b{font-size:20px;color:var(--fg);font-weight:800}
+.v-cbar{height:5px;border-radius:3px;background:var(--code);overflow:hidden;margin:2px 0 10px}
+.v-cbar span{display:block;height:100%;background:var(--pos);border-radius:3px}
+.v-clist{list-style:none;margin:0;padding:0;display:grid;
+grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:2px 16px}
+.v-clist li{display:grid;grid-template-columns:13px 1fr auto;gap:7px;align-items:baseline;
+padding:3px 0;font-size:13px}
+.v-cmark{width:9px;height:9px;border-radius:50%;align-self:center}
+.v-clist li.ok .v-cmark{background:var(--pos)}
+.v-clist li.no .v-cmark{background:var(--neg)}
+.v-clist li.na .v-cmark{background:var(--line);box-shadow:inset 0 0 0 1px var(--muted)}
+.v-clist li.na{opacity:.6}
+.v-cname{color:var(--fg)}
+.v-clist li.no .v-cname{font-weight:700;color:var(--neg)}
+.v-cval{color:var(--muted);font-variant-numeric:tabular-nums;font-size:12px}
+.v-cwant{grid-column:2/4;color:var(--muted);font-size:11px;margin:-2px 0 2px}
+.v-cfail{margin-top:9px;padding-top:8px;border-top:1px solid var(--line);
+font-size:12.5px;color:var(--neg);font-weight:600}
+.v-gleg{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);
+margin:2px 0 0 106px;max-width:calc(100% - 258px)}
+@media (max-width:620px){
+.v-brow{grid-template-columns:104px 1fr 72px}
+.v-grow{grid-template-columns:78px 1fr 118px}
+.v-gleg{margin-left:88px;max-width:calc(100% - 196px)}}
+</style>
+</head><body><div class="wrap"><header class="site"><a class="back" href="../../index.html">← 전체 리포트</a></header>
+<p class="meta"><span class="badge">시황</span>2026-10-23 07:08</p>
+<h1 class="title">시황 리포트 · 2026-10-23</h1>
+<div class="lede"><span class="lbl">한 줄 결론</span>10/22 종가 나스닥 26,009 · S&amp;P 500 7,663으로 두 지수 모두 다음 지지(26,261 · 7,665)를 일봉 종가로 잃어 하방 갈래가 열렸고, 기준선을 나스닥 26,261 · S&amp;P 500 7,701로 내립니다. 일봉 종가로 그 위면 도착지 26,686 · 7,794, S&amp;P 500은 7,615 아래 종가면 다음 지지 갈래이며, 일봉 종가로 나스닥 25,967 · S&amp;P 500 7,517 아래면 매수 계획 종료입니다. 새 ETF 스윙 계획은 XLP 94.21달러 종가 돌파 매수 <b class="rr">1:2.86</b> (손절 1.50 ATR) 하나입니다.</div>
+<aside class="callout danger"><span class="ct">손절·무효화 기준</span><p>일봉 종가로 나스닥 25,967 · S&amp;P 500 7,517 아래면 남은 사다리 회차를 집행하지 않고 산 회차는 다음 세션에 전량 매도 (사다리 취소)입니다. 나스닥은 10/22 장중 25,918까지 내려 이 선을 장중에 밑돌았으나 종가 26,009로 지켰습니다 — 장중 이탈은 판정이 아니며 일봉 종가로만 봅니다. ETF는 진입한 경우에만 장중 도달 시 전량 매도 (손절) — XLP 92.40달러, QQQ 717달러, XLV 186달러, XLE 68.87달러.</p></aside>
+<section class="sec">
+<h3>장전 예측 검증</h3>
+<p>2026-10-22 장전 예측 5건: 5건 중 5건 적중(100.0%)</p>
+<div class="table-wrap"><table><thead><tr><th>예측</th><th>근거</th><th>실제</th><th>판정</th></tr></thead><tbody><tr><td>S&amp;P 500 장중 고가가 7,794 아래 유지</td><td>기준선 7,794 미회복 — 10/21 고가 7,770, S&amp;P 500 선물 7,727(<span class="neg">-0.94%</span>)</td><td>고가 7,703</td><td>적중</td></tr><tr><td>S&amp;P 500 종가 7,729 하회</td><td>20일선 7,729 재이탈 — 10/21 종가 7,757(20일선 위 <span class="pos">+0.37%</span>), S&amp;P 500 선물 7,727(<span class="neg">-0.94%</span>)</td><td>종가 7,663 (<span class="neg">-0.64%</span>)</td><td>적중</td></tr><tr><td>나스닥 종합 종가 26,622 하회</td><td>50일선 26,622 이탈 — 10/21 종가 26,702(50일선 위 <span class="pos">+0.30%</span>), 나스닥 선물 <span class="neg">-1.59%</span></td><td>종가 26,009 (<span class="neg">-1.57%</span>)</td><td>적중</td></tr><tr><td>나스닥 종합, S&amp;P 500 대비 약세 마감</td><td>나스닥 선물 <span class="neg">-1.59%</span> 대 S&amp;P 500 선물 <span class="neg">-0.94%</span>, 변동성지수 18.00(<span class="pos">+3.99%</span>)</td><td><span class="neg">-1.57%</span> 대 S&amp;P 500 <span class="neg">-0.64%</span></td><td>적중</td></tr><tr><td>기술 (XLK), S&amp;P 500 대비 약세 마감</td><td>20일 초과수익 <span class="neg">-4.16%</span> 최하위, 10/21 하루 초과 <span class="pos">+1.08%</span> 반등 뒤 나스닥 선물 <span class="neg">-1.59%</span></td><td><span class="neg">-3.29%</span> 대 S&amp;P 500 <span class="neg">-0.64%</span></td><td>적중</td></tr></tbody></table></div>
+<p class="note">US 최근 90일 누적 13건 중 11건 적중(84.6%) · 최근 20건 13건 중 11건 적중(84.6%)</p>
+<p>표의 지수 등락률(<span class="neg">-1.57%</span> · <span class="neg">-0.64%</span>)은 시세 제공처에서 10/21 지수 일봉이 빠져 10/20 종가(26,425 · 7,713) 대비로 계산된 값입니다. XLK의 <span class="neg">-3.29%</span>는 10/21 종가 대비라 기준일이 다르지만, S&amp;P 500이 10/21 종가 7,757에서 7,663으로 내린 폭(94포인트)은 3.29%보다 작아 판정은 같습니다. 같은 이유로 직전 회차가 4건 모두 적중으로 옮긴 10/21 예측이 지금은 판정 불가 3건 · 판정 대기 1건으로 다시 계산돼 누적에서 빠졌습니다. 누적 표본은 4세션 13건이라 적중률을 성과로 읽을 수 없습니다.</p>
+</section>
+<section class="sec">
+<h3>직전 브리핑(2026-10-22) 판정</h3>
+<p>직전 시황은 10/22 미국 장전 회차이며, 가격은 10/21 미국 마감 후 회차가 등록한 값입니다.</p>
+<div class="table-wrap"><table><thead><tr><th>직전 가격</th><th>판정 방식</th><th>10/22 결과</th><th>판정</th></tr></thead><tbody><tr><td>나스닥 기준선 26,992</td><td>일봉 종가 상회</td><td>고가 26,359</td><td>미충족</td></tr><tr><td>나스닥 다음 지지 26,261</td><td>일봉 종가 하회</td><td>종가 26,009</td><td>이탈</td></tr><tr><td>나스닥 취소선 25,967</td><td>일봉 종가 하회</td><td>저가 25,918 · 종가 26,009</td><td>지킴</td></tr><tr><td>S&amp;P 500 기준선 7,794</td><td>일봉 종가 상회</td><td>고가 7,703</td><td>미충족</td></tr><tr><td>S&amp;P 500 다음 지지 7,665</td><td>일봉 종가 하회</td><td>종가 7,663</td><td>이탈 (2포인트)</td></tr><tr><td>S&amp;P 500 사다리 2차 7,578</td><td>장중 저가 도달</td><td>저가 7,637</td><td>미도달</td></tr><tr><td>S&amp;P 500 취소선 7,517</td><td>일봉 종가 하회</td><td>종가 7,663</td><td>지킴</td></tr><tr><td>QQQ 730 · XLV 190 · XLE 70.80달러</td><td>일봉 종가 상회</td><td>704.47 · 181.30 · 67.57달러</td><td>미충족</td></tr></tbody></table></div>
+<p>직전이 적은 &quot;못 지키면&quot; 가격은 두 지수 모두 닿았습니다. 나스닥은 26,261을 지나 장중 25,918까지 내려가 취소선 아래를 찍고 26,009에서 마쳤고, S&amp;P 500은 장중 7,637에서 멈췄습니다(8/24 스윙 저점 7,638). 취소선이 지켜져 직전 계획(사다리·취소선)은 살아 있으며 그대로 유지합니다. 다음 지지가 일봉 종가로 깨졌으므로 그 위쪽 판정선을 옮깁니다 — 나스닥은 잃은 9번 반응 가격대 하단 26,261을 기준선으로, S&amp;P 500은 7,665가 현재가에서 2포인트라 판정선 구실을 못 해 50일선·7,700·일봉 23.6% 되돌림선이 겹친 7,701을 기준선으로 씁니다. 직전 판단에서 정정할 것은 없습니다.</p>
+</section>
+<section class="sec">
+<h3>지수 계획</h3>
+<p>20일선·50일선은 지수이동평균입니다. 두 지수 모두 20일선·50일선 아래로 내려왔고 경로를 말할 근거가 없어 방향을 말하지 않고 기준선과 두 갈래만 냅니다.</p>
+<div class="viz rail"><div class="v-h">나스닥 종합 (^IXIC) · 10/22 종가 26,009 · 하루 변동폭 376</div><svg viewBox="0 0 720 237" role="img" aria-label="나스닥 종합 (^IXIC) · 10/22 종가 26,009 · 하루 변동폭 376 가격 레일"><rect x="0" y="12.0" width="720" height="97.2" class="v-band up"/><rect x="0" y="184.0" width="720" height="41.0" class="v-band dn"/><line x1="300" y1="12" x2="300" y2="225" class="v-rail"/><line x1="285" y1="24.0" x2="297" y2="24.0" class="v-ev calc"/><path d="M 285 24.0 C 277 24.0, 277 24.0, 269 24.0" class="v-lead ev"/><text x="265" y="27.5" text-anchor="end" class="v-evlab">20일선 <tspan class="v-evnum">26,734</tspan></text><line x1="285" y1="27.1" x2="297" y2="27.1" class="v-ev"/><path d="M 285 27.1 C 277 27.1, 277 39.0, 269 39.0" class="v-lead ev"/><text x="265" y="42.5" text-anchor="end" class="v-evlab">7번 반응한 가격 (저항→지지) <tspan class="v-evnum">26,717</tspan></text><line x1="285" y1="49.4" x2="297" y2="49.4" class="v-ev calc"/><path d="M 285 49.4 C 277 49.4, 277 54.0, 269 54.0" class="v-lead ev"/><text x="265" y="57.5" text-anchor="end" class="v-evlab">50일선 <tspan class="v-evnum">26,593</tspan></text><line x1="285" y1="72.8" x2="297" y2="72.8" class="v-ev calc"/><path d="M 285 72.8 C 277 72.8, 277 72.8, 269 72.8" class="v-lead ev"/><text x="265" y="76.3" text-anchor="end" class="v-evlab">일봉 38.2% 되돌림선 <tspan class="v-evnum">26,463</tspan></text><line x1="285" y1="104.2" x2="297" y2="104.2" class="v-ev"/><path d="M 285 104.2 C 277 104.2, 277 104.2, 269 104.2" class="v-lead ev"/><text x="265" y="107.7" text-anchor="end" class="v-evlab">9번 반응한 가격 <tspan class="v-evnum">26,289</tspan></text><line x1="285" y1="142.9" x2="297" y2="142.9" class="v-ev calc"/><path d="M 285 142.9 C 277 142.9, 277 142.9, 269 142.9" class="v-lead ev"/><text x="265" y="146.4" text-anchor="end" class="v-evlab">일봉 50% 되돌림선 <tspan class="v-evnum">26,074</tspan></text><line x1="285" y1="157.0" x2="297" y2="157.0" class="v-ev"/><path d="M 285 157.0 C 277 157.0, 277 157.9, 269 157.9" class="v-lead ev"/><text x="265" y="161.4" text-anchor="end" class="v-evlab">9/1 스윙 저점 <tspan class="v-evnum">25,996</tspan></text><line x1="285" y1="182.0" x2="297" y2="182.0" class="v-ev"/><path d="M 285 182.0 C 277 182.0, 277 182.0, 269 182.0" class="v-lead ev"/><text x="265" y="185.5" text-anchor="end" class="v-evlab">6번 반응한 가격 (저항→지지) <tspan class="v-evnum">25,857</tspan></text><line x1="285" y1="213.0" x2="297" y2="213.0" class="v-ev calc"/><path d="M 285 213.0 C 277 213.0, 277 213.0, 269 213.0" class="v-lead ev"/><text x="265" y="216.5" text-anchor="end" class="v-evlab">일봉 61.8% 되돌림선 <tspan class="v-evnum">25,685</tspan></text><path d="M 300 32.6 C 312 32.6, 312 32.6, 326 32.6" class="v-lead"/><circle cx="300" cy="32.6" r="5" fill="var(--v-up)" class="v-dot"/><text x="334" y="37.1" class="v-lab"><tspan class="v-tag" fill="var(--v-up)">도착지</tspan><tspan dx="8" class="v-price">26,686</tspan><tspan dx="10" class="v-dist">+677 · 1.80배</tspan></text><path d="M 300 33.7 C 312 33.7, 312 59.6, 326 59.6" class="v-lead"/><circle cx="300" cy="33.7" r="5" fill="var(--v-buy)" class="v-dot"/><text x="334" y="64.1" class="v-lab"><tspan class="v-tag" fill="var(--v-buy)">사다리 1차</tspan><tspan dx="8" class="v-price">26,680</tspan><tspan dx="10" class="v-dist">+671 · 1.78배</tspan></text><path d="M 300 109.2 C 312 109.2, 312 109.2, 326 109.2" class="v-lead"/><circle cx="300" cy="109.2" r="5" fill="var(--v-trigger)" class="v-dot"/><text x="334" y="113.7" class="v-lab"><tspan class="v-tag" fill="var(--v-trigger)">기준선 · 사다리 2차</tspan><tspan dx="8" class="v-price">26,261</tspan><tspan dx="10" class="v-dist">+252 · 0.67배</tspan></text><path d="M 300 154.6 C 312 154.6, 312 154.6, 326 154.6" class="v-lead"/><line x1="0" y1="154.6" x2="720" y2="154.6" class="v-nowline"/><circle cx="300" cy="154.6" r="7" fill="var(--v-now)" class="v-dot now"/><text x="334" y="159.1" class="v-lab now"><tspan class="v-tag" fill="var(--v-now)">현재</tspan><tspan dx="8" class="v-price">26,009</tspan></text><path d="M 300 162.2 C 312 162.2, 312 181.6, 326 181.6" class="v-lead"/><circle cx="300" cy="162.2" r="5" fill="var(--v-cancel)" class="v-dot"/><text x="334" y="186.1" class="v-lab"><tspan class="v-tag" fill="var(--v-cancel)">취소선</tspan><tspan dx="8" class="v-price">25,967</tspan><tspan dx="10" class="v-dist">−42 · 0.11배</tspan></text><path d="M 300 184.0 C 312 184.0, 312 208.6, 326 208.6" class="v-lead"/><circle cx="300" cy="184.0" r="5" fill="var(--v-down)" class="v-dot"/><text x="334" y="213.1" class="v-lab"><tspan class="v-tag" fill="var(--v-down)">다음 지지</tspan><tspan dx="8" class="v-price">25,846</tspan><tspan dx="10" class="v-dist">−163 · 0.43배</tspan></text></svg><div class="v-leg">오른쪽 숫자 = 현재가와의 거리 · 하루 평균 변동폭 배수 · 왼쪽 = 그 가격을 정한 근거선 (점선은 이평·되돌림처럼 계산으로 나온 선, 실선은 여러 번 반응한 가격·스윙 고저·박스처럼 실제 반응이 있었던 자리)</div><ul class="v-why"><li><i style="background:var(--v-up)"></i><b>도착지 26,686</b> 50일선 · 20일선 · 7번 반응한 가격(저항→지지) · 8/5 스윙 고점 26,739가 겹친 26,593~26,739</li><li><i style="background:var(--v-buy)"></i><b>사다리 1차 26,680</b> 계좌의 3% · 10/16 집행됨</li><li><i style="background:var(--v-trigger)"></i><b>기준선 · 사다리 2차 26,261</b> <strong>일봉 종가</strong> 상회로 판정 · 10/22 종가로 잃은 9번 반응 가격대(26,261~26,317) 하단 · 2차는 10/16 집행됨</li><li><i style="background:var(--v-now)"></i><b>현재 26,009</b> 20일선 26,734 · 50일선 26,593 아래 · 상대강도지수 37.3 · 장중 저가 25,918</li><li><i style="background:var(--v-cancel)"></i><b>취소선 25,967</b> 일봉 종가 하회 시 매수 계획 종료 · 두 회차 모두 이 가격에서 매도하면 계좌 <span class="neg">-0.11%</span> · 직전과 같음</li><li><i style="background:var(--v-down)"></i><b>다음 지지 25,846</b> <strong>일봉 종가</strong> 하회로 판정 · 8/24 스윙 저점 25,911 · 9/16 스윙 저점 25,803 · 6번 반응한 가격(저항→지지) · 25,800 라운드가 겹친 25,800~25,911</li></ul></div>
+<p>기준선은 한 세션 평균 움직임 안의 거리이고, 취소선은 현재가 바로 아래입니다. 사다리 두 회차가 모두 집행돼 남은 매수 회차는 없습니다. 직전에 취소선 근거로 든 6번 반응한 가격은 오늘 계산에서 25,857(25,803~25,911)로 잡혀, 취소선 바로 위 근거는 9/1 스윙 저점 25,996과 일봉 50% 되돌림선 26,074입니다. 취소선 가격은 옮기지 않습니다. 90일 박스(24,897~27,296) 안쪽 판정은 중립(지지 테스트 매도 거래량 감소, 저점 절하, 상승봉 대 하락봉 거래량비 1.06)으로 직전과 같습니다.</p>
+<div class="viz rail"><div class="v-h">S&amp;P 500 (^GSPC) · 10/22 종가 7,663 · 하루 변동폭 71</div><svg viewBox="0 0 720 264" role="img" aria-label="S&amp;P 500 (^GSPC) · 10/22 종가 7,663 · 하루 변동폭 71 가격 레일"><rect x="0" y="12.0" width="720" height="100.2" class="v-band up"/><rect x="0" y="171.9" width="720" height="80.1" class="v-band dn"/><line x1="300" y1="12" x2="300" y2="252" class="v-rail"/><line x1="285" y1="24.0" x2="297" y2="24.0" class="v-ev"/><path d="M 285 24.0 C 277 24.0, 277 24.0, 269 24.0" class="v-lead ev"/><text x="265" y="27.5" text-anchor="end" class="v-evlab">90일 박스 상단 <tspan class="v-evnum">7,828</tspan></text><line x1="285" y1="47.6" x2="297" y2="47.6" class="v-ev"/><path d="M 285 47.6 C 277 47.6, 277 47.6, 269 47.6" class="v-lead ev"/><text x="265" y="51.1" text-anchor="end" class="v-evlab">8/5 스윙 고점 <tspan class="v-evnum">7,794</tspan></text><line x1="285" y1="99.0" x2="297" y2="99.0" class="v-ev calc"/><path d="M 285 99.0 C 277 99.0, 277 99.0, 269 99.0" class="v-lead ev"/><text x="265" y="102.5" text-anchor="end" class="v-evlab">20일선 <tspan class="v-evnum">7,720</tspan></text><line x1="285" y1="112.2" x2="297" y2="112.2" class="v-ev calc"/><path d="M 285 112.2 C 277 112.2, 277 114.0, 269 114.0" class="v-lead ev"/><text x="265" y="117.5" text-anchor="end" class="v-evlab">일봉 23.6% 되돌림선 <tspan class="v-evnum">7,701</tspan></text><line x1="285" y1="124.7" x2="297" y2="124.7" class="v-ev calc"/><path d="M 285 124.7 C 277 124.7, 277 129.0, 269 129.0" class="v-lead ev"/><text x="265" y="132.5" text-anchor="end" class="v-evlab">50일선 <tspan class="v-evnum">7,683</tspan></text><line x1="285" y1="156.0" x2="297" y2="156.0" class="v-ev"/><path d="M 285 156.0 C 277 156.0, 277 156.0, 269 156.0" class="v-lead ev"/><text x="265" y="159.5" text-anchor="end" class="v-evlab">8/24 스윙 저점 <tspan class="v-evnum">7,638</tspan></text><line x1="285" y1="165.0" x2="297" y2="165.0" class="v-ev"/><path d="M 285 165.0 C 277 165.0, 277 171.0, 269 171.0" class="v-lead ev"/><text x="265" y="174.5" text-anchor="end" class="v-evlab">6번 반응한 가격 (저항→지지) <tspan class="v-evnum">7,625</tspan></text><line x1="285" y1="173.3" x2="297" y2="173.3" class="v-ev calc"/><path d="M 285 173.3 C 277 173.3, 277 186.0, 269 186.0" class="v-lead ev"/><text x="265" y="189.5" text-anchor="end" class="v-evlab">일봉 38.2% 되돌림선 <tspan class="v-evnum">7,613</tspan></text><line x1="285" y1="206.0" x2="297" y2="206.0" class="v-ev"/><path d="M 285 206.0 C 277 206.0, 277 206.0, 269 206.0" class="v-lead ev"/><text x="265" y="209.5" text-anchor="end" class="v-evlab">5번 반응한 가격 (저항→지지) <tspan class="v-evnum">7,566</tspan></text><line x1="285" y1="240.0" x2="297" y2="240.0" class="v-ev"/><path d="M 285 240.0 C 277 240.0, 277 240.0, 269 240.0" class="v-lead ev"/><text x="265" y="243.5" text-anchor="end" class="v-evlab">7번 반응한 가격 (저항→지지) <tspan class="v-evnum">7,517</tspan></text><path d="M 300 47.6 C 312 47.6, 312 47.6, 326 47.6" class="v-lead"/><circle cx="300" cy="47.6" r="5" fill="var(--v-up)" class="v-dot"/><text x="334" y="52.1" class="v-lab"><tspan class="v-tag" fill="var(--v-up)">도착지</tspan><tspan dx="8" class="v-price">7,794</tspan><tspan dx="10" class="v-dist">+131 · 1.85배</tspan></text><path d="M 300 112.2 C 312 112.2, 312 105.0, 326 105.0" class="v-lead"/><circle cx="300" cy="112.2" r="5" fill="var(--v-trigger)" class="v-dot"/><text x="334" y="109.5" class="v-lab"><tspan class="v-tag" fill="var(--v-trigger)">기준선</tspan><tspan dx="8" class="v-price">7,701</tspan><tspan dx="10" class="v-dist">+38 · 0.54배</tspan></text><path d="M 300 138.6 C 312 138.6, 312 132.0, 326 132.0" class="v-lead"/><line x1="0" y1="138.6" x2="720" y2="138.6" class="v-nowline"/><circle cx="300" cy="138.6" r="7" fill="var(--v-now)" class="v-dot now"/><text x="334" y="136.5" class="v-lab now"><tspan class="v-tag" fill="var(--v-now)">현재</tspan><tspan dx="8" class="v-price">7,663</tspan></text><path d="M 300 145.5 C 312 145.5, 312 159.0, 326 159.0" class="v-lead"/><circle cx="300" cy="145.5" r="5" fill="var(--v-buy)" class="v-dot"/><text x="334" y="163.5" class="v-lab"><tspan class="v-tag" fill="var(--v-buy)">사다리 1차</tspan><tspan dx="8" class="v-price">7,653</tspan><tspan dx="10" class="v-dist">−10 · 0.14배</tspan></text><path d="M 300 171.9 C 312 171.9, 312 186.0, 326 186.0" class="v-lead"/><circle cx="300" cy="171.9" r="5" fill="var(--v-down)" class="v-dot"/><text x="334" y="190.5" class="v-lab"><tspan class="v-tag" fill="var(--v-down)">다음 지지</tspan><tspan dx="8" class="v-price">7,615</tspan><tspan dx="10" class="v-dist">−48 · 0.68배</tspan></text><path d="M 300 197.6 C 312 197.6, 312 213.0, 326 213.0" class="v-lead"/><circle cx="300" cy="197.6" r="5" fill="var(--v-buy)" class="v-dot"/><text x="334" y="217.5" class="v-lab"><tspan class="v-tag" fill="var(--v-buy)">사다리 2차</tspan><tspan dx="8" class="v-price">7,578</tspan><tspan dx="10" class="v-dist">−85 · 1.20배</tspan></text><path d="M 300 240.0 C 312 240.0, 312 240.0, 326 240.0" class="v-lead"/><circle cx="300" cy="240.0" r="5" fill="var(--v-cancel)" class="v-dot"/><text x="334" y="244.5" class="v-lab"><tspan class="v-tag" fill="var(--v-cancel)">취소선</tspan><tspan dx="8" class="v-price">7,517</tspan><tspan dx="10" class="v-dist">−146 · 2.06배</tspan></text></svg><div class="v-leg">오른쪽 숫자 = 현재가와의 거리 · 하루 평균 변동폭 배수 · 왼쪽 = 그 가격을 정한 근거선 (점선은 이평·되돌림처럼 계산으로 나온 선, 실선은 여러 번 반응한 가격·스윙 고저·박스처럼 실제 반응이 있었던 자리)</div><ul class="v-why"><li><i style="background:var(--v-up)"></i><b>도착지 7,794</b> 8/5 스윙 고점 7,794 · 7,771~7,800 스윙 고점 세 개와 7,800 라운드 · 직전 기준선</li><li><i style="background:var(--v-trigger)"></i><b>기준선 7,701</b> <strong>일봉 종가</strong> 상회로 판정 · 50일선 7,683 + 7,700 라운드 + 일봉 23.6% 되돌림선 7,701 겹침 구간 상단</li><li><i style="background:var(--v-now)"></i><b>현재 7,663</b> 20일선 7,720 · 50일선 7,683 아래 · 상대강도지수 45.0 · 장중 저가 7,637</li><li><i style="background:var(--v-buy)"></i><b>사다리 1차 7,653</b> 계좌의 3% · 10/16 집행됨</li><li><i style="background:var(--v-down)"></i><b>다음 지지 7,615</b> <strong>일봉 종가</strong> 하회로 판정 · 7,600 라운드 · 9/1 · 10/1 스윙 저점 · 일봉 38.2% 되돌림선 · 6번 반응한 가격(저항→지지)이 겹친 7,600~7,625</li><li><i style="background:var(--v-buy)"></i><b>사다리 2차 7,578</b> 계좌의 3% · 장중 저가로 닿으면 집행 · 직전과 같음</li><li><i style="background:var(--v-cancel)"></i><b>취소선 7,517</b> 일봉 종가 하회 시 매수 계획 종료 · 두 회차 전부 물리면 계좌 <span class="neg">-0.08%</span> · 직전과 같음</li></ul></div>
+<p>기준선과 다음 지지 모두 한 세션 평균 움직임 안의 거리입니다. 남은 매수 회차는 2차 7,578 하나입니다. 90일 박스(7,328~7,828) 안쪽 판정은 중립(지지 테스트 거래량 혼조, 저점 절하, 거래량비 1.02)입니다.</p>
+</section>
+<section class="sec">
+<h3>ETF 스윙</h3>
+<p>S&amp;P 500 7,663이 200일 이동평균 7,284 위(<span class="pos">+5.21%</span>, 4/8부터)라 새 계획을 낼 수 있는 국면입니다.</p>
+<div class="table-wrap"><table><thead><tr><th>ETF</th><th>등록일</th><th>현재</th><th>진입</th><th>손절</th><th>목표</th><th>상태</th></tr></thead><tbody><tr><td>Invesco QQQ (QQQ)</td><td>2026-10-22</td><td>704</td><td>730</td><td>717</td><td>750</td><td>진입 대기</td></tr><tr><td>에너지 (XLE)</td><td>2026-10-20</td><td>67.57</td><td>70.80</td><td>68.87</td><td>74.54</td><td>진입 대기</td></tr><tr><td>헬스케어 (XLV)</td><td>2026-10-22</td><td>181</td><td>190</td><td>186</td><td>198</td><td>진입 대기</td></tr></tbody></table></div>
+<div class="viz rail"><div class="v-h">필수소비재 (XLP) · 돌파 매수 · 새 계획</div><svg viewBox="0 0 720 228" role="img" aria-label="필수소비재 (XLP) · 돌파 매수 · 새 계획 가격 레일"><rect x="0" y="12.0" width="720" height="74.0" class="v-band up"/><rect x="0" y="107.7" width="720" height="108.3" class="v-band dn"/><line x1="300" y1="12" x2="300" y2="216" class="v-rail"/><line x1="285" y1="140.4" x2="297" y2="140.4" class="v-ev"/><path d="M 285 140.4 C 277 140.4, 277 140.4, 269 140.4" class="v-lead ev"/><text x="265" y="143.9" text-anchor="end" class="v-evlab">180일 박스 상단 <tspan class="v-evnum">89.66</tspan></text><line x1="285" y1="150.9" x2="297" y2="150.9" class="v-ev"/><path d="M 285 150.9 C 277 150.9, 277 155.4, 269 155.4" class="v-lead ev"/><text x="265" y="158.9" text-anchor="end" class="v-evlab">7/28 스윙 고점 <tspan class="v-evnum">88.78</tspan></text><line x1="285" y1="195.9" x2="297" y2="195.9" class="v-ev calc"/><path d="M 285 195.9 C 277 195.9, 277 189.0, 269 189.0" class="v-lead ev"/><text x="265" y="192.5" text-anchor="end" class="v-evlab">20일선 <tspan class="v-evnum">85.02</tspan></text><line x1="285" y1="204.0" x2="297" y2="204.0" class="v-ev calc"/><path d="M 285 204.0 C 277 204.0, 277 204.0, 269 204.0" class="v-lead ev"/><text x="265" y="207.5" text-anchor="end" class="v-evlab">50일선 <tspan class="v-evnum">84.34</tspan></text><path d="M 300 24.0 C 312 24.0, 312 24.0, 326 24.0" class="v-lead"/><circle cx="300" cy="24.0" r="5" fill="var(--v-up)" class="v-dot"/><text x="334" y="28.5" class="v-lab"><tspan class="v-tag" fill="var(--v-up)">목표</tspan><tspan dx="8" class="v-price">99.40</tspan><tspan dx="10" class="v-dist">+9.41 · 7.78배</tspan></text><path d="M 300 86.0 C 312 86.0, 312 86.0, 326 86.0" class="v-lead"/><circle cx="300" cy="86.0" r="5" fill="var(--v-trigger)" class="v-dot"/><text x="334" y="90.5" class="v-lab"><tspan class="v-tag" fill="var(--v-trigger)">진입</tspan><tspan dx="8" class="v-price">94.21</tspan><tspan dx="10" class="v-dist">+4.22 · 3.49배</tspan></text><path d="M 300 107.7 C 312 107.7, 312 113.0, 326 113.0" class="v-lead"/><circle cx="300" cy="107.7" r="5" fill="var(--v-down)" class="v-dot"/><text x="334" y="117.5" class="v-lab"><tspan class="v-tag" fill="var(--v-down)">손절</tspan><tspan dx="8" class="v-price">92.40</tspan><tspan dx="10" class="v-dist">+2.41 · 1.99배</tspan></text><path d="M 300 136.5 C 312 136.5, 312 140.0, 326 140.0" class="v-lead"/><line x1="0" y1="136.5" x2="720" y2="136.5" class="v-nowline"/><circle cx="300" cy="136.5" r="7" fill="var(--v-now)" class="v-dot now"/><text x="334" y="144.5" class="v-lab now"><tspan class="v-tag" fill="var(--v-now)">현재</tspan><tspan dx="8" class="v-price">89.99</tspan></text></svg><div class="v-leg">오른쪽 숫자 = 현재가와의 거리 · 하루 평균 변동폭 배수 · 왼쪽 = 그 가격을 정한 근거선 (점선은 이평·되돌림처럼 계산으로 나온 선, 실선은 여러 번 반응한 가격·스윙 고저·박스처럼 실제 반응이 있었던 자리)</div><ul class="v-why"><li><i style="background:var(--v-up)"></i><b>목표 99.40</b> 주봉 1.618 확장선 · 99.40달러에서 전량 매도 (목표 도달)</li><li><i style="background:var(--v-trigger)"></i><b>진입 94.21</b> 일봉 종가 상회 · 손익비 <b class="rr">1:2.86</b> (손절 1.50 ATR) · 주봉 1.272 확장선</li><li><i style="background:var(--v-down)"></i><b>손절 92.40</b> 진입가에서 ATR의 1.5배 아래 · 92.40달러에서 전량 매도 (손절)</li><li><i style="background:var(--v-now)"></i><b>현재 89.99</b> 20일선 85.02 위 · 상대강도지수 76.7 · 52주 고점 대비 <span class="neg">-0.17%</span></li></ul></div>
+<p>엣지는 모멘텀(저항을 넘으면 그 방향이 이어진다는 전제)이며 집행은 99.40달러에서 전량 매도, 트레일링 없음입니다. 손절이 진입가에서 ATR의 1.5배 아래라 구조적 손절 기준 손익비도 같은 <b class="rr">1:2.86</b>입니다. 1% 리스크 기준 비중은 계좌의 52.0%로 나와 13%로 제한하며, 이때 손절 시 손실은 계좌의 0.25%입니다. 진입선이 현재가에서 하루 평균 변동폭의 3.5배 위이고 진입·목표 모두 실제 반응이 있었던 가격이 아닌 확장선이라 근거가 얇습니다. 조건 점검 9개 중 7개 통과, 미달은 상대강도선 신고가와 박스 안쪽(180일 박스 80.36~89.66이 분산 우위 — 지지 테스트마다 매도 거래량 증가, 저점 절하)입니다.</p>
+<p>나머지는 새 계획을 내지 않습니다. SPY와 XLE는 대표 셋업이 현재가 아래 눌림 매수라, 진입을 종가 상회로 채점하는 지금 등록 방식에서는 다음 종가에 바로 진입한 것으로 잡힙니다. QQQ는 대표 셋업인 돌파 매수가 <b class="rr low">1:0.85</b> (손절 1.18 ATR)라 패스입니다. 기존 QQQ · XLE · XLV 계획은 진입 조건이 충족되지 않아 그대로 둡니다.</p>
+</section>
+<section class="sec">
+<h3>주도섹터</h3>
+<div class="viz bars"><div class="v-h">미국 섹터 20일 초과수익 (SPDR 업종 ETF, S&amp;P 500 대비)</div><div class="v-brow"><div class="v-blab">필수소비재 (XLP)</div><div class="v-btrack"><span class="v-bzero"></span><span class="v-bar pos" style="left:50%;width:50.00%"></span></div><div class="v-bval pos">+9.72%</div><div class="v-bnote">5일 +5.29</div></div><div class="v-brow"><div class="v-blab">에너지 (XLE)</div><div class="v-btrack"><span class="v-bzero"></span><span class="v-bar pos" style="left:50%;width:43.67%"></span></div><div class="v-bval pos">+8.49%</div><div class="v-bnote">5일 +2.24</div></div><div class="v-brow"><div class="v-blab">유틸리티 (XLU)</div><div class="v-btrack"><span class="v-bzero"></span><span class="v-bar pos" style="left:50%;width:43.21%"></span></div><div class="v-bval pos">+8.40%</div><div class="v-bnote">5일 +3.48</div></div><div class="v-brow"><div class="v-blab">헬스케어 (XLV)</div><div class="v-btrack"><span class="v-bzero"></span><span class="v-bar pos" style="left:50%;width:40.95%"></span></div><div class="v-bval pos">+7.96%</div><div class="v-bnote">5일 +4.94</div></div><div class="v-brow"><div class="v-blab">임의소비재 (XLY)</div><div class="v-btrack"><span class="v-bzero"></span><span class="v-bar pos" style="left:50%;width:23.10%"></span></div><div class="v-bval pos">+4.49%</div><div></div></div><div class="v-brow"><div class="v-blab">금융 (XLF)</div><div class="v-btrack"><span class="v-bzero"></span><span class="v-bar pos" style="left:50%;width:22.84%"></span></div><div class="v-bval pos">+4.44%</div><div></div></div><div class="v-brow"><div class="v-blab">소재 (XLB)</div><div class="v-btrack"><span class="v-bzero"></span><span class="v-bar pos" style="left:50%;width:17.28%"></span></div><div class="v-bval pos">+3.36%</div><div></div></div><div class="v-brow"><div class="v-blab">부동산 (XLRE)</div><div class="v-btrack"><span class="v-bzero"></span><span class="v-bar pos" style="left:50%;width:11.21%"></span></div><div class="v-bval pos">+2.18%</div><div></div></div><div class="v-brow"><div class="v-blab">산업재 (XLI)</div><div class="v-btrack"><span class="v-bzero"></span><span class="v-bar neg" style="right:50%;width:7.36%"></span></div><div class="v-bval neg">−1.43%</div><div></div></div><div class="v-brow"><div class="v-blab">커뮤니케이션 (XLC)</div><div class="v-btrack"><span class="v-bzero"></span><span class="v-bar neg" style="right:50%;width:26.80%"></span></div><div class="v-bval neg">−5.21%</div><div class="v-bnote">5일 -3.75</div></div><div class="v-brow"><div class="v-blab">기술 (XLK)</div><div class="v-btrack"><span class="v-bzero"></span><span class="v-bar neg" style="right:50%;width:29.84%"></span></div><div class="v-bval neg">−5.80%</div><div class="v-bnote">5일 -2.90</div></div></div>
+<p>상위 2개는 필수소비재·에너지로, 직전 2위 헬스케어(<span class="pos">+5.34%</span>)가 4위(<span class="pos">+7.96%</span>)로 내려갔습니다. 상위 네 섹터가 모두 방어·원자재 업종이고 기술·커뮤니케이션이 최하위입니다. 한국은 헬스케어(<span class="pos">+14.80%</span>)·2차전지(<span class="pos">+13.87%</span>)가 20일 상위입니다.</p>
+<p>종목 발굴: 200개를 훑어 3개가 남았습니다(구조 판정에서 박스 판정 불가 5개, 추격 비권장 2개 탈락). 1순위 US Foods (USFD, 필수소비재)는 이 브리핑 뒤에 배치가 정식 리포트를 씁니다. Occidental Petroleum (OXY)과 Suncor Energy (SU)는 에너지 섹터 후보이며 리포트가 아닙니다 — 텔레그램으로 종목명을 보내면 리포트가 나갑니다.</p>
+</section>
+<section class="sec">
+<h3>매크로 좌표</h3>
+<div class="table-wrap"><table><thead><tr><th>항목</th><th>값</th><th>직전 대비</th></tr></thead><tbody><tr><td>미국 경기선행지수</td><td>101.00 (9월)</td><td>전월 대비 +0.05 · 직전 회차와 같은 값</td></tr><tr><td>한국 경기선행지수</td><td>102.53 (9월)</td><td>전월 대비 -0.13 · 직전 회차와 같은 값</td></tr><tr><td>미 10년 명목금리</td><td>확정 5.13% (10/21) · 지수 시세 4.953% (10/22)</td><td>확정 <span class="pos">+0.01%</span>포인트</td></tr><tr><td>미 10년 기대물가</td><td>2.32% (10/22)</td><td><span class="neg">-0.05%</span>포인트</td></tr><tr><td>미 10년 실질금리</td><td>2.76% (10/21)</td><td><span class="neg">-0.01%</span>포인트</td></tr><tr><td>유가 (WTI)</td><td>확정 107.89달러 (10/20) · 선물 99.10달러 (10/22)</td><td>확정 -2.12달러</td></tr><tr><td>달러지수 (광의)</td><td>121.40 (10/16)</td><td>-0.16</td></tr><tr><td>변동성지수 (VIX)</td><td>19.03 (10/22, 장중 20.31)</td><td>백분위 산출물 없음</td></tr></tbody></table></div>
+<p>경기선행지수는 장기 평균을 100으로 놓고 경기 방향을 몇 달 앞서 보여주는 OECD 지표이며, 새 발표가 없어 해석을 바꾸지 않습니다. 10/22에 10년 금리 시세가 5% 아래로 내려왔고 같은 날 기대물가도 <span class="neg">-0.05%</span>포인트 내렸으나, 10/22 실질금리 값이 아직 없어 명목 하락분이 어디서 왔는지 가르지 못합니다. 이 절은 지수 기준선에 반영하지 않습니다.</p>
+</section>
+<section class="sec">
+<h3>핵심 뉴스</h3>
+<ul><li>인공지능 투자 비용 의구심이 다시 커지며 기술주가 매도됐다는 보도(Reuters 2건). 기술 (XLK)은 하루 <span class="neg">-3.29%</span>, 20일 초과수익 <span class="neg">-5.80%</span>로 최하위이며 나스닥이 26,261을 잃은 배경입니다.</li><li>안전자산 선호로 10년 금리가 5% 아래로 내려왔다는 보도(MarketWatch). 금리 시세 4.953%이며, 직전 회차가 배경으로 든 금리 급등과 반대 방향입니다.</li><li>유조선 운임 급등으로 유가가 이란 전쟁 당시 고점에 다가섰다는 보도(MarketWatch). WTI 선물 99.10달러이며, 에너지는 20일 초과수익 2위(<span class="pos">+8.49%</span>)지만 XLE는 10/22 67.57달러로 기존 진입선 70.80달러 아래입니다.</li></ul>
+</section>
+<section class="sec">
+<h3>투자심리</h3>
+<div class="viz gauge"><div class="v-h">공포·탐욕 지수 (0~100)</div><div class="v-grow"><div class="v-glab">S&amp;P 500 (CNN)</div><div class="v-gtrack"><span class="v-gmove" style="left:19.80%;width:11.60%"></span><span class="v-gprev" style="left:31.40%"></span><span class="v-gcur" style="left:19.80%"></span></div><div class="v-gval"><b>19.8</b> 극단적 공포 <span class="neg">−11.6</span></div></div><div class="v-grow"><div class="v-glab">코스피 (CNN 방식)</div><div class="v-gtrack"><span class="v-gmove" style="left:35.20%;width:4.60%"></span><span class="v-gprev" style="left:39.80%"></span><span class="v-gcur" style="left:35.20%"></span></div><div class="v-gval"><b>35.2</b> 공포 <span class="neg">−4.6</span></div></div><div class="v-gleg"><span>공포</span><span>중립</span><span>탐욕</span></div></div>
+<figure><a href="feargreed_20261022.png" target="_blank" rel="noopener"><img src="feargreed_20261022.png" alt="공포·탐욕 게이지 (2026-10-22)" loading="lazy"></a><figcaption>공포·탐욕 게이지 (2026-10-22)</figcaption></figure>
+<p>S&amp;P 500은 CNN 공식값이며 1주 전 30.3, 1개월 전 35.0이었습니다. 점수를 끌어내린 항목은 안전자산 선호 9.6, 주가 강도 17.6, 변동성 17.7이고, 가장 높은 항목은 정크본드 수요 32.2입니다. 코스피는 CNN 방식을 한국 데이터로 재구성한 값이며 공식 지수가 아닙니다. 일곱 항목을 모두 썼고 기준일은 10/22이며, 가장 낮은 항목은 모멘텀 2.2, 가장 높은 항목은 풋/콜 비율 86.2입니다.</p>
+</section>
+<section class="sec">
+<h3>확인 캘린더</h3>
+<div class="table-wrap"><table><thead><tr><th>날짜 (미국)</th><th>이벤트</th><th>확인할 것</th></tr></thead><tbody><tr><td>10/23 마감</td><td>뉴욕 마감</td><td>나스닥 26,261 · 25,967, S&amp;P 500 7,701 · 7,615 대비 종가 · XLP 94.21 · QQQ 730 · XLV 190 · XLE 70.80달러 종가</td></tr><tr><td>10/28</td><td>FOMC</td><td>금리 결정</td></tr><tr><td>10/29</td><td>GDP · 개인소비지출 물가 · 실업수당 청구</td><td>성장 · 물가</td></tr><tr><td>11/6</td><td>고용보고서 · 실업률</td><td>고용</td></tr><tr><td>11/10</td><td>소비자물가</td><td>물가</td></tr></tbody></table></div>
+</section>
+<section class="sec">
+<h3>집행</h3>
+<p>1. 매수 쪽 — 나스닥은 사다리 두 회차가 모두 집행돼 더 살 회차가 없습니다. S&amp;P 500은 2차 7,578에 장중 저가로 닿으면 계좌의 3%를 삽니다. 2. 일봉 종가로 나스닥 25,967 아래면 나스닥 두 회차를, S&amp;P 500 7,517 아래면 S&amp;P 500 회차를 다음 세션에 전량 매도 (사다리 취소)합니다. 3. XLP 진입 대기 — 일봉 종가 94.21달러 상회 시 다음 세션 계좌의 13% 이내로 진입, 진입 후 92.40달러 장중 도달 시 전량 매도 (손절), 99.40달러에서 전량 매도 (목표 도달). 4. QQQ 진입 대기 — 일봉 종가 730달러 상회 시 진입, 717달러 장중 도달 시 전량 매도 (손절), 750달러에서 전량 매도 (목표 도달). 5. XLV 진입 대기 — 일봉 종가 190달러 상회 시 진입, 186달러 장중 도달 시 전량 매도 (손절), 198달러에서 전량 매도 (목표 도달). 6. XLE 진입 대기 — 일봉 종가 70.80달러 상회 시 진입, 68.87달러 장중 도달 시 전량 매도 (손절), 74.54달러에서 전량 매도 (목표 도달).</p>
+<p>다음 세션에 볼 것 — 나스닥 종가가 25,967 위에 남는지입니다.</p>
+</section>
+<section class="sec">
+<h3>데이터 상태</h3>
+<ul><li>시세 제공처에서 10/21 지수 일봉(나스닥·S&amp;P 500)이 빠져 있습니다. 그래서 지수 시세의 전일 대비 등락률, 변동성지수·10년 금리 시세의 전일 값이 10/20 기준으로 나오며, 10/21 장전 예측 4건은 판정 불가·대기로 바뀌었습니다. 섹터 1일 초과수익은 S&amp;P 500 쪽 기준일이 어긋나 인용하지 않았고, 5일·20일 초과수익도 S&amp;P 500 일봉 하나가 빠진 채 계산된 값입니다.</li><li>원유 선물 시세의 전일 종가 97.15달러가 직전 회차가 적은 10/21 값 97.71달러와 맞지 않아 등락률을 인용하지 않습니다.</li><li>경제지표 일정은 5일 범위 조회가 0건을 돌려줘 21일 범위로 다시 받았습니다.</li><li>뉴스 출처 중 Yahoo Finance 주요 기사 피드를 받지 못했습니다.</li><li>ETF 셋업 산출물에 구조적 손절 기준 손익비가 따로 담기지 않았습니다. XLP는 손절이 ATR의 1.5배 규칙 자리라 같은 값으로 적었습니다.</li></ul>
+</section>
+<div class="gloss"><p class="note">지수이동평균: 최근 가격에 더 무게를 둔 평균.</p><p class="note">상대강도지수(RSI): 최근 14일 상승폭과 하락폭의 비율로 과열·침체를 보는 0~100 지표.</p><p class="note">ATR: 하루 평균 변동폭(14일).</p><p class="note">VIX: S&amp;P 500 옵션 가격에서 뽑은 향후 30일 예상 변동성.</p></div>
+<p><a class="dl" href="report.md">Markdown 원문</a></p></div></body></html>
