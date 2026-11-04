@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>시황 리포트 · 2026-11-05</title>
+<style>
+:root{--bg:#fbfbfa;--panel:#fff;--fg:#1c1c1a;--muted:#6b6b66;--line:#e3e3df;
+--accent:#2f6f4f;--accent-soft:#e8f1ec;--code:#f3f3f0;
+--pos:#1a7d4f;--neg:#c2402c;--hl:#fff3b8;--hl-fg:#3d3200;
+--danger:#c2402c;--danger-bg:#fdf1ee;--key:#2f6f4f;--key-bg:#eef5f1;
+--info:#5a6b86;--info-bg:#f0f3f8;--sec:#f5f5f3}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--panel:#1c1c1b;--fg:#e8e8e4;
+--muted:#9a9a93;--line:#2e2e2b;--accent:#7dc4a0;--accent-soft:#1e2a24;--code:#232322;
+--pos:#5fcf98;--neg:#f08b76;--hl:#4a3f10;--hl-fg:#ffe8a3;
+--danger:#f08b76;--danger-bg:#2b1c18;--key:#7dc4a0;--key-bg:#18241e;
+--info:#9db1d0;--info-bg:#1a1e26;--sec:#1a1a19}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+-webkit-text-size-adjust:100%}
+.wrap{max-width:820px;margin:0 auto;padding:28px 20px 80px}
+a{color:var(--accent)}
+header.site{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:22px}
+header.site h1{font-size:19px;margin:0;letter-spacing:-.01em}
+header.site .sub{color:var(--muted);font-size:13px}
+.back{font-size:13px;text-decoration:none}
+.meta{color:var(--muted);font-size:13px;margin:0 0 18px}
+.badge{display:inline-block;background:var(--accent-soft);color:var(--accent);
+border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;margin-right:8px}
+h1.title{font-size:22px;line-height:1.3;margin:0 0 6px;letter-spacing:-.02em}
+.lede{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+border-radius:6px;padding:14px 16px;margin:0 0 22px;font-size:15px;font-weight:500}
+.lede .lbl{display:block;color:var(--muted);font-size:11px;font-weight:700;
+letter-spacing:.09em;text-transform:uppercase;margin-bottom:5px}
+h2{font-size:20px;margin:34px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:16px;margin:20px 0 8px}
+h4{font-size:15px;margin:20px 0 6px;color:var(--muted)}
+p{margin:0 0 12px}
+ul{margin:0 0 14px;padding-left:20px}
+li{margin-bottom:5px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+figure{margin:20px 0}
+figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+figcaption{color:var(--muted);font-size:13px;margin-top:7px;text-align:center}
+.table-wrap{overflow-x:auto;margin:0 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:420px}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--code);font-weight:600}
+.missing{color:#b4553c;font-size:14px}
+.note{color:var(--muted);font-size:12px;line-height:1.55;margin:-2px 0 14px;opacity:.78}
+.sec{background:var(--sec);border-radius:6px;padding:2px 14px 6px;margin:0 0 12px}
+.sec>h2:first-child,.sec>h3:first-child{margin-top:12px}
+.gloss{background:var(--sec);border-radius:6px;padding:10px 14px;margin:0 0 12px}
+.gloss .note{margin:0 0 4px}
+.gloss .note:last-child{margin-bottom:0}
+.rr{font-size:1.06em;font-weight:800;font-variant-numeric:tabular-nums;
+white-space:nowrap;padding:1px 6px;border-radius:5px;
+color:var(--pos);background:var(--key-bg);box-shadow:inset 0 0 0 1px var(--pos)}
+.rr.low{color:var(--neg);background:var(--danger-bg);box-shadow:inset 0 0 0 1px var(--neg)}
+.pos{color:var(--pos);font-weight:600;font-variant-numeric:tabular-nums}
+.neg{color:var(--neg);font-weight:600;font-variant-numeric:tabular-nums}
+mark{background:var(--hl);color:var(--hl-fg);padding:0 3px;border-radius:3px}
+td strong,th strong{font-weight:700}
+.callout{border:1px solid var(--line);border-left:4px solid var(--info);
+background:var(--info-bg);border-radius:6px;padding:12px 15px;margin:0 0 18px}
+.callout .ct{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;
+text-transform:uppercase;color:var(--info);margin-bottom:6px}
+.callout p{margin:0 0 7px;font-size:14px}
+.callout p:last-child{margin-bottom:0}
+.callout.danger{border-left-color:var(--danger);background:var(--danger-bg)}
+.callout.danger .ct{color:var(--danger)}
+.callout.key{border-left-color:var(--key);background:var(--key-bg)}
+.callout.key .ct{color:var(--key)}
+.dl{display:inline-block;font-size:13px;text-decoration:none;border:1px solid var(--line);
+border-radius:6px;padding:6px 12px;margin-top:8px}
+.warn{background:var(--accent-soft);border:1px solid var(--line);border-radius:6px;
+padding:10px 14px;font-size:13px;color:var(--muted);margin:0 0 20px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filters input{flex:1;min-width:160px;padding:8px 12px;border:1px solid var(--line);
+border-radius:6px;background:var(--panel);color:var(--fg);font-size:14px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--muted);
+border-radius:999px;padding:6px 13px;font-size:13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);
+border-color:var(--accent);font-weight:600}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;
+padding:15px 17px;margin-bottom:11px;text-decoration:none;color:inherit}
+.card:hover{border-color:var(--accent)}
+.card h2{font-size:17px;margin:0 0 5px;border:0;padding:0}
+.card .sum{color:var(--muted);font-size:14px;margin:0}
+.card .row{display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
+.card time{color:var(--muted);font-size:12px}
+.empty{color:var(--muted);text-align:center;padding:40px 0;font-size:14px}
+footer{color:var(--muted);font-size:12px;margin-top:44px;padding-top:14px;
+border-top:1px solid var(--line)}
+
+:root{--v-up:#1a7d4f;--v-trigger:#2f6f4f;--v-now:#1c1c1a;--v-down:#c98a2e;
+--v-buy:#3b74c4;--v-cancel:#c2402c;--v-bandup:rgba(26,125,79,.07);
+--v-banddn:rgba(194,64,44,.07);--v-fib:#7b55b8}
+@media (prefers-color-scheme:dark){:root{--v-up:#5fcf98;--v-trigger:#7dc4a0;
+--v-now:#e8e8e4;--v-down:#e0ac57;--v-buy:#6f9fe0;--v-cancel:#f08b76;
+--v-bandup:rgba(95,207,152,.09);--v-banddn:rgba(240,139,118,.09);--v-fib:#b79ae6}}
+.viz{background:var(--panel);border:1px solid var(--line);border-radius:8px;
+padding:14px 16px 12px;margin:0 0 16px}
+.viz .v-h{font-size:13px;font-weight:700;color:var(--muted);margin-bottom:8px}
+.viz svg{width:100%;height:auto;display:block;overflow:visible}
+.viz.rail svg{max-width:700px}
+.v-scroll{overflow-x:auto}
+.v-rail{stroke:var(--line);stroke-width:2}
+.v-lead{fill:none;stroke:var(--line);stroke-width:1.1}
+.v-lead.ev{opacity:.7}
+.v-band.up{fill:var(--v-bandup)}
+.v-band.dn{fill:var(--v-banddn)}
+.v-nowline{stroke:var(--v-now);stroke-width:1;stroke-dasharray:2 4;opacity:.4}
+.v-dot{stroke:var(--panel);stroke-width:2}
+.v-dot.now{stroke-width:3}
+.v-ev{stroke:var(--muted);stroke-width:2;opacity:.75}
+.v-ev.calc{stroke-dasharray:3 2.5;opacity:.6}
+.v-ev.fib{stroke:var(--v-fib);stroke-dasharray:3 2.5;opacity:1}
+.v-evlab{font-size:11px;fill:var(--muted)}
+.v-evlab.fib .v-evname{fill:var(--v-fib);font-weight:600}
+.v-evnum{font-variant-numeric:tabular-nums;font-weight:700;fill:var(--fg);opacity:.75}
+.v-evbasis{font-size:9.5px;fill:var(--muted);opacity:.85}
+.halo{paint-order:stroke;stroke:var(--panel);stroke-width:4px;stroke-linejoin:round}
+.v-tag{font-size:12.5px;font-weight:700}
+.v-tag.now{fill:var(--fg)}
+.v-price{font-size:15px;font-weight:700;fill:var(--fg);font-variant-numeric:tabular-nums}
+.v-price.now{font-weight:800}
+.v-dist{font-size:11.5px;fill:var(--muted);font-variant-numeric:tabular-nums}
+.v-leg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11px;color:var(--muted);
+margin:8px 0 0;line-height:1.5}
+.v-key{display:inline-flex;align-items:center;gap:5px}
+.v-key i{display:inline-block;width:16px;border-top:2px solid var(--muted);opacity:.75}
+.v-key.calc i{border-top-style:dashed}
+.v-key.fib i{border-top:2px dashed var(--v-fib);opacity:1}
+.v-key.fib{color:var(--v-fib)}
+.v-why{list-style:none;margin:9px 0 0;padding:9px 0 0;border-top:1px solid var(--line)}
+.v-why li{position:relative;padding-left:15px;margin-bottom:4px;font-size:12.5px;
+line-height:1.5;color:var(--muted)}
+.v-why li i{position:absolute;left:0;top:6px;width:7px;height:7px;border-radius:50%}
+.v-why li b{color:var(--fg);font-weight:700;font-variant-numeric:tabular-nums}
+.v-brow{display:grid;grid-template-columns:150px 1fr 88px;gap:8px;align-items:center;
+margin-bottom:5px}
+.v-blab{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.v-btrack{position:relative;height:17px;background:var(--code);border-radius:3px}
+.v-bzero{position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:var(--line)}
+.v-bar{position:absolute;top:3px;bottom:3px;border-radius:2px}
+.v-bar.pos{background:var(--pos)}
+.v-bar.neg{background:var(--neg)}
+.v-bval{font-size:13px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.v-bval.pos{color:var(--pos)}
+.v-bval.neg{color:var(--neg)}
+.v-bnote{grid-column:2/4;font-size:11px;color:var(--muted);margin:-3px 0 5px}
+.v-grow{display:grid;grid-template-columns:96px 1fr 152px;gap:10px;align-items:center;
+margin-bottom:9px}
+.v-glab{font-size:13px}
+.v-gtrack{position:relative;height:9px;border-radius:5px;
+background:linear-gradient(90deg,var(--neg) 0%,#c98a2e 34%,var(--muted) 50%,
+#6f9f5a 66%,var(--pos) 100%);opacity:.9}
+.v-gmove{position:absolute;top:-3px;height:15px;background:var(--fg);opacity:.16;
+border-radius:3px}
+.v-gprev{position:absolute;top:-1px;width:11px;height:11px;margin-left:-5px;
+border-radius:50%;border:2px solid var(--muted);background:var(--panel);opacity:.85}
+.v-gcur{position:absolute;top:-5px;width:19px;height:19px;margin-left:-9px;
+border-radius:50%;border:3px solid var(--fg);background:var(--panel)}
+.v-gval{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.v-gval b{color:var(--fg);font-size:15px;margin-right:3px}
+.v-chead{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.v-cscore{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.v-cscore b{font-size:20px;color:var(--fg);font-weight:800}
+.v-cbar{height:5px;border-radius:3px;background:var(--code);overflow:hidden;margin:2px 0 10px}
+.v-cbar span{display:block;height:100%;background:var(--pos);border-radius:3px}
+.v-clist{list-style:none;margin:0;padding:0;display:grid;
+grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:2px 16px}
+.v-clist li{display:grid;grid-template-columns:13px 1fr auto;gap:7px;align-items:baseline;
+padding:3px 0;font-size:13px}
+.v-cmark{width:9px;height:9px;border-radius:50%;align-self:center}
+.v-clist li.ok .v-cmark{background:var(--pos)}
+.v-clist li.no .v-cmark{background:var(--neg)}
+.v-clist li.na .v-cmark{background:var(--line);box-shadow:inset 0 0 0 1px var(--muted)}
+.v-clist li.na{opacity:.6}
+.v-cname{color:var(--fg)}
+.v-clist li.no .v-cname{font-weight:700;color:var(--neg)}
+.v-cval{color:var(--muted);font-variant-numeric:tabular-nums;font-size:12px}
+.v-cwant{grid-column:2/4;color:var(--muted);font-size:11px;margin:-2px 0 2px}
+.v-cfail{margin-top:9px;padding-top:8px;border-top:1px solid var(--line);
+font-size:12.5px;color:var(--neg);font-weight:600}
+.v-gleg{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);
+margin:2px 0 0 106px;max-width:calc(100% - 258px)}
+@media (max-width:620px){
+.viz.rail svg{min-width:540px;direction:ltr}
+.v-scroll{direction:rtl}
+.v-brow{grid-template-columns:104px 1fr 72px}
+.v-grow{grid-template-columns:78px 1fr 118px}
+.v-gleg{margin-left:88px;max-width:calc(100% - 196px)}}
+</style>
+</head><body><div class="wrap"><header class="site"><a class="back" href="../../index.html">← 전체 리포트</a></header>
+<p class="meta"><span class="badge">시황</span>2026-11-05 08:34</p>
+<h1 class="title">시황 리포트 · 2026-11-05</h1>
+<div class="lede"><span class="lbl">한 줄 결론</span>간밤 S&amp;P 500 <span class="pos">+1.58%</span>·나스닥 <span class="pos">+1.44%</span>였으나 필라델피아 반도체 <span class="neg">-3.13%</span>·EWY <span class="neg">-1.90%</span>로 코스피 쪽 신호는 엇갈립니다. 오늘 판정은 15:30 일봉 종가가 기준선 6,032 위면 상방(도착지 6,409), 다음 지지 5,400 아래면 하방(5,200~5,328 구간)입니다. 일봉 종가가 4,900 아래면 매수 계획 종료이며, 지수가 200일선 아래라 새 ETF 스윙 계획은 없습니다.</div>
+<aside class="callout danger"><span class="ct">손절·무효화 기준</span><p>일봉 종가 4,900 하회 시 남은 사다리 회차를 집행하지 않고, 이미 산 회차는 다음 세션에 전량 매도합니다 (사다리 취소). 장중 이탈은 무효가 아니라 관찰 단계이며 15:30 종가로만 판정합니다.</p></aside>
+<section class="sec">
+<h3>밤사이 변화</h3>
+<ul><li>미국 11/4 종가: 나스닥 25,737(<span class="pos">+1.44%</span>), S&amp;P 500 7,689(<span class="pos">+1.58%</span>). 변동성지수(VIX)는 16.61(<span class="neg">-20.26%</span>)입니다.</li><li>장전 시점 나스닥 선물 28,580(<span class="pos">+0.97%</span>), S&amp;P 500 선물 7,732(<span class="pos">+1.78%</span>), 원/달러 1,341원(<span class="neg">-0.32%</span>).</li><li>미국 업종은 임의소비재 <span class="pos">+4.26%</span>·금융 <span class="pos">+3.51%</span>가 강했고 기술 <span class="neg">-0.01%</span>·산업재 <span class="neg">-1.09%</span>·에너지 <span class="neg">-4.74%</span>가 약했습니다. 필라델피아 반도체 10,269(<span class="neg">-3.13%</span>), 한국 ETF EWY 152.12달러(<span class="neg">-1.90%</span>)입니다.</li><li>민주당 중간선거 압승 뒤 주가가 올랐지만, 텍사스 등의 결과가 AI 데이터센터 증설에 의문을 던지며 마이크론 등 반도체주는 밀렸습니다(CNBC·MarketWatch). 퀄컴은 메모리 부족에 따른 스마트폰 판매 둔화를 반영한 약한 전망으로 <span class="neg">-6%</span>입니다(CNBC).</li></ul>
+</section>
+<section class="sec">
+<h3>오늘의 기준선</h3>
+<div class="viz rail"><div class="v-h">코스피 (^KS11) · 11/4 잠정 종가 5,662 기준 · 하루 변동폭 272</div><div class="v-scroll"><svg viewBox="0 8 620 548" role="img" aria-label="코스피 (^KS11) · 11/4 잠정 종가 5,662 기준 · 하루 변동폭 272 가격 레일"><rect x="0" y="10" width="620" rx="6" height="141.9" class="v-band up"/><rect x="0" y="369.7" width="620" rx="6" height="184.3" class="v-band dn"/><line x1="0" y1="279.4" x2="330" y2="279.4" class="v-nowline"/><line x1="498" y1="279.4" x2="620" y2="279.4" class="v-nowline"/><line x1="330" y1="10" x2="330" y2="554.0" class="v-rail"/><line x1="314" y1="25.8" x2="327" y2="25.8" class="v-ev real"/><line x1="295" y1="25.8" x2="312" y2="25.8" class="v-lead ev"/><text x="290" y="29.3" text-anchor="end" class="v-evlab real"><tspan class="v-evname">6번 반응한 가격 (저항→지지)</tspan> <tspan class="v-evnum">6,398</tspan></text><line x1="314" y1="56.1" x2="327" y2="56.1" class="v-ev calc"/><line x1="295" y1="56.1" x2="312" y2="56.1" class="v-lead ev"/><text x="290" y="59.6" text-anchor="end" class="v-evlab calc"><tspan class="v-evname">50일선</tspan> <tspan class="v-evnum">6,310</tspan></text><line x1="314" y1="150.5" x2="327" y2="150.5" class="v-ev fib"/><line x1="295" y1="150.5" x2="312" y2="150.5" class="v-lead ev"/><text x="290" y="154.0" text-anchor="end" class="v-evlab fib"><tspan class="v-evname">피보나치 38.2% 되돌림</tspan> <tspan class="v-evnum">6,036</tspan></text><text x="290" y="166.0" text-anchor="end" class="v-evbasis">일봉 08/18 7,217→10/23 5,306 하락폭</text><line x1="314" y1="188.1" x2="327" y2="188.1" class="v-ev real"/><line x1="295" y1="188.1" x2="312" y2="188.1" class="v-lead ev"/><text x="290" y="191.6" text-anchor="end" class="v-evlab real"><tspan class="v-evname">6번 반응한 가격</tspan> <tspan class="v-evnum">5,927</tspan></text><line x1="314" y1="189.5" x2="327" y2="189.5" class="v-ev calc"/><path d="M 295 205.1 H 301 L 306 189.5 H 312" class="v-lead ev"/><text x="290" y="208.6" text-anchor="end" class="v-evlab calc"><tspan class="v-evname">20일선</tspan> <tspan class="v-evnum">5,923</tspan></text><line x1="314" y1="219.8" x2="327" y2="219.8" class="v-ev fib"/><path d="M 295 222.1 H 301 L 306 219.8 H 312" class="v-lead ev"/><text x="290" y="225.6" text-anchor="end" class="v-evlab fib"><tspan class="v-evname">피보나치 50% 되돌림</tspan> <tspan class="v-evnum">5,835</tspan></text><text x="290" y="237.6" text-anchor="end" class="v-evbasis">주봉 2025/04/07 2,285→2026/06/15 9,386 상승폭</text><line x1="314" y1="241.2" x2="327" y2="241.2" class="v-ev real"/><path d="M 295 252.1 H 301 L 306 241.2 H 312" class="v-lead ev"/><text x="290" y="255.6" text-anchor="end" class="v-evlab real"><tspan class="v-evname">6번 반응한 가격</tspan> <tspan class="v-evnum">5,773</tspan></text><line x1="314" y1="352.1" x2="327" y2="352.1" class="v-ev real"/><line x1="295" y1="352.1" x2="312" y2="352.1" class="v-lead ev"/><text x="290" y="355.6" text-anchor="end" class="v-evlab real"><tspan class="v-evname">10/15 스윙 저점</tspan> <tspan class="v-evnum">5,451</tspan></text><line x1="314" y1="394.5" x2="327" y2="394.5" class="v-ev real"/><line x1="295" y1="394.5" x2="312" y2="394.5" class="v-lead ev"/><text x="290" y="398.0" text-anchor="end" class="v-evlab real"><tspan class="v-evname">5번 반응한 가격 (저항→지지)</tspan> <tspan class="v-evnum">5,328</tspan></text><line x1="330" y1="22.0" x2="350" y2="22.0" class="v-lead"/><circle cx="330" cy="22.0" r="5" fill="var(--v-up)" class="v-dot"/><text x="356" y="27.0" fill="var(--v-up)" class="v-tag">도착지</text><text x="478" y="27.0" text-anchor="end" class="v-price">6,409</text><text x="544" y="27.0" text-anchor="end" class="v-dist">+747</text><text x="598" y="27.0" text-anchor="end" class="v-dist">2.75배</text><line x1="330" y1="151.9" x2="350" y2="151.9" class="v-lead"/><circle cx="330" cy="151.9" r="5" fill="var(--v-trigger)" class="v-dot"/><text x="356" y="156.9" fill="var(--v-trigger)" class="v-tag">기준선</text><text x="478" y="156.9" text-anchor="end" class="v-price">6,032</text><text x="544" y="156.9" text-anchor="end" class="v-dist">+370</text><text x="598" y="156.9" text-anchor="end" class="v-dist">1.36배</text><line x1="330" y1="279.4" x2="350" y2="279.4" class="v-lead"/><circle cx="330" cy="279.4" r="7" fill="var(--v-now)" class="v-dot now"/><text x="356" y="284.4" fill="var(--v-now)" class="v-tag now halo">현재</text><text x="478" y="284.4" text-anchor="end" class="v-price now halo">5,662</text><line x1="330" y1="369.7" x2="350" y2="369.7" class="v-lead"/><circle cx="330" cy="369.7" r="5" fill="var(--v-down)" class="v-dot"/><text x="356" y="374.7" fill="var(--v-down)" class="v-tag">다음 지지</text><text x="478" y="374.7" text-anchor="end" class="v-price">5,400</text><text x="544" y="374.7" text-anchor="end" class="v-dist">−262</text><text x="598" y="374.7" text-anchor="end" class="v-dist">0.96배</text><line x1="330" y1="416.9" x2="350" y2="416.9" class="v-lead"/><circle cx="330" cy="416.9" r="5" fill="var(--v-buy)" class="v-dot"/><text x="356" y="421.9" fill="var(--v-buy)" class="v-tag">사다리 1차</text><text x="478" y="421.9" text-anchor="end" class="v-price">5,263</text><text x="544" y="421.9" text-anchor="end" class="v-dist">−399</text><text x="598" y="421.9" text-anchor="end" class="v-dist">1.47배</text><line x1="330" y1="542.0" x2="350" y2="542.0" class="v-lead"/><circle cx="330" cy="542.0" r="5" fill="var(--v-cancel)" class="v-dot"/><text x="356" y="547.0" fill="var(--v-cancel)" class="v-tag">취소선</text><text x="478" y="547.0" text-anchor="end" class="v-price">4,900</text><text x="544" y="547.0" text-anchor="end" class="v-dist">−762</text><text x="598" y="547.0" text-anchor="end" class="v-dist">2.80배</text></svg></div><div class="v-leg"><span class="v-key real"><i></i>실제로 반응한 자리</span><span class="v-key calc"><i></i>이동평균</span><span class="v-key fib"><i></i>피보나치 계산선</span><span class="v-keytxt">오른쪽 숫자: 현재가와의 거리 · 하루 평균 변동폭의 몇 배인지</span></div><ul class="v-why"><li><i style="background:var(--v-up)"></i><b>도착지 6,409</b> 6번 반응·역할 전환(저항→지지) 6,398~6,439 구간 · 장중 고가 도달로 판정</li><li><i style="background:var(--v-trigger)"></i><b>기준선 6,032</b> <strong>일봉 종가</strong> 상회로 판정</li><li><i style="background:var(--v-now)"></i><b>현재 5,662</b> 11/4 잠정 종가(장전이라 전일 종가) · 20일선 5,923·50일선 6,310 아래 · 상대강도지수 40.5</li><li><i style="background:var(--v-down)"></i><b>다음 지지 5,400</b> 일봉 종가 하회로 판정 · 10/15 스윙 저점 5,451 + 5,400 라운드 (5,400~5,451)</li><li><i style="background:var(--v-buy)"></i><b>사다리 1차 5,263</b> 계좌의 2% · 7/29 스윙 저점 · 5,200~5,328 구간</li><li><i style="background:var(--v-cancel)"></i><b>취소선 4,900</b> 일봉 종가 하회 시 회차 중단 · 물리면 계좌 <span class="neg">-0.14%</span></li></ul></div>
+<p>기준선 6,032는 하루 평균 변동폭 밖의 거리이고 그 앞에 5,773~5,835와 5,927~6,000 두 구간이 있습니다. 경로를 말할 근거가 없어 방향은 말하지 않고 기준선과 두 갈래만 냅니다.</p>
+</section>
+<section class="sec">
+<h3>ETF 스윙 계획</h3>
+<p>등록된 ETF 스윙 계획이 없습니다. 지수가 200일선 아래(6,499 대비 <span class="neg">-13.09%</span>, 11/3 종가 기준)라 오늘 진입선에 닿을 계획도 없습니다.</p>
+</section>
+<section class="sec">
+<h3>오늘의 예측</h3>
+<div class="table-wrap"><table><thead><tr><th>예측</th><th>근거</th></tr></thead><tbody><tr><td>코스피 종가 5,773 하회</td><td>기준선 6,032 앞 첫 저항 5,773~5,835 구간 종가 회복 실패 — 11/4 잠정 종가 5,662, 고가 5,828에서 구간을 넘지 못함, 간밤 필라델피아 반도체 <span class="neg">-3.13%</span>·EWY <span class="neg">-1.90%</span></td></tr><tr><td>코스피 장중 저가가 5,422 위 유지</td><td>11/4 저가 5,422 재이탈 없음 — 다음 지지 5,400 구간 상단권, 간밤 S&amp;P 500 <span class="pos">+1.58%</span>·나스닥 <span class="pos">+1.44%</span>, 변동성지수 16.61(<span class="neg">-20.26%</span>)</td></tr><tr><td>KODEX 반도체, KODEX 200 대비 약세 마감</td><td>간밤 필라델피아 반도체 <span class="neg">-3.13%</span>, 미국 기술 업종(XLK) <span class="neg">-0.01%</span>로 S&amp;P 500 <span class="pos">+1.58%</span>에 뒤짐, 반도체 20일 초과수익 <span class="neg">-12.08%</span>p(11/4 마감 후 기준)</td></tr><tr><td>KODEX 헬스케어, KODEX 200 대비 강세 마감</td><td>간밤 미국 헬스케어 업종(XLV) <span class="pos">+3.06%</span>(1일 초과수익 <span class="pos">+1.48%</span>p), 헬스케어 20일 초과수익 <span class="pos">+9.15%</span>p로 한국 섹터 1위(11/4 마감 후 기준)</td></tr></tbody></table></div>
+</section>
+<section class="sec">
+<h3>확인 캘린더</h3>
+<ul><li>11/5(목) 15:30 코스피 마감 — 6,032 · 5,400 · 4,900 대비 종가 판정. 오늘 한국 세션 안의 지표 발표는 없습니다.</li></ul>
+</section>
+<section class="sec">
+<h3>데이터 상태</h3>
+<ul><li>시세 제공처가 오늘 아침 코스피 11/4 일봉을 돌려주지 않아 마지막 봉이 11/3(5,649)입니다. 레일의 5,662·20일선·50일선·상대강도지수와 하루 변동폭은 11/4 마감 후 회차가 그날 등록·인용한 값이며 오늘 재확인하지 못했습니다. 30분봉 마지막 구간(14:30)은 5,651이라 5,662와 11포인트 차이가 납니다.</li><li>예측 등록 때 가격 거리는 5,649를 전일 종가, 262를 하루 변동폭으로 재었습니다. 코스피 봉 누락의 영향을 피하려고 섹터 상대강도 예측의 비교 대상을 KODEX 200으로 잡았습니다.</li><li>같은 이유로 11/4 장전 코스피 예측 2건이 지금 판정 대기로 돌아가 있습니다(11/4 마감 후 채점 결과: 4건 중 2건 적중).</li><li>오늘 받은 한국 섹터 초과수익은 코스피와 ETF의 날짜가 어긋나 쓰지 않고 11/4 마감 후 값을 썼습니다. 뉴스 원천 중 Yahoo Finance Top Stories가 비어 있었고, 한국 기업 실적 일정은 조회 도구에 없어 적지 않았습니다.</li></ul>
+</section>
+<div class="gloss"><p class="note">ATR(하루 평균 변동폭): 최근 14일 동안 하루에 오르내린 폭의 평균.</p><p class="note">EWY: 미국에 상장된 한국 주식 ETF.</p><p class="note">상대강도지수(RSI): 최근 14일 오른 폭과 내린 폭의 비율을 0~100으로 나타낸 값.</p><p class="note">20일선·50일선: 최근 가격에 무게를 더 둔 지수이동평균.</p><p class="note">200일선: 최근 200거래일 종가의 단순 평균.</p><p class="note">1일·20일 초과수익: 해당 기간 수익률에서 기준 지수 수익률을 뺀 값.</p><p class="note">피보나치 되돌림: 직전 하락폭 또는 상승폭의 일정 비율만큼 움직인 가격을 계산한 선.</p></div>
+<p><a class="dl" href="report.md">Markdown 원문</a></p></div></body></html>
